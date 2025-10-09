@@ -1,0 +1,3746 @@
+[
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Plaza central de San Pablo Huitzo.jpg"
+    },
+    {
+        "name": "Ex Convento y Templo de San Pablo Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto conventual dominico construido en 1554 en cantera gris poroso; representa la arquitectura colonial del siglo XVI con atrio convento y templo",
+        "latitude": "17.277.100",
+        "longitude": "-96.883.500",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "http://mexicanarq.blogspot.com/2016/02/san-pablo-huitzo.html"
+    },
+    {
+        "name": "Casa de la Cultura Federico Flores Aguilar",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Centro cultural fundado en 1982 que fomenta disciplinas artísticas y talleres comunitarios; nombrado en honor al profesor Federico Flores Aguilar",
+        "latitude": "17.276.800",
+        "longitude": "-96.882.800",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Casa de la Cultura Federico Flores Aguilar.jpg"
+    },
+    {
+        "name": "Palacio Municipal de San Pablo Huitzo",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio emblemático construido en 1910 en cantera rosa; destaca por su belleza arquitectónica y es sede del gobierno municipal",
+        "latitude": "17.276.900",
+        "longitude": "-96.882.600",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Palacio Municipal Huitzo.jpg"
+    },
+    {
+        "name": "Zona Arqueológica Huijazoo",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca con vestigios que remontan al año 1200 a.C.; testimonio de la antigua población conocida como Huijazoo",
+        "latitude": "17.275.500",
+        "longitude": "-96.884.000",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Zona Arqueológica Huijazoo.jpg"
+    },
+    {
+        "name": "Archivo Municipal de San Pablo Huitzo",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Archivo histórico que resguarda documentos sobre la historia del municipio y su evolución desde la época colonial",
+        "latitude": "17.277.000",
+        "longitude": "-96.882.700",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Archivo Municipal de San Pablo Huitzo.jpg"
+    },
+    {
+        "name": "Mercado Municipal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio de intercambio comercial donde se venden productos agrícolas locales principalmente verduras flores y hortalizas",
+        "latitude": "17.276.300",
+        "longitude": "-96.882.500",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Mercado municipal San Pablo Huitzo.jpg"
+    },
+    {
+        "name": "Feria Anual de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Celebración que se realiza del 21 al 27 de enero con actividades culturales deportivas y gastronómicas; incluye octava el 1 y 2 de febrero",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Feria anual San Pablo Huitzo.jpg"
+    },
+    {
+        "name": "Agencia Municipal Santa María Tenexpan",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Agencia municipal que forma parte del territorio de San Pablo Huitzo; comunidad con identidad propia y tradiciones locales",
+        "latitude": "17.268.000",
+        "longitude": "-96.876.000",
+        "lugar": "Santa María Tenexpan",
+        "url_media": "Agencia Municpal de Santa Maria Tenexpan.jpg"
+    },
+    {
+        "name": "Zona Agrícola de San Pablo Huitzo",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Extensas áreas de cultivo de verduras flores y hortalizas; representa la vocación agrícola del municipio con casi la mitad de la población dedicada a esta actividad",
+        "latitude": "17.274.000",
+        "longitude": "-96.885.000",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Zona agricola Huitzo.jpg"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Templo católico del siglo XVI dedicado al santo patrono San Pablo; lugar de celebraciones religiosas y fiestas patronales",
+        "latitude": "17.277.050",
+        "longitude": "-96.883.450",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Templo de San Pablo Huitzo.jpg"
+    },
+    {
+        "name": "Corredor Ferrocarrilero Histórico",
+        "category": "Sitios de patrimonio",
+        "description": "Zona histórica relacionada con la época del ferrocarril; parte importante de la identidad comunitaria documentada en el museo",
+        "latitude": "17.278.000",
+        "longitude": "-96.881.500",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Corredor Ferrocarrilero.mp4"
+    },
+    {
+        "name": "Jardines y Huertas Comunitarias",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Espacios de cultivo tradicional de flores y hortalizas que mantienen prácticas agrícolas ancestrales zapotecas",
+        "latitude": "17.275.000",
+        "longitude": "-96.884.500",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "Jardines y Huertas Comunitarias..jpg"
+    },
+    {
+        "name": "Templo y Ex Convento de San Pablo Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo y ex-convento del siglo XVI construido en cantera; alberga el museo comunitario con salas de arqueología y arte religioso colonial; declarado monumento histórico",
+        "latitude": "17.277.081",
+        "longitude": "-96.883.497",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe piezas prehispánicas y arte religioso colonial con tres salas temáticas sobre arqueología historia del convento y ferrocarrileros",
+        "latitude": "17.277.081",
+        "longitude": "-96.883.497",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=570"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales; centro de convivencia comunitaria",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Zona Arqueológica Huijazoo",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico prehispánico con antigüedad del 1200 a.C.; importante asentamiento zapoteca conocido originalmente como Huijazoo antes de la conquista mexica",
+        "latitude": "17.280.000",
+        "longitude": "-96.880.000",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/huitzo.htm"
+    },
+    {
+        "name": "Templo de San Francisco de Asís",
+        "category": "Sitios de patrimonio",
+        "description": "Templo principal de San Francisco Telixtlahuaca; centro religioso y cultural de la comunidad fundada en 1625",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://gcatholic.org/churches/mexico/58293.htm"
+    },
+    {
+        "name": "Plaza Central de Telixtlahuaca",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se celebra la Feria de la Empanada y la Barbacoa; centro de festividades patronales y mercado tradicional",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://www.oaxaca.gob.mx/comunicacion/deleitara-san-francisco-telixtlahuaca-con-su-tradicional-barbacoa-y-empanadas/"
+    },
+    {
+        "name": "Mercado Municipal de Telixtlahuaca",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde se venden productos locales gastronomía típica incluyendo barbacoa blanca y enchilada y empanadas; espacio de intercambio cultural y económico",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://imparcialoaxaca.mx/estilo/san-francisco-telixtlahuaca-un-lugar-para-recordar/"
+    },
+    {
+        "name": "Sitio Arqueológico Santa Catarina",
+        "category": "Sitios de patrimonio",
+        "description": "Importante enclave prehispánico mixteco con muros de 2 a 2.5 metros de altura; presenta cuartos laberínticos escalinatas y estructura piramidal; evidencia de asentamiento significativo",
+        "latitude": "17.310.000",
+        "longitude": "-96.895.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://www.diariomarca.com.mx/2022/08/san-francisco-telixtlahuaca-un-rincon-para-recordar/"
+    },
+    {
+        "name": "Cerro El Negrito",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Sitio del primer asentamiento mixteco fundado en 1625; conserva vestigios arqueológicos del poblado original a 10 km de la ubicación actual",
+        "latitude": "17.320.000",
+        "longitude": "-96.910.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20150a.html"
+    },
+    {
+        "name": "Casa de Cultura de Telixtlahuaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario para actividades artísticas talleres y eventos culturales; espacio de preservación de tradiciones locales",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://es.wikipedia.org/wiki/San_Francisco_Telixtlahuaca"
+    },
+    {
+        "name": "Templo y Ex Convento de San Pablo Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo y ex-convento del siglo XVI construido en cantera; alberga el museo comunitario con salas de arqueología y arte religioso colonial; declarado monumento histórico",
+        "latitude": "17.318.538",
+        "longitude": "-96.908.680",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe piezas prehispánicas y arte religioso colonial con tres salas temáticas sobre arqueología historia del convento y ferrocarrileros",
+        "latitude": "17.322.987",
+        "longitude": "-96.911.453",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=571"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales; centro de convivencia comunitaria",
+        "latitude": "17.327.437",
+        "longitude": "-96.914.226",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Zona Arqueológica Huijazoo",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico prehispánico con antigüedad del 1200 a.C.; importante asentamiento zapoteca conocido originalmente como Huijazoo antes de la conquista mexica",
+        "latitude": "17.331.886",
+        "longitude": "-96.916.998",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/huitzo.htm"
+    },
+    {
+        "name": "Templo de San Francisco de Asís",
+        "category": "Sitios de patrimonio",
+        "description": "Templo principal de San Francisco Telixtlahuaca; centro religioso y cultural de la comunidad fundada en 1626",
+        "latitude": "17.336.335",
+        "longitude": "-96.919.771",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://gcatholic.org/churches/mexico/58293.htm"
+    },
+    {
+        "name": "Biblioteca Comunitaria San Pablo Huitzo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Biblioteca municipal que resguarda archivo histórico y ofrece servicios de consulta; espacio de preservación documental de la comunidad",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "http://censoarchivos.mcu.es/CensoGuia/archivodetail.htm?id=1251477"
+    },
+    {
+        "name": "Zona de Talleres Artesanales Telixtlahuaca",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio donde artesanos locales elaboran productos tradicionales y ofrecen talleres de transmisión de conocimientos ancestrales",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "San Francisco Telixtlahuaca",
+        "url_media": "https://imparcialoaxaca.mx/estilo/san-francisco-telixtlahuaca-un-lugar-para-recordar/"
+    },
+    {
+        "name": "Mirador Natural Cerro Tenismo",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Elevación natural que ofrece vistas panorámicas de los Valles Centrales; área de vegetación nativa y senderos tradicionales",
+        "latitude": "17.285.000",
+        "longitude": "-96.895.000",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://revistaquixe.com/2023/09/13/conoce-san-pablo-huitzo-en-oaxaca/"
+    },
+    {
+        "name": "Camino Real Histórico Etla-Telixtlahuaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Antigua ruta colonial que conectaba comunidades de la región; conserva tramos originales y paisajes culturales tradicionales",
+        "latitude": "17.300.000",
+        "longitude": "-96.900.000",
+        "lugar": "Región Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/huitzo.htm"
+    },
+    {
+        "name": "Centro Comunitario de San Pablo Huitzo",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio de reunión comunitaria para actividades educativas culturales y de organización social; sede de talleres y capacitaciones",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://programadestinosmexico.com/san-pablo-huitzo-oaxaca/"
+    },
+    {
+        "name": "Zona Arqueológica Cerro de la Campana",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca del periodo clásico (300-400 d.C.) conocido como Huijazoo; conserva basamentos de templos palacios juego de pelota y conjuntos ceremoniales TPA (templo-patio-adoratorio)",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/suchilquitongo.htm"
+    },
+    {
+        "name": "Tumba 5 del Cerro de la Campana",
+        "category": "Sitios de patrimonio",
+        "description": "Una de las obras maestras del arte zapoteca; tumba construida en cantera rosada ubicada 5 metros bajo una plataforma con mascarones jambas y dinteles policromados; se cree fue morada de un gobernante o sacerdote importante",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.holatulum.com/santiago-suchilquitongo-una-comunidad-oaxaquena/"
+    },
+    {
+        "name": "Museo Comunitario Cerro de la Campana",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo fundado en 1989 tras el descubrimiento de la Tumba 5; exhibe piezas arqueológicas encontradas en el sitio incluyendo cerámica jade concha y objetos funerarios zapotecas",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=289"
+    },
+    {
+        "name": "Templo de Santiago Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que conserva capillas posas y cruz atrial; importante centro religioso construido durante el virreinato; representa la arquitectura religiosa del siglo XVI",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://revistaquixe.com/2023/08/11/ven-a-santiago-suchilquitongo-y-escribe-tu-propia-historia-en-este-magico-lugar/"
+    },
+    {
+        "name": "Palacio Municipal de Suchilquitongo",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio porfiriano construido íntegramente en cantera rosada; su construcción tomó 18 años; ejemplo destacado de arquitectura civil del siglo XIX con ornamentación en piedra",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "http://www.geocities.ws/binnigulazaa/suchilquitongo.html"
+    },
+    {
+        "name": "Panteón Municipal de Suchilquitongo",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio único en su género con tumbas cubiertas por monolitos de cantera esculpidos que imitan ataúdes; decorados con flores y motivos religiosos; ejemplo de arte funerario popular",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "http://www.geocities.ws/binnigulazaa/suchilquitongo.html"
+    },
+    {
+        "name": "Plaza Central de Santiago Suchilquitongo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se celebra la Fiesta Titular de Santiago Apóstol el 25 de julio; centro de convivencia comunitaria y festividades patronales",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/sectur-oaxaca-invita-a-disfrutar-la-fiesta-titular-de-santiago-suchilquitongo/"
+    },
+    {
+        "name": "Canteras de Piedra Rosada",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Yacimientos históricos de cantera rosada de alta calidad; utilizados desde la época prehispánica hasta la actualidad; paisaje cultural vinculado a la arquitectura regional",
+        "latitude": "17.255.000",
+        "longitude": "-96.870.000",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/suchilquitongo.htm"
+    },
+    {
+        "name": "Archivo Municipal de Suchilquitongo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Archivo histórico municipal que resguarda documentación de la comunidad; importante acervo para la investigación de la historia local y regional",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=archivo&table_id=820"
+    },
+    {
+        "name": "Fiesta Titular de Santiago Apóstol",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Festividad patronal celebrada el 25 de julio con danzas tradicionales procesiones y gastronomía; una de las celebraciones más importantes de la región de Etla",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca.gob.mx/comunicacion/sectur-oaxaca-invita-a-disfrutar-la-fiesta-titular-de-santiago-suchilquitongo/"
+    },
+    {
+        "name": "Conjunto TPA Prehispánico",
+        "category": "Sitios de patrimonio",
+        "description": "Conjuntos ceremoniales zapotecas formados por Templo-Patio-Adoratorio; estructuras arquitectónicas destinadas a rituales y ceremonias religiosas del periodo clásico",
+        "latitude": "17.250.500",
+        "longitude": "-96.867.000",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.holatulum.com/santiago-suchilquitongo-una-comunidad-oaxaquena/"
+    },
+    {
+        "name": "Juego de Pelota Prehispánico",
+        "category": "Sitios de patrimonio",
+        "description": "Cancha para el juego ritual mesoamericano; parte del complejo palaciego del sitio arqueológico; evidencia de la importancia política y ceremonial del asentamiento",
+        "latitude": "17.250.300",
+        "longitude": "-96.866.800",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.holatulum.com/santiago-suchilquitongo-una-comunidad-oaxaquena/"
+    },
+    {
+        "name": "Casa de Cultura de Suchilquitongo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario para actividades artísticas talleres y eventos; espacio de preservación y difusión de las tradiciones locales",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/sectur-oaxaca-invita-a-disfrutar-la-fiesta-titular-de-santiago-suchilquitongo/"
+    },
+    {
+        "name": "Ruta Biocultural Etla-Suchilquitongo",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor que conecta comunidades del distrito de Etla atravesando paisajes culturales con vestigios arqueológicos y recursos naturales; incluye zonas de cantera y vegetación nativa",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Región Etla",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_Santiago_Suchilquitongo"
+    },
+    {
+        "name": "Señorío Zapoteca de Huijazoo",
+        "category": "Sitios de patrimonio",
+        "description": "Antiguo señorío prehispánico que abarcaba el territorio actual de Suchilquitongo y San Pablo Huitzo; importante centro político y religioso zapoteca dividido durante la colonia",
+        "latitude": "17.260.000",
+        "longitude": "-96.870.000",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_Santiago_Suchilquitongo"
+    },
+    {
+        "name": "Miradores del Cerro de la Campana",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Puntos elevados del sitio arqueológico que ofrecen vistas panorámicas del Valle de Etla; espacios naturales con vegetación endémica y senderos interpretativos",
+        "latitude": "17.251.000",
+        "longitude": "-96.867.500",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/suchilquitongo.htm"
+    },
+    {
+        "name": "Taller de Cantería Tradicional",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio donde artesanos locales trabajan la cantera rosada con técnicas tradicionales; ofrece talleres de transmisión de conocimientos sobre este oficio ancestral",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "http://www.geocities.ws/binnigulazaa/suchilquitongo.html"
+    },
+    {
+        "name": "Mercado Tradicional de Suchilquitongo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado local donde se comercializan productos agrícolas artesanías y gastronomía típica; centro de intercambio económico y cultural de la comunidad",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "https://www.ciudadesdemimexico.com.mx/oaxaca/santiago_suchilquitongo"
+    },
+    {
+        "name": "Centro Comunitario de Suchilquitongo",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio para reuniones comunitarias asambleas y actividades educativas; sede de la organización social bajo el sistema de usos y costumbres",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Santiago Suchilquitongo",
+        "url_media": "http://suchilquitongo2014.blogspot.com/2014/09/usos-y-costumbre-de-santiago.html"
+    },
+    {
+        "name": "Carretera Oaxaca-Telixtlahuaca (tramo cultural)",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Tramo de la Federal 190 que conecta sitios culturales y arqueológicos de la región de Etla; ruta escénica con acceso a comunidades y paisajes bioculturales",
+        "latitude": "17.250.000",
+        "longitude": "-96.866.667",
+        "lugar": "Región Etla",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/suchilquitongo.htm"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca habitado desde el periodo clásico (100-650 d.C.) con apogeo en el postclásico (750-1521 d.C.); conocido como Liobaa (casa de tumbas) en zapoteco y Mictlán (lugar de muertos) en náhuatl; famoso por sus grecas ornamentales únicas en Mesoamérica",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-mitla"
+    },
+    {
+        "name": "Grupo de las Columnas",
+        "category": "Sitios de patrimonio",
+        "description": "Principal conjunto arquitectónico de Mitla con el Palacio de las Columnas y el Salón de las Columnas; destacan los mosaicos de grecas talladas en piedra y las tumbas subterráneas con ornamentación elaborada",
+        "latitude": "16.926.900",
+        "longitude": "-96.359.500",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://lugares.inah.gob.mx/es/zonas-arqueologicas/zona-arqueologica-de-mitla.html"
+    },
+    {
+        "name": "Grupo de la Iglesia",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto prehispánico sobre el cual se construyó el Templo de San Pablo Apóstol; integra arquitectura zapoteca y colonial en un mismo espacio; muestra la superposición cultural del virreinato",
+        "latitude": "16.927.000",
+        "longitude": "-96.360.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.gob.mx/ficha.php?table=zona_arqueologica&table_id=75"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico del siglo XVI construido sobre estructuras prehispánicas del Grupo de la Iglesia; ejemplo de arquitectura colonial que incorpora elementos indígenas; centro religioso de la comunidad",
+        "latitude": "16.927.000",
+        "longitude": "-96.360.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.travelbymexico.com/oaxaca/atractivos/?nom=koaxsanpablo"
+    },
+    {
+        "name": "Museo Ervin Frissell de Arte Zapoteca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo de arqueología fundado en 1952 por Edwin Robert Frissell y Howard Leigh; ubicado en casa colonial del siglo XVII con arquitectura neoclásica; alberga entre 35 mil y 45 mil piezas arqueológicas zapotecas y mixtecas; reabierto en agosto de 2023",
+        "latitude": "16.926.500",
+        "longitude": "-96.359.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=1759"
+    },
+    {
+        "name": "Plaza Central de Mitla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se realizan festividades patronales mercados tradicionales y eventos comunitarios; centro de la vida social y cultural del Pueblo Mágico",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Mercado de Artesanías de Mitla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional especializado en textiles bordados tapetes de lana y artesanías zapotecas; importante centro de producción y venta de arte textil oaxaqueño",
+        "latitude": "16.926.500",
+        "longitude": "-96.359.500",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://tipsparatuviaje.com/san-pablo-villa-mitla/"
+    },
+    {
+        "name": "Grupo del Sur",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto arquitectónico clasificado como palaciego con patios cuadrangulares rodeados de cuartos; muestra el sistema constructivo y ornamental característico de la élite zapoteca",
+        "latitude": "16.926.000",
+        "longitude": "-96.359.500",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/mitla.htm"
+    },
+    {
+        "name": "Grupo del Adobe",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto palaciego construido con adobe y piedra; evidencia de las técnicas constructivas mixtas utilizadas en Mitla durante el periodo postclásico",
+        "latitude": "16.926.300",
+        "longitude": "-96.359.800",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/mitla.htm"
+    },
+    {
+        "name": "Grupo del Arroyo",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto arquitectónico ubicado cerca de un arroyo; presenta características similares a los otros grupos pero con menor grado de conservación; importante para entender la extensión del asentamiento",
+        "latitude": "16.927.200",
+        "longitude": "-96.360.200",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca-mio.com/atrac_turisticos/mitla.htm"
+    },
+    {
+        "name": "Ex Hacienda de Xaagá",
+        "category": "Sitios de patrimonio",
+        "description": "Hacienda colonial ubicada en las inmediaciones de Mitla; ejemplo de arquitectura rural del virreinato; conserva elementos originales de la época",
+        "latitude": "16.930.000",
+        "longitude": "-96.355.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.pueblosmexico.com.mx/san-pablo-villa-mitla-pueblo-magico-oaxaca/"
+    },
+    {
+        "name": "Hierve el Agua",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cascadas petrificadas formadas por carbonato de calcio durante millones de años; sistema de riego prehispánico zapoteca aún funcional; ubicado a 17 km de Mitla en San Isidro Roaguía; albercas naturales con vistas panorámicas",
+        "latitude": "16.866.667",
+        "longitude": "-96.275.833",
+        "lugar": "San Isidro Roaguía",
+        "url_media": "https://tipsparatuviaje.com/san-pablo-villa-mitla/"
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio fortificado zapoteca del periodo clásico y postclásico; destaca por su juego de pelota (el segundo más grande de Mesoamérica) el palacio de los seis patios y tumbas decoradas; declarado Patrimonio Mundial por UNESCO junto con las cuevas prehistóricas",
+        "latitude": "16.950.000",
+        "longitude": "-96.400.000",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-yagul"
+    },
+    {
+        "name": "Cuevas Prehistóricas de Yagul y Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Sistema de cuevas con evidencia de ocupación humana de hace 10 mil años; contiene restos de cultivos domesticados más antiguos de América; declarado Patrimonio Mundial por UNESCO en 2010 como paisaje cultural",
+        "latitude": "16.945.000",
+        "longitude": "-96.395.000",
+        "lugar": "Valle de Tlacolula",
+        "url_media": "https://www.pueblosmexico.com.mx/san-pablo-villa-mitla-pueblo-magico-oaxaca/"
+    },
+    {
+        "name": "Casa de Cultura de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que promueve talleres de danza música y artes tradicionales; espacio de preservación de la cultura zapoteca y difusión del patrimonio local",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca.gob.mx/comunicacion/museo-frissell-riqueza-arqueologia-de-oaxaca/"
+    },
+    {
+        "name": "Talleres de Textiles Tradicionales",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacios comunitarios donde artesanas zapotecas elaboran textiles bordados y tejidos en telar de pedal; ofrecen demostraciones y talleres de transmisión de técnicas ancestrales",
+        "latitude": "16.926.500",
+        "longitude": "-96.359.500",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://tipsparatuviaje.com/san-pablo-villa-mitla/"
+    },
+    {
+        "name": "Fiesta Patronal de San Pablo Apóstol",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Festividad celebrada el 25 de enero con procesiones danzas tradicionales calendas y gastronomía zapoteca; una de las celebraciones religiosas más importantes del Valle de Tlacolula",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Bosque de las Piedras",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Formación natural de rocas erosionadas que crean figuras caprichosas; sitio de paisaje natural ubicado cerca de Mitla; espacio de contemplación y conexión con la naturaleza",
+        "latitude": "16.935.000",
+        "longitude": "-96.365.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.pueblosmexico.com.mx/san-pablo-villa-mitla-pueblo-magico-oaxaca/"
+    },
+    {
+        "name": "Ruta de los Conventos Valle de Tlacolula",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor turístico y cultural que conecta templos coloniales y zonas arqueológicas del Valle de Tlacolula; incluye Mitla Yagul Tlacolula de Matamoros y comunidades cercanas; recorrido de patrimonio cultural y paisajes agaveros",
+        "latitude": "16.960.000",
+        "longitude": "-96.475.000",
+        "lugar": "Valle de Tlacolula",
+        "url_media": "https://www.oaxaca.gob.mx/destino-zonas-arqueologicas/"
+    },
+    {
+        "name": "Biblioteca Municipal de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Biblioteca pública que resguarda acervo histórico y documental de la comunidad; ofrece servicios de consulta y actividades de fomento a la lectura",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Centro Comunitario de Mitla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio de reunión para actividades comunitarias asambleas y eventos culturales; sede de la organización social bajo sistema de usos y costumbres",
+        "latitude": "16.926.667",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Manantiales de Mitla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Sistema de manantiales naturales utilizados desde la época prehispánica; importante recurso hídrico para la comunidad y zona de recreación; parte del sistema de riego zapoteca ancestral",
+        "latitude": "16.928.000",
+        "longitude": "-96.362.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.pueblosmexico.com.mx/san-pablo-villa-mitla-pueblo-magico-oaxaca/"
+    },
+    {
+        "name": "Mirador de Yagul",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Punto elevado en la zona arqueológica de Yagul con vistas panorámicas del Valle de Tlacolula y la Sierra Madre Oriental; sitio de observación natural y cultural",
+        "latitude": "16.951.000",
+        "longitude": "-96.400.500",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-yagul"
+    },
+    {
+        "name": "Panteón Municipal de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio histórico que conserva tumbas y monumentos funerarios del siglo XIX y XX; refleja tradiciones funerarias zapotecas y católicas; importante para el estudio de la cultura material",
+        "latitude": "16.927.500",
+        "longitude": "-96.361.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Ruta del Mezcal Valle de Tlacolula",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor biocultural que recorre palenques tradicionales y campos de agave en el Valle de Tlacolula; incluye degustaciones y talleres sobre producción artesanal de mezcal; paisaje agavero con denominación de origen",
+        "latitude": "16.960.000",
+        "longitude": "-96.475.000",
+        "lugar": "Valle de Tlacolula",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Banco Comunitario de Semillas - Unión Zapata",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Proyecto comunitario para preservar la agrobiodiversidad del maíz nativo y semillas criollas; considerada cuna del maíz con orgullo ancestral",
+        "latitude": "16.919.444",
+        "longitude": "-96.415.278",
+        "lugar": "Unión Zapata",
+        "url_media": "https://www.ororadio.com.mx/2021/04/ejido-union-zapata-cuna-del-maiz-orgullo-ancestral/"
+    },
+    {
+        "name": "Feria de las Flores de Muertos - Unión Zapata",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Feria anual que celebra la tradición de las flores de temporada de Día de Muertos; incluye recorridos por cultivos gastronomía y actividades culturales",
+        "latitude": "16.919.444",
+        "longitude": "-96.415.278",
+        "lugar": "Unión Zapata",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/celebrara-union-zapata-segunda-feria-de-las-flores-de-muertos/"
+    },
+    {
+        "name": "Feria de la Agrodiversidad - Unión Zapata",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Encuentro donde más de 500 productores muestran semillas frutos de huertos tradicionales y productos elaborados localmente",
+        "latitude": "16.919.444",
+        "longitude": "-96.415.278",
+        "lugar": "Unión Zapata",
+        "url_media": "https://oaxaca.quadratin.com.mx/realizaran-en-union-zapata-feria-de-la-agrodiversidad-en-oaxaca/"
+    },
+    {
+        "name": "Senderos de Avistamiento de Aves - Unión Zapata",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Recorridos por senderos naturales para observación de aves y especies endémicas; parte del proyecto ecoturístico comunitario",
+        "latitude": "16.919.444",
+        "longitude": "-96.415.278",
+        "lugar": "Unión Zapata",
+        "url_media": "https://www.ororadio.com.mx/2021/04/ejido-union-zapata-cuna-del-maiz-orgullo-ancestral/"
+    },
+    {
+        "name": "Museo Comunitario en Desarrollo - Unión Zapata",
+        "category": "Espacios culturales y artísticos",
+        "description": "Proyecto de museo comunitario en consolidación para exhibir la historia agrícola y cultural de la región",
+        "latitude": "16.919.444",
+        "longitude": "-96.415.278",
+        "lugar": "Unión Zapata",
+        "url_media": "https://www.ororadio.com.mx/2021/04/ejido-union-zapata-cuna-del-maiz-orgullo-ancestral/"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Principal sitio arqueológico zapoteco conocido por sus grecas ornamentales únicas en México; fue centro ceremonial y residencia de sumos sacerdotes",
+        "latitude": "16.926.389",
+        "longitude": "-96.359.444",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-mitla"
+    },
+    {
+        "name": "Museo de Sitio de la Zona Arqueológica de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo que resguarda piezas arqueológicas encontradas en las excavaciones de Mitla; exhibe cerámica textiles y objetos zapotecos",
+        "latitude": "16.926.389",
+        "longitude": "-96.359.444",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=2086"
+    },
+    {
+        "name": "Museo Oaxaqueño de Arqueología Ervin Frissell",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo fundado por coleccionista estadounidense; exhibe importante colección de arte zapoteco y piezas arqueológicas regionales",
+        "latitude": "16.925.556",
+        "longitude": "-96.360.833",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Villa_de_Mitla"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol - Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial construido sobre estructuras prehispánicas; representa el sincretismo religioso zapoteco-católico",
+        "latitude": "16.925.833",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.gob.mx/sectur/articulos/san-pablo-villa-mitla-oaxaca"
+    },
+    {
+        "name": "Plaza Central de Mitla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del Pueblo Mágico; espacio para mercados festividades patronales y convivencia comunitaria",
+        "latitude": "16.925.556",
+        "longitude": "-96.359.722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.gob.mx/sectur/articulos/san-pablo-villa-mitla-oaxaca"
+    },
+    {
+        "name": "Centro Cultural Pitao Bezelao",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural dedicado a la preservación y difusión de la cultura zapoteca tradicional y contemporánea",
+        "latitude": "16.925.278",
+        "longitude": "-96.360.278",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.tripadvisor.co/Attraction_Review-g1026024-d155100-Reviews-or20-Zona_Arqueologica_de_Mitla-San_Pablo_Villa_de_Mitla_Southern_Mexico.html"
+    },
+    {
+        "name": "Cuevas Prehistóricas de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Cuevas con evidencia de ocupación humana prehistórica; sitio de importancia arqueológica y natural",
+        "latitude": "16.923.611",
+        "longitude": "-96.357.222",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.tripadvisor.co/Attraction_Review-g1026024-d155100-Reviews-or20-Zona_Arqueologica_de_Mitla-San_Pablo_Villa_de_Mitla_Southern_Mexico.html"
+    },
+    {
+        "name": "Mercado de Artesanías de Mitla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde artesanos locales venden textiles de lana tejidos en telares de pedal y otras artesanías zapotecas",
+        "latitude": "16.925.833",
+        "longitude": "-96.360.000",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.gob.mx/sectur/articulos/san-pablo-villa-mitla-oaxaca"
+    },
+    {
+        "name": "Talleres de Telar de Pedal - Mitla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres familiares donde se preserva la técnica tradicional del tejido en telar de pedal; ofrecen demostraciones y clases",
+        "latitude": "16.925.278",
+        "longitude": "-96.360.556",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.gob.mx/sectur/articulos/san-pablo-villa-mitla-oaxaca"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años de antigüedad; uno de los árboles más anchos del mundo y Patrimonio Natural",
+        "latitude": "17.046.389",
+        "longitude": "-96.636.389",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Templo y Ex Convento de Santa María del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto religioso colonial del siglo XVI; destaca por su arquitectura franciscana y murales",
+        "latitude": "17.046.667",
+        "longitude": "-96.636.667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Teotitlán del Valle",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Pueblo zapoteco famoso por sus tapetes y textiles de lana teñidos con tintes naturales; preserva tradiciones ancestrales de tejido",
+        "latitude": "17.053.889",
+        "longitude": "-96.540.278",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Museo Comunitario Balaa Xtee Guech Gulal - Teotitlán",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario que exhibe piezas arqueológicas zapotecas y documenta la historia del tejido tradicional en telar de pedal",
+        "latitude": "17.053.056",
+        "longitude": "-96.540.556",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Talleres de Tintes Naturales - Teotitlán del Valle",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres familiares donde se enseña la técnica ancestral de extracción de tintes naturales de cochinilla añil e índigo",
+        "latitude": "17.053.333",
+        "longitude": "-96.540.000",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Hierve el Agua",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cascadas petrificadas formadas por carbonato de calcio; sistema de riego prehispánico y paisaje natural excepcional",
+        "latitude": "16.865.833",
+        "longitude": "-96.276.111",
+        "lugar": "San Lorenzo Albarradas",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Ciudad fortificada zapoteca con palacio de los seis patios tumba triple y juego de pelota; forma parte del Patrimonio Mundial UNESCO",
+        "latitude": "16.942.778",
+        "longitude": "-96.394.167",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx"
+    },
+    {
+        "name": "Cueva Prehistórica de Guilá Naquitz",
+        "category": "Sitios de patrimonio",
+        "description": "Cueva con evidencia de domesticación temprana del maíz hace 10000 años; Patrimonio Mundial UNESCO",
+        "latitude": "16.940.000",
+        "longitude": "-96.390.000",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://whc.unesco.org"
+    },
+    {
+        "name": "Mercado de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Tianguis tradicional dominical más importante de los Valles Centrales; venta de productos agrícolas artesanías y comida oaxaqueña",
+        "latitude": "16.957.500",
+        "longitude": "-96.479.167",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Capilla del Señor de Tlacolula",
+        "category": "Sitios de patrimonio",
+        "description": "Templo barroco del siglo XVII con retablos dorados y capilla del Cristo de Tlacolula; joya del arte novohispano",
+        "latitude": "16.957.778",
+        "longitude": "-96.479.444",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "San Jerónimo Tlacochahuaya",
+        "category": "Sitios de patrimonio",
+        "description": "Templo dominico del siglo XVI con órgano tubular histórico restaurado; reconocido por su acústica y arquitectura colonial",
+        "latitude": "17.026.944",
+        "longitude": "-96.606.944",
+        "lugar": "San Jerónimo Tlacochahuaya",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Zona Arqueológica de Lambityeco",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio zapoteco con estuccos y frisos que representan deidades y gobernantes; destaca por sus mascarones y tumbas",
+        "latitude": "16.958.333",
+        "longitude": "-96.524.722",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx"
+    },
+    {
+        "name": "Jardín Etnobotánico de Oaxaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín botánico dedicado a la conservación de flora endémica de Oaxaca; espacio educativo sobre biodiversidad regional",
+        "latitude": "17.063.889",
+        "longitude": "-96.726.389",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.jardinetnobotanico.org"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural en antigua fábrica textil; alberga talleres de artes visuales gráfica y textiles con artistas residentes",
+        "latitude": "16.930.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.casanagustín.org"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Capilla de San Antonio de Padua",
+        "category": "Sitios de patrimonio",
+        "description": "Templo histórico que representa el patrimonio religioso colonial de la comunidad; catalogado por el Instituto del Patrimonio Cultural del Estado de Oaxaca",
+        "latitude": "16.998.060",
+        "longitude": "-96.431.390",
+        "lugar": "Villa Díaz Ordaz",
+        "url_media": "https://www.oaxaca.gob.mx/inpac/"
+    },
+    {
+        "name": "Plaza Central de Villa Díaz Ordaz",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del pueblo donde se realizan festividades cívicas y religiosas; punto de encuentro comunitario",
+        "latitude": "16.998.060",
+        "longitude": "-96.431.390",
+        "lugar": "Villa Díaz Ordaz",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Templo de Villa Díaz Ordaz",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico principal de la localidad; centro de la vida religiosa y festividades patronales de la comunidad",
+        "latitude": "16.998.300",
+        "longitude": "-96.431.500",
+        "lugar": "Villa Díaz Ordaz",
+        "url_media": "http://aquioaxaca.com"
+    },
+    {
+        "name": "Casa de la Cultura de Villa Díaz Ordaz",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio dedicado a la promoción y difusión de las artes y cultura local; alberga talleres y actividades comunitarias",
+        "latitude": "16.998.060",
+        "longitude": "-96.431.390",
+        "lugar": "Villa Díaz Ordaz",
+        "url_media": "https://www.oaxaca.gob.mx/comunicacion/"
+    },
+    {
+        "name": "Zona Arqueológica de San Lorenzo Albarradas",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteco que funcionó como fortificación defensiva prehispánica; cercano a Villa Díaz Ordaz",
+        "latitude": "16.995.000",
+        "longitude": "-96.410.000",
+        "lugar": "Santo Domingo Albarradas",
+        "url_media": "https://es.wikipedia.org/wiki/Villa_D%C3%ADaz_Ordaz"
+    },
+    {
+        "name": "Museo Comunitario Balaa Xtee Guech Gulal",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo en antiguo mercado municipal con sala arqueológica de piedras talladas y tepalcates sala de artesanías telares y bodas tradicionales; organiza festivales y excursiones",
+        "latitude": "17.053.056",
+        "longitude": "-96.540.556",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=864"
+    },
+    {
+        "name": "Talleres de Telar de Pedal - Teotitlán del Valle",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres familiares donde se preserva la técnica tradicional zapoteca del tejido en telar de pedal con lana teñida con tintes naturales ancestrales",
+        "latitude": "17.053.333",
+        "longitude": "-96.540.000",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://mexicotravelchannel.com.mx/estados/20210104/teotitlan-del-valle-finas-artesanias-lana-oaxaca/"
+    },
+    {
+        "name": "Templo de la Preciosa Sangre de Cristo",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial de Teotitlán del Valle; centro de ceremonias religiosas y festividades tradicionales zapotecas",
+        "latitude": "17.053.611",
+        "longitude": "-96.540.278",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://programadestinosmexico.com/teotitlan-del-valle-oaxaca/"
+    },
+    {
+        "name": "Plaza Central de Teotitlán del Valle",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social donde se realizan tianguis artesanales festividades patronales y eventos comunitarios",
+        "latitude": "17.053.889",
+        "longitude": "-96.540.278",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.viveoaxaca.org/2011/08/teotitlan-del-valle-tlacolula-oaxaca.html"
+    },
+    {
+        "name": "Talleres de Tintes Naturales - Teotitlán",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacios donde se enseña la técnica ancestral zapoteca de extracción de tintes naturales de cochinilla añil musgo e índigo para teñir lana",
+        "latitude": "17.053.200",
+        "longitude": "-96.540.100",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://mexicotravelchannel.com.mx/estados/20210104/teotitlan-del-valle-finas-artesanias-lana-oaxaca/"
+    },
+    {
+        "name": "Centro de Producción de Mezcal Artesanal - Teotitlán",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Palenques tradicionales donde se produce mezcal artesanal siguiendo métodos ancestrales; ofrecen recorridos y degustaciones",
+        "latitude": "17.054.000",
+        "longitude": "-96.540.500",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.viveoaxaca.org/2011/08/teotitlan-del-valle-tlacolula-oaxaca.html"
+    },
+    {
+        "name": "Museo Comunitario Shan-Dany",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario que exhibe piezas arqueológicas zapotecas historia del pueblo y técnicas tradicionales de tejido",
+        "latitude": "17.042.500",
+        "longitude": "-96.479.722",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.nvinoticias.com/agenda/cultura/santa-ana-del-valle-tejidos-de-los-valles-centrales/8245"
+    },
+    {
+        "name": "Talleres de Tejido en Telar - Santa Ana del Valle",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres artesanales familiares especializados en tejidos de lana; ofrecen demostraciones y venta directa de tapetes y sarapes",
+        "latitude": "17.042.778",
+        "longitude": "-96.479.444",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.nvinoticias.com/agenda/cultura/santa-ana-del-valle-tejidos-de-los-valles-centrales/8245"
+    },
+    {
+        "name": "Templo de Santa Ana",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que alberga las festividades en honor a Santa Ana; centro religioso de la comunidad",
+        "latitude": "17.042.900",
+        "longitude": "-96.479.600",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_Santa_Ana_del_Valle"
+    },
+    {
+        "name": "Plaza Cívica de Santa Ana del Valle",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan asambleas comunitarias regidas por usos y costumbres mercados dominicales y fiestas tradicionales",
+        "latitude": "17.042.500",
+        "longitude": "-96.479.722",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_Santa_Ana_del_Valle"
+    },
+    {
+        "name": "Comunidad de Santo Domingo Albarradas",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Pueblo zapoteco fundado en 1423 cercano a Hierve el Agua; preserva títulos de propiedad desde 1517 y tradiciones comunitarias",
+        "latitude": "16.906.944",
+        "longitude": "-96.331.111",
+        "lugar": "Santo Domingo Albarradas",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_Santo_Domingo_Albarradas"
+    },
+    {
+        "name": "Sendero a Hierve el Agua desde Albarradas",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta de acceso a las cascadas petrificadas desde Santo Domingo Albarradas; recorrido por paisajes naturales de los Valles Centrales",
+        "latitude": "16.890.000",
+        "longitude": "-96.300.000",
+        "lugar": "Santo Domingo Albarradas",
+        "url_media": "https://es.wikipedia.org/wiki/Santo_Domingo_Albarradas"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Principal sitio arqueológico zapoteco conocido por sus grecas ornamentales únicas en México; fue centro ceremonial y residencia de sumos sacerdotes",
+        "latitude": "16.926.389",
+        "longitude": "-96.359.444",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.inah.gob.mx/zonas/zona-arqueologica-de-mitla"
+    },
+    {
+        "name": "Museo de Sitio de la Zona Arqueológica de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo que resguarda piezas arqueológicas encontradas en las excavaciones de Mitla; exhibe cerámica textiles y objetos zapotecos",
+        "latitude": "16.926.389",
+        "longitude": "-96.359.444",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=2086"
+    },
+    {
+        "name": "Hierve el Agua",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cascadas petrificadas formadas por carbonato de calcio; sistema de riego prehispánico zapoteco y paisaje natural excepcional",
+        "latitude": "16.865.833",
+        "longitude": "-96.276.111",
+        "lugar": "San Lorenzo Albarradas",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Ciudad fortificada zapoteca con palacio de los seis patios tumba triple y juego de pelota; forma parte del Patrimonio Mundial UNESCO junto con las cuevas prehistóricas",
+        "latitude": "16.942.778",
+        "longitude": "-96.394.167",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx"
+    },
+    {
+        "name": "Cueva Prehistórica de Guilá Naquitz",
+        "category": "Sitios de patrimonio",
+        "description": "Cueva con evidencia arqueológica de domesticación temprana del maíz hace 10000 años; inscrita en la Lista del Patrimonio Mundial UNESCO",
+        "latitude": "16.940.000",
+        "longitude": "-96.390.000",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://whc.unesco.org"
+    },
+    {
+        "name": "Mercado de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Tianguis tradicional dominical más importante de los Valles Centrales; venta de productos agrícolas artesanías mezcal y comida oaxaqueña típica",
+        "latitude": "16.957.500",
+        "longitude": "-96.479.167",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Capilla del Señor de Tlacolula",
+        "category": "Sitios de patrimonio",
+        "description": "Templo barroco del siglo XVII con retablos dorados cúpula y capilla del Cristo de Tlacolula; obra maestra del arte religioso novohispano",
+        "latitude": "16.957.778",
+        "longitude": "-96.479.444",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Zona Arqueológica de Lambityeco",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio zapoteco con estuccos frisos y mascarones que representan deidades como Cocijo; destaca por sus tumbas y arquitectura ceremonial",
+        "latitude": "16.958.333",
+        "longitude": "-96.524.722",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.inah.gob.mx"
+    },
+    {
+        "name": "San Jerónimo Tlacochahuaya",
+        "category": "Sitios de patrimonio",
+        "description": "Templo dominico del siglo XVI con órgano tubular histórico del año 1700 restaurado; reconocido internacionalmente por su acústica excepcional",
+        "latitude": "17.026.944",
+        "longitude": "-96.606.944",
+        "lugar": "San Jerónimo Tlacochahuaya",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años de antigüedad y 42 metros de circunferencia; uno de los árboles más anchos del mundo",
+        "latitude": "17.046.389",
+        "longitude": "-96.636.389",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Templo y Ex Convento de Santa María del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto religioso colonial del siglo XVI franciscano; destaca por su arquitectura sobria y relación con el árbol sagrado del Tule",
+        "latitude": "17.046.667",
+        "longitude": "-96.636.667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Templo de San Juan Bautista - Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico dedicado al santo patrono San Juan Bautista; centro de la vida religiosa y festividades tradicionales de la comunidad zapoteca",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20178a.html"
+    },
+    {
+        "name": "Plaza Central de Guelache",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio cívico del pueblo donde se celebran festividades patronales eventos comunitarios y asambleas bajo el sistema de usos y costumbres",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://mexico.pueblosamerica.com/i/san-juan-bautista-guelache/"
+    },
+    {
+        "name": "Archivo Municipal de San Juan Bautista Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Archivo histórico que resguarda documentos desde 1526 incluyendo títulos de propiedad expedidos por el gobierno español y actas municipales",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=archivo&table_id=793"
+    },
+    {
+        "name": "Casa de la Cultura de Guelache",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro comunitario dedicado a la promoción de actividades culturales tradicionales y talleres artísticos para la población local",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20178a.html"
+    },
+    {
+        "name": "Agencia Municipal de Santos Degollado",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Comunidad zapoteca perteneciente al municipio con 539 habitantes que conserva tradiciones agrícolas y festividades locales",
+        "latitude": "17.221.389",
+        "longitude": "-96.790.556",
+        "lugar": "Santos Degollado",
+        "url_media": "http://www.nuestro-mexico.com/Oaxaca/San-Juan-Bautista-Guelache/Santos-Degollado/"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural instalado en antigua fábrica textil del siglo XIX; alberga talleres residenciales de artes visuales gráfica textiles y exposiciones temporales",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.casanagustin.org"
+    },
+    {
+        "name": "Museo de Arte Gráfico de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio dedicado al arte gráfico contemporáneo dentro del Centro de las Artes; exhibe obras de artistas residentes y colecciones internacionales",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.mexicodesconocido.com.mx/centro-de-las-artes-san-agustin-virtuosismo-oaxaqueno.html"
+    },
+    {
+        "name": "Antigua Fábrica de Hilados y Tejidos La Soledad",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio industrial del siglo XIX restaurado que hoy alberga el Centro de las Artes; ejemplo de arquitectura industrial oaxaqueña",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.cenart.gob.mx/2015/07/san-agustin-oaxaca/"
+    },
+    {
+        "name": "Templo de San Agustín de Hipona",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a San Agustín; arquitectura religiosa barroca que conserva retablos y arte sacro de los siglos XVII y XVIII",
+        "latitude": "17.155.556",
+        "longitude": "-96.694.444",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanagustin.htm"
+    },
+    {
+        "name": "Palacio Municipal de San Agustín Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio gubernamental construido a principios del siglo XX con arquitectura de estilo porfiriano; sede del gobierno municipal",
+        "latitude": "17.155.556",
+        "longitude": "-96.694.444",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanagustin.htm"
+    },
+    {
+        "name": "Casa de la Cultura de Villa de Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que ofrece talleres artísticos permanentes y promueve espectáculos culturales para niños jóvenes y adultos de la región",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://sic.gob.mx/ficha.php?table=centro_cultural&table_id=200"
+    },
+    {
+        "name": "Templo y Ex Convento de Villa de Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto religioso colonial construido sobre antigua zona ceremonial zapoteca; ejemplo de sincretismo arquitectónico novohispano",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Mercado Municipal de Villa de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Tianguis tradicional ubicado donde antiguamente existió un gran centro urbano zapoteco con pirámides y patios ceremoniales",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Plaza de la Constitución - Villa de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal del pueblo donde se realizan festividades cívicas tianguis dominicales y celebraciones patronales tradicionales",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20338a.html"
+    },
+    {
+        "name": "Zona Arqueológica de Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Restos de antiguo centro urbano zapoteco con pirámides y patios ceremoniales ubicados bajo el actual templo y mercado; evidencia de ocupación prehispánica",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Sitio de Domesticación Temprana del Maíz - Valle de Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Región donde se han encontrado semillas de maíz y calabaza datadas hace 10000 años; considerado uno de los centros de origen de la agricultura mesoamericana",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Casa de la Cultura Federico Flores Aguilar",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural instalado en el antiguo Palacio Municipal construido en 1910; edificio de arquitectura arrogante considerado notable en la región",
+        "latitude": "17.276.944",
+        "longitude": "-96.882.778",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=centro_cultural&table_id=922"
+    },
+    {
+        "name": "Casa de la Cultura San Pablo Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro comunitario dedicado a la preservación y difusión de las tradiciones culturales zapotecas; ofrece talleres y actividades artísticas",
+        "latitude": "17.242.222",
+        "longitude": "-96.775.556",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://sic.cultura.gob.mx/lista.php?estado_id=20&municipio_id=-1&table=centro_cultural"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol - San Pablo Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a San Pablo Apóstol; conserva elementos arquitectónicos barrocos y es centro de festividades religiosas comunitarias",
+        "latitude": "17.242.222",
+        "longitude": "-96.775.556",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Ruta del Queso Oaxaqueño - Valle de Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor gastronómico y cultural que recorre queserías artesanales del Valle de Etla famosas por la producción tradicional de quesillo oaxaqueño",
+        "latitude": "17.200.000",
+        "longitude": "-96.780.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Río Atoyac a su paso por Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cauce fluvial que atraviesa el Valle de Etla; recurso hídrico fundamental para la agricultura tradicional y ecosistema ribereño",
+        "latitude": "17.210.000",
+        "longitude": "-96.790.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Mercado de Quesillo y Productos Lácteos - Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado especializado en productos lácteos artesanales donde se comercializa el famoso quesillo de Etla y otros quesos tradicionales oaxaqueños",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Talleres de Producción de Quesillo",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Queserías familiares donde se elabora artesanalmente el quesillo oaxaqueño según técnicas tradicionales; ofrecen visitas y demostraciones",
+        "latitude": "17.195.000",
+        "longitude": "-96.795.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Capilla de la Virgen de Guadalupe - Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Capilla comunitaria dedicada a la Virgen de Guadalupe; espacio de devoción popular y peregrinaciones locales",
+        "latitude": "17.227.000",
+        "longitude": "-96.778.000",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20178a.html"
+    },
+    {
+        "name": "Campos de Cultivo de Maíz Criollo - Guelache",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Milpas tradicionales donde se cultivan variedades nativas de maíz según prácticas agrícolas ancestrales zapotecas; agrobiodiversidad activa",
+        "latitude": "17.224.000",
+        "longitude": "-96.782.000",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20178a.html"
+    },
+    {
+        "name": "Panteón Municipal de Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio histórico que conserva tumbas tradicionales y es escenario de las festividades de Día de Muertos con ofrendas monumentales",
+        "latitude": "17.228.000",
+        "longitude": "-96.780.000",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://mexico.pueblosamerica.com/i/san-juan-bautista-guelache/"
+    },
+    {
+        "name": "Mirador Natural Sierra Norte desde Guelache",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Punto panorámico natural que ofrece vistas hacia la Sierra Norte de Oaxaca; espacio para observación de paisajes y aves migratorias",
+        "latitude": "17.230.000",
+        "longitude": "-96.775.000",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.municipios.mx/oaxaca/san-juan-bautista-guelache/"
+    },
+    {
+        "name": "Salón de Usos Múltiples Comunitario",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio público para eventos sociales asambleas comunitarias y celebraciones tradicionales bajo el sistema de usos y costumbres",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://mexico.pueblosamerica.com/i/san-juan-bautista-guelache/"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Templo de San Miguel Arcángel - San Miguel Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico dedicado a San Miguel Arcángel; centro de la vida religiosa y festividades patronales de la comunidad zapoteca",
+        "latitude": "17.212.400",
+        "longitude": "-96.781.400",
+        "lugar": "San Miguel Etla",
+        "url_media": "http://www.nuestro-mexico.com/Oaxaca/San-Juan-Bautista-Guelache/San-Miguel-Etla/"
+    },
+    {
+        "name": "Plaza Central de San Miguel Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público central donde se realizan celebraciones comunitarias asambleas de usos y costumbres y festividades tradicionales",
+        "latitude": "17.212.400",
+        "longitude": "-96.781.400",
+        "lugar": "San Miguel Etla",
+        "url_media": "https://mexico.pueblosamerica.com/i/san-miguel-etla/"
+    },
+    {
+        "name": "Panteón Municipal de San Miguel Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio histórico comunitario ubicado en Avenida Independencia; espacio de memoria colectiva y festividades de Día de Muertos",
+        "latitude": "17.213.000",
+        "longitude": "-96.782.000",
+        "lugar": "San Miguel Etla",
+        "url_media": "https://www.familysearch.org/es/wiki/San_Juan_Bautista_Guelache"
+    },
+    {
+        "name": "Casa de la Cultura San Miguel Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro comunitario dedicado a la preservación de tradiciones zapotecas; ofrece talleres artísticos y actividades culturales para la población local",
+        "latitude": "17.212.400",
+        "longitude": "-96.781.400",
+        "lugar": "San Miguel Etla",
+        "url_media": "http://www.nuestro-mexico.com/Oaxaca/San-Juan-Bautista-Guelache/San-Miguel-Etla/"
+    },
+    {
+        "name": "Centro de Salud Rural San Miguel Etla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Centro de atención médica comunitaria que también funciona como espacio de educación en salud y medicina tradicional zapoteca",
+        "latitude": "17.212.000",
+        "longitude": "-96.781.500",
+        "lugar": "San Miguel Etla",
+        "url_media": "https://www.finanzasoaxaca.gob.mx/pdf/inversion_publica/pmds/08_10/178.pdf"
+    },
+    {
+        "name": "Campos de Cultivo Tradicional - San Miguel Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Milpas tradicionales donde se cultivan variedades nativas de maíz frijol y calabaza según prácticas agrícolas ancestrales zapotecas",
+        "latitude": "17.210.000",
+        "longitude": "-96.785.000",
+        "lugar": "San Miguel Etla",
+        "url_media": "http://www.nuestro-mexico.com/Oaxaca/San-Juan-Bautista-Guelache/San-Miguel-Etla/"
+    },
+    {
+        "name": "Templo de San Juan Bautista - Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico dedicado al santo patrono San Juan Bautista; centro de la vida religiosa y festividades tradicionales de la comunidad zapoteca",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20178a.html"
+    },
+    {
+        "name": "Archivo Municipal de San Juan Bautista Guelache",
+        "category": "Sitios de patrimonio",
+        "description": "Archivo histórico que resguarda documentos desde 1526 incluyendo títulos de propiedad expedidos por el gobierno español y actas municipales",
+        "latitude": "17.226.500",
+        "longitude": "-96.778.500",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=archivo&table_id=793"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural instalado en antigua fábrica textil del siglo XIX; alberga talleres residenciales de artes visuales gráfica textiles y exposiciones temporales",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://casa.oaxaca.gob.mx/wp/"
+    },
+    {
+        "name": "Museo de Arte Gráfico de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio dedicado al arte gráfico contemporáneo dentro del Centro de las Artes; exhibe obras de artistas residentes y colecciones internacionales",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.mexicodesconocido.com.mx/centro-de-las-artes-san-agustin-virtuosismo-oaxaqueno.html"
+    },
+    {
+        "name": "Antigua Fábrica de Hilados y Tejidos La Soledad",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio industrial del siglo XIX restaurado que hoy alberga el Centro de las Artes; ejemplo de arquitectura industrial oaxaqueña",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanagustin.htm"
+    },
+    {
+        "name": "Templo de San Agustín de Hipona",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a San Agustín; arquitectura religiosa barroca que conserva retablos y arte sacro de los siglos XVII y XVIII",
+        "latitude": "17.155.556",
+        "longitude": "-96.694.444",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanagustin.htm"
+    },
+    {
+        "name": "Palacio Municipal de San Agustín Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio gubernamental construido a principios del siglo XX con arquitectura de estilo porfiriano; destaca por su fachada principal",
+        "latitude": "17.155.556",
+        "longitude": "-96.694.444",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanagustin.htm"
+    },
+    {
+        "name": "Taller de Papel Reciclado - San Agustín Etla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Taller artesanal donde se produce papel reciclado con técnicas sustentables; ofrece demostraciones y actividades educativas",
+        "latitude": "17.156.000",
+        "longitude": "-96.694.000",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.tripadvisor.es/Attraction_Review-g3210346-d4789522-Reviews-Centro_de_Artes_de_San_Agustin-San_Agustin_Etla_Southern_Mexico.html"
+    },
+    {
+        "name": "Plaza Principal de San Agustín Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del pueblo donde se realizan festividades patronales mercados y eventos comunitarios tradicionales",
+        "latitude": "17.155.556",
+        "longitude": "-96.694.444",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.zonaturistica.com/que-hacer/oaxaca/san-agustin-etla"
+    },
+    {
+        "name": "Casa de la Cultura de Villa de Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que ofrece talleres artísticos permanentes y promueve espectáculos culturales para niños jóvenes y adultos de la región",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://sic.gob.mx/ficha.php?table=centro_cultural&table_id=200"
+    },
+    {
+        "name": "Templo y Ex Convento de Villa de Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto religioso colonial construido sobre antigua zona ceremonial zapoteca; ejemplo de sincretismo arquitectónico novohispano",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Mercado Municipal de Villa de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Tianguis tradicional ubicado donde antiguamente existió un gran centro urbano zapoteco con pirámides y patios ceremoniales",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Plaza de la Constitución - Villa de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal del pueblo donde se realizan festividades cívicas tianguis dominicales y celebraciones patronales tradicionales",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20338a.html"
+    },
+    {
+        "name": "Zona Arqueológica de Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Restos de antiguo centro urbano zapoteco con pirámides y patios ceremoniales ubicados bajo el actual templo y mercado; evidencia de ocupación prehispánica",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Sitio de Domesticación Temprana del Maíz - Valle de Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Región donde se han encontrado semillas de maíz y calabaza datadas hace 10000 años; considerado uno de los centros de origen de la agricultura mesoamericana",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Ruta del Queso Oaxaqueño - Valle de Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor gastronómico y cultural que recorre queserías artesanales del Valle de Etla famosas por la producción tradicional de quesillo oaxaqueño",
+        "latitude": "17.200.000",
+        "longitude": "-96.780.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Mercado de Quesillo y Productos Lácteos - Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado especializado en productos lácteos artesanales donde se comercializa el famoso quesillo de Etla y otros quesos tradicionales oaxaqueños",
+        "latitude": "17.200.000",
+        "longitude": "-96.800.000",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Talleres de Producción de Quesillo",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Queserías familiares donde se elabora artesanalmente el quesillo oaxaqueño según técnicas tradicionales; ofrecen visitas y demostraciones",
+        "latitude": "17.195.000",
+        "longitude": "-96.795.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Río Atoyac a su paso por Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cauce fluvial que atraviesa el Valle de Etla; recurso hídrico fundamental para la agricultura tradicional y ecosistema ribereño",
+        "latitude": "17.210.000",
+        "longitude": "-96.790.000",
+        "lugar": "Valle de Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/etla.htm"
+    },
+    {
+        "name": "Casa de la Cultura Federico Flores Aguilar",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural instalado en el antiguo Palacio Municipal construido en 1910; edificio de arquitectura notable considerado emblemático en la región",
+        "latitude": "17.276.944",
+        "longitude": "-96.882.778",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://sic.cultura.gob.mx/ficha.php?table=centro_cultural&table_id=922"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol - San Pablo Etla",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a San Pablo Apóstol; conserva elementos arquitectónicos barrocos y es centro de festividades religiosas comunitarias",
+        "latitude": "17.242.222",
+        "longitude": "-96.775.556",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Casa de la Cultura San Pablo Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro comunitario dedicado a la preservación y difusión de las tradiciones culturales zapotecas; ofrece talleres y actividades artísticas",
+        "latitude": "17.242.222",
+        "longitude": "-96.775.556",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://sic.cultura.gob.mx/lista.php?estado_id=20&municipio_id=-1&table=centro_cultural"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Templo de San Miguel Arcángel - Tlalixtac",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico principal de Tlalixtac de Cabrera dedicado a San Miguel Arcángel; centro de la vida religiosa comunitaria y festividades patronales",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20553a.html"
+    },
+    {
+        "name": "Plaza Central de Tlalixtac de Cabrera",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Explanada municipal y centro cívico donde se realizan festividades patronales eventos comunitarios y celebraciones tradicionales zapotecas",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "https://www.mexicoescultura.com/recinto/68652/explanada-municipal-de-tlalixtac-de-cabrera.html"
+    },
+    {
+        "name": "Biblioteca Pública Municipal Tlalixtac",
+        "category": "Espacios culturales y artísticos",
+        "description": "Biblioteca pública que forma parte de la Red Nacional de Bibliotecas; ofrece servicios de consulta y fomento a la lectura para la comunidad",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "http://www.oaxaca.sic.gob.mx/index.php?table=biblioteca&municipio_id=553&table_id=814"
+    },
+    {
+        "name": "Casa de la Cultura de Tlalixtac de Cabrera",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que promueve actividades artísticas talleres y expresiones culturales tradicionales y contemporáneas",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "https://www.tlalixtacdecabrera.com/"
+    },
+    {
+        "name": "Palacio Municipal de Tlalixtac",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio gubernamental ubicado en Calle Miguel Cabrera; sede del ayuntamiento y espacio emblemático de la administración municipal",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "https://www.tlalixtacdecabrera.com/"
+    },
+    {
+        "name": "Mercado Municipal de Tlalixtac",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde se comercializan productos locales agrícolas artesanías y alimentos típicos oaxaqueños; centro de intercambio comunitario",
+        "latitude": "17.071.000",
+        "longitude": "-96.649.000",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "https://mexicocalidadsuprema.com.mx/tlalixtac-de-cabrera/"
+    },
+    {
+        "name": "Sitio Arqueológico Zapoteco de Tlalixtac",
+        "category": "Sitios de patrimonio",
+        "description": "Vestigios arqueológicos de la antigua ciudad zapoteca fundada en el siglo XII; evidencia de ocupación prehispánica en el Valle de Oaxaca",
+        "latitude": "17.070.833",
+        "longitude": "-96.648.889",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20553a.html"
+    },
+    {
+        "name": "Panteón Municipal de Tlalixtac",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio histórico comunitario; espacio de memoria colectiva y escenario de las festividades de Día de Muertos con ofrendas monumentales",
+        "latitude": "17.072.000",
+        "longitude": "-96.650.000",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "https://mexicocalidadsuprema.com.mx/tlalixtac-de-cabrera/"
+    },
+    {
+        "name": "Campos de Cultivo Tradicional - Tlalixtac",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Milpas y parcelas agrícolas donde se cultivan variedades nativas de maíz según prácticas ancestrales zapotecas; agrobiodiversidad activa",
+        "latitude": "17.075.000",
+        "longitude": "-96.645.000",
+        "lugar": "Tlalixtac de Cabrera",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20553a.html"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años de antigüedad y 42 metros de circunferencia; uno de los árboles más anchos del mundo y Patrimonio Natural",
+        "latitude": "17.046.389",
+        "longitude": "-96.636.389",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.gob.mx/sectur"
+    },
+    {
+        "name": "Templo de Santa María de la Asunción - El Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial del siglo XVI que resguarda el Árbol del Tule en su atrio; arquitectura franciscana con elementos barrocos",
+        "latitude": "17.046.667",
+        "longitude": "-96.636.667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.tripadvisor.com.mx/Attraction_Review-g7158692-d15291364-Reviews-Santa_Maria_de_la_Asuncion-Santa_Maria_del_Tule_Southern_Mexico.html"
+    },
+    {
+        "name": "Plaza Central de Santa María del Tule",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del pueblo ubicado junto al Árbol del Tule; espacio para mercados artesanales festividades y eventos comunitarios",
+        "latitude": "17.046.389",
+        "longitude": "-96.636.389",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.mexicodestinos.com/lugares/santa-maria-del-tule-"
+    },
+    {
+        "name": "Mercado de Artesanías del Tule",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional alrededor del Árbol del Tule; venta de textiles de lana alebrijes mezcal y artesanías oaxaqueñas",
+        "latitude": "17.046.500",
+        "longitude": "-96.636.500",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.tripadvisor.es/Attractions-g7158692-Activities-Santa_Maria_del_Tule_Southern_Mexico.html"
+    },
+    {
+        "name": "Museo Comunitario del Tule",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo que exhibe la historia natural del Árbol del Tule piezas arqueológicas zapotecas y documentación histórica de la comunidad",
+        "latitude": "17.046.400",
+        "longitude": "-96.636.400",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://cvc.cervantes.es/artes/ciudades_patrimonio/oaxaca/paseo/tule.htm"
+    },
+    {
+        "name": "Centro Cultural de Santa María del Tule",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio dedicado a la preservación de tradiciones zapotecas; ofrece talleres de artesanías danza y música tradicional",
+        "latitude": "17.046.300",
+        "longitude": "-96.636.300",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.getyourguide.es/santa-maria-del-tule-l135627/"
+    },
+    {
+        "name": "Templo de San Sebastián Mártir - Tutla",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico colonial dedicado a San Sebastián Mártir; centro religioso de la comunidad con arquitectura barroca novohispana",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Sebastián Tutla",
+        "url_media": "https://es.wikipedia.org/wiki/Municipio_de_San_Sebasti%C3%A1n_Tutla"
+    },
+    {
+        "name": "Plaza Central de San Sebastián Tutla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro cívico del municipio conurbado con Oaxaca de Juárez; espacio para festividades patronales y eventos comunitarios",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Sebastián Tutla",
+        "url_media": "https://www.expedia.mx/Oaxaca-San-Sebastian-Tutla.dx553248635640678282"
+    },
+    {
+        "name": "Casa de la Cultura San Sebastián Tutla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que promueve actividades artísticas talleres y expresiones culturales para niños jóvenes y adultos de la región",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Sebastián Tutla",
+        "url_media": "https://www.expedia.mx/Oaxaca-San-Sebastian-Tutla.dx553248635640678282"
+    },
+    {
+        "name": "Mercado Municipal de Tutla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde se comercializan productos agrícolas locales alimentos típicos y artesanías; punto de intercambio económico comunitario",
+        "latitude": "17.034.000",
+        "longitude": "-96.701.000",
+        "lugar": "San Sebastián Tutla",
+        "url_media": "https://www.expedia.mx/Oaxaca-San-Sebastian-Tutla.dx553248635640678282"
+    },
+    {
+        "name": "Templo de Santa Lucía Virgen y Mártir",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico colonial dedicado a Santa Lucía; arquitectura religiosa barroca que conserva retablos y arte sacro tradicional",
+        "latitude": "17.050.000",
+        "longitude": "-96.683.333",
+        "lugar": "Santa Lucía del Camino",
+        "url_media": "https://es.wikipedia.org/wiki/Santa_Luc%C3%ADa_del_Camino"
+    },
+    {
+        "name": "Plaza Central de Santa Lucía del Camino",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del municipio conurbado con la capital oaxaqueña; espacio para festividades cívicas y religiosas tradicionales",
+        "latitude": "17.050.000",
+        "longitude": "-96.683.333",
+        "lugar": "Santa Lucía del Camino",
+        "url_media": "https://es.wikipedia.org/wiki/Santa_Luc%C3%ADa_del_Camino"
+    },
+    {
+        "name": "Centro Cultural Santa Lucía",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio cultural que ofrece talleres artísticos exposiciones y actividades de difusión de las tradiciones zapotecas",
+        "latitude": "17.050.000",
+        "longitude": "-96.683.333",
+        "lugar": "Santa Lucía del Camino",
+        "url_media": "https://sic.gob.mx"
+    },
+    {
+        "name": "Jardín Etnobotánico de Oaxaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín botánico dedicado a la conservación de flora endémica de Oaxaca; espacio educativo sobre biodiversidad regional y plantas medicinales",
+        "latitude": "17.063.889",
+        "longitude": "-96.726.389",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.jardinetnobotanico.org"
+    },
+    {
+        "name": "Museo de las Culturas de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo ubicado en el exconvento de Santo Domingo de Guzmán; exhibe importantes colecciones arqueológicas zapotecas y mixtecas incluido el tesoro de Monte Albán",
+        "latitude": "17.065.556",
+        "longitude": "-96.716.667",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=105"
+    },
+    {
+        "name": "Templo y Exconvento de Santo Domingo de Guzmán",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto arquitectónico barroco del siglo XVI considerado Patrimonio Cultural de la Humanidad; uno de los recintos religiosos más importantes de México",
+        "latitude": "17.065.556",
+        "longitude": "-96.716.667",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=105"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural instalado en antigua fábrica textil del siglo XIX; alberga talleres residenciales de artes visuales gráfica textiles y exposiciones temporales",
+        "latitude": "17.155.833",
+        "longitude": "-96.694.167",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://casa.oaxaca.gob.mx/wp/"
+    },
+    {
+        "name": "Zona Arqueológica de Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Ciudad zapoteca prehispánica declarada Patrimonio Mundial UNESCO; capital ceremonial y política con pirámides templos y juego de pelota",
+        "latitude": "17.043.056",
+        "longitude": "-96.767.778",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.inah.gob.mx"
+    },
+    {
+        "name": "Ruta de los Conventos - Valles Centrales",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor cultural que conecta templos y conventos coloniales del siglo XVI en los Valles Centrales; patrimonio arquitectónico y religioso",
+        "latitude": "17.050.000",
+        "longitude": "-96.700.000",
+        "lugar": "Valles Centrales",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/"
+    },
+    {
+        "name": "Corredor Gastronómico Tlalixtac-Tule",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta gastronómica que conecta restaurantes tradicionales queserías y productores de mezcal artesanal entre Tlalixtac y Santa María del Tule",
+        "latitude": "17.058.000",
+        "longitude": "-96.642.000",
+        "lugar": "Tlalixtac-Tule",
+        "url_media": "https://mexicocalidadsuprema.com.mx/tlalixtac-de-cabrera/"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología historia del convento y del ferrocarril",
+        "latitude": "1.727.708.118",
+        "longitude": "-9.688.349.664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias danzas tradicionales y festividades patronales",
+        "latitude": "17.276.520",
+        "longitude": "-96.882.310",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Templo de San Antonio de Padua - San Antonio de la Cal",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico colonial dedicado a San Antonio de Padua; centro de la vida religiosa y festividades patronales de la comunidad",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20107a.html"
+    },
+    {
+        "name": "Plaza Central de San Antonio de la Cal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro cívico municipal donde se realizan festividades patronales eventos comunitarios y celebraciones tradicionales zapotecas",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Casa de la Cultura San Antonio de la Cal",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que ofrece talleres artísticos permanentes y promueve actividades culturales para niños jóvenes y adultos de la comunidad",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Biblioteca Pública Municipal San Antonio de la Cal",
+        "category": "Espacios culturales y artísticos",
+        "description": "Biblioteca que forma parte de la Red Nacional de Bibliotecas Públicas; ofrece servicios de consulta y fomento a la lectura",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Palacio Municipal de San Antonio de la Cal",
+        "category": "Sitios de patrimonio",
+        "description": "Edificio gubernamental sede del ayuntamiento; construcción moderna que alberga la administración municipal y espacios para eventos cívicos",
+        "latitude": "17.033.333",
+        "longitude": "-96.700.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Mercado Municipal de San Antonio de la Cal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde se comercializan productos agrícolas locales alimentos típicos oaxaqueños y artesanías; centro de intercambio económico",
+        "latitude": "17.034.000",
+        "longitude": "-96.701.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Panteón Municipal de San Antonio de la Cal",
+        "category": "Sitios de patrimonio",
+        "description": "Cementerio histórico comunitario; espacio de memoria colectiva y escenario de las festividades de Día de Muertos con ofrendas monumentales",
+        "latitude": "17.035.000",
+        "longitude": "-96.702.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Campos de Cultivo Tradicional - San Antonio de la Cal",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Parcelas agrícolas donde se cultivan variedades nativas de maíz y hortalizas según prácticas ancestrales zapotecas",
+        "latitude": "17.030.000",
+        "longitude": "-96.695.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20107a.html"
+    },
+    {
+        "name": "Zona Arqueológica de Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Ciudad zapoteca prehispánica declarada Patrimonio Mundial UNESCO en 1987; capital ceremonial y política con pirámides templos juego de pelota y observatorio astronómico",
+        "latitude": "17.043.056",
+        "longitude": "-96.767.778",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://www.inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Museo de Sitio de Monte Albán",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo inaugurado en 1994 que exhibe objetos encontrados en las excavaciones; ofrece panorama sobre la historia de la ciudad prehispánica zapoteca",
+        "latitude": "17.043.056",
+        "longitude": "-96.767.778",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=877"
+    },
+    {
+        "name": "Gran Plaza de Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Plaza ceremonial central rodeada por edificios monumentales pirámides y plataformas; corazón político y religioso de la antigua capital zapoteca",
+        "latitude": "17.043.056",
+        "longitude": "-96.767.778",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://www.inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Juego de Pelota - Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Cancha prehispánica para el juego ritual mesoamericano; estructura ceremonial fundamental en la cosmovisión zapoteca",
+        "latitude": "17.043.333",
+        "longitude": "-96.768.056",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://www.inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Edificio de los Danzantes - Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Estructura con bajo relieves de figuras humanas llamadas danzantes; evidencia de escritura zapoteca temprana y prácticas rituales",
+        "latitude": "17.043.222",
+        "longitude": "-96.768.111",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://www.inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Tumba 104 y 105 - Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Tumbas zapotecas con murales policromos y ofrendas funerarias; testimonio del arte y las creencias religiosas sobre la muerte",
+        "latitude": "17.042.778",
+        "longitude": "-96.767.500",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://www.inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Templo del Señor de las Peñas - Santa Cruz Xoxocotlán",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico colonial dedicado al Cristo crucificado encontrado en una cueva; centro de peregrinación regional y festividades religiosas",
+        "latitude": "17.033.333",
+        "longitude": "-96.733.333",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20385a.html"
+    },
+    {
+        "name": "Plaza Central de Santa Cruz Xoxocotlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro social del municipio conurbado con Oaxaca; espacio para festividades patronales y eventos comunitarios tradicionales",
+        "latitude": "17.033.333",
+        "longitude": "-96.733.333",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20385a.html"
+    },
+    {
+        "name": "Casa de la Cultura de Santa Cruz Xoxocotlán",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que promueve talleres artísticos exposiciones y difusión de tradiciones zapotecas y mixtecas de la región",
+        "latitude": "17.033.333",
+        "longitude": "-96.733.333",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Panteón Municipal de Xoxocotlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Cementerio famoso por sus celebraciones monumentales de Día de Muertos con ofrendas gigantes música danza y convivencia comunitaria",
+        "latitude": "17.030.000",
+        "longitude": "-96.730.000",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20385a.html"
+    },
+    {
+        "name": "Mercado Municipal de Xoxocotlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde se comercializan productos agrícolas flores para Día de Muertos alimentos típicos y artesanías locales",
+        "latitude": "17.034.000",
+        "longitude": "-96.734.000",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "http://www.inafed.gob.mx/work/enciclopedia/EMM20oaxaca/municipios/20385a.html"
+    },
+    {
+        "name": "Ex Convento de Cuilápam de Guerrero",
+        "category": "Sitios de patrimonio",
+        "description": "Monumento histórico dominico del siglo XVI inconcluso; considerado una de las construcciones religiosas más imponentes de América con arquitectura renacentista",
+        "latitude": "17.012.500",
+        "longitude": "-96.789.167",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Templo de Santiago Apóstol - Cuilápam",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico adyacente al ex convento; construcción colonial que conserva elementos arquitectónicos barrocos y capilla abierta",
+        "latitude": "17.012.500",
+        "longitude": "-96.789.167",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Capilla Abierta de Cuilápam",
+        "category": "Sitios de patrimonio",
+        "description": "Estructura única del siglo XVI para evangelización masiva de indígenas; ejemplo excepcional de arquitectura religiosa novohispana temprana",
+        "latitude": "17.012.500",
+        "longitude": "-96.789.167",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Museo de las Culturas de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo ubicado en el exconvento de Santo Domingo de Guzmán; exhibe importantes colecciones arqueológicas zapotecas y mixtecas incluido el tesoro de Monte Albán",
+        "latitude": "17.065.556",
+        "longitude": "-96.716.667",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=105"
+    },
+    {
+        "name": "Templo y Exconvento de Santo Domingo de Guzmán",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto arquitectónico barroco del siglo XVI declarado Patrimonio Cultural de la Humanidad UNESCO; uno de los recintos religiosos más importantes de México",
+        "latitude": "17.065.556",
+        "longitude": "-96.716.667",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=105"
+    },
+    {
+        "name": "Jardín Etnobotánico de Oaxaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín botánico dedicado a la conservación de flora endémica de Oaxaca; espacio educativo sobre biodiversidad regional plantas medicinales y especies tradicionales",
+        "latitude": "17.063.889",
+        "longitude": "-96.726.389",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.jardinetnobotanico.org"
+    },
+    {
+        "name": "Andador Turístico de San Antonio de la Cal",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor peatonal que conecta sitios de interés cultural y gastronómico; promueve el turismo local y artesanías tradicionales",
+        "latitude": "17.032.000",
+        "longitude": "-96.698.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Ruta Monte Albán - Cuilápam",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor cultural y arqueológico que conecta la zona arqueológica de Monte Albán con el ex convento de Cuilápam; recorrido por sitios Patrimonio Mundial",
+        "latitude": "17.027.778",
+        "longitude": "-96.778.472",
+        "lugar": "Valles Centrales",
+        "url_media": "https://www.oaxaca.gob.mx/sectur/"
+    },
+    {
+        "name": "Talleres de Alfarería Tradicional - San Antonio de la Cal",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres artesanales donde se produce alfarería con técnicas ancestrales zapotecas; ofrecen demostraciones y venta directa de piezas de barro negro y rojo",
+        "latitude": "17.031.000",
+        "longitude": "-96.697.000",
+        "lugar": "San Antonio de la Cal",
+        "url_media": "https://www.municipio-sanantoniodelacal.gob.mx/"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología",
+        "latitude": "17,27708118",
+        "longitude": "-96,88349664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Plaza Central de San Pablo Huitzo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público donde se realizan ferias",
+        "latitude": "17,27652",
+        "longitude": "-96,88231",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huitzo"
+    },
+    {
+        "name": "Templo de San Agustín",
+        "category": "Sitios de patrimonio",
+        "description": "Templo fundado en 1600 en honor al santo patrón; de gran valor histórico por haber alojado al general Vicente Guerrero en 1824",
+        "latitude": "17,011111",
+        "longitude": "-96,711667",
+        "lugar": "San Agustín de las Juntas",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Plaza Central San Agustín de las Juntas",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro de la vida comunitaria donde se realizan festividades patronales y mercados locales; asentamiento zapoteco de origen prehispánico",
+        "latitude": "17,011111",
+        "longitude": "-96,711667",
+        "lugar": "San Agustín de las Juntas",
+        "url_media": ""
+    },
+    {
+        "name": "Centro de las Artes de San Agustín (CASA)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Primer centro de las artes ecológico en Latinoamérica; espacio para talleres artísticos",
+        "latitude": "17,189167",
+        "longitude": "-96,774722",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://casa.oaxaca.gob.mx"
+    },
+    {
+        "name": "Casa de la Cultura San Pablo Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que ofrece talleres artísticos y actividades culturales permanentes",
+        "latitude": "17,195833",
+        "longitude": "-96,756111",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Casa de la Cultura de Villa de Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que genera procesos de desarrollo cultural permanente mediante talleres y eventos",
+        "latitude": "17,2",
+        "longitude": "-96,786111",
+        "lugar": "Villa de Etla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Antigua capital zapoteca fundada 500 a.C.; Patrimonio Mundial UNESCO 1987; una de las primeras ciudades mesoamericanas con la Gran Plaza como área principal",
+        "latitude": "17,043333",
+        "longitude": "-96,767778",
+        "lugar": "Santa Cruz Xoxocotlán",
+        "url_media": "https://inah.gob.mx/zonas/94-zona-arqueologica-de-monte-alban"
+    },
+    {
+        "name": "Zona Arqueológica de Atzompa",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico en el Cerro El Bonete; complemento de Monte Albán con palacios y la extraordinaria Tumba 3; ejerció poder estatal zapoteco",
+        "latitude": "17,066667",
+        "longitude": "-96,791667",
+        "lugar": "Santa María Atzompa",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Centro ceremonial zapoteco conocido por sus grecas únicas; lugar sagrado y de peregrinación; significa 'lugar de los muertos'",
+        "latitude": "16,928611",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años; uno de los árboles más anchos del mundo; ubicado en el atrio de la iglesia de Santa María",
+        "latitude": "17,046389",
+        "longitude": "-96,636667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Museo de las Culturas de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo ubicado en el ex-convento de Santo Domingo de Guzmán; exhibe panorama arqueológico y cultural de Oaxaca; patrimonio arquitectónico colonial",
+        "latitude": "17,073056",
+        "longitude": "-96,718889",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx"
+    },
+    {
+        "name": "Templo y Ex-Convento de Santo Domingo",
+        "category": "Sitios de patrimonio",
+        "description": "Monumento histórico del siglo XVI; ejemplo destacado de arquitectura colonial; alberga el Museo de las Culturas de Oaxaca",
+        "latitude": "17,073056",
+        "longitude": "-96,718889",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Mercado de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional dominical con más de 500 años; centro de intercambio cultural zapoteco; gastronomía",
+        "latitude": "17",
+        "longitude": "-96,477778",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Casa de la Cultura de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que preserva y difunde tradiciones zapotecas; talleres de lengua zapoteca",
+        "latitude": "16,928611",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Mercado de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional conocido por su producción quesera artesanal; centro de intercambio de productos de la región",
+        "latitude": "17,2",
+        "longitude": "-96,786111",
+        "lugar": "Villa de Etla",
+        "url_media": ""
+    },
+    {
+        "name": "Zona Arqueológica de Dainzú",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteco con jugadores de pelota tallados en piedra; florecimiento entre 300 a.C. y 350 d.C.",
+        "latitude": "17",
+        "longitude": "-96,527778",
+        "lugar": "San Macario Trinidad",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Lambityeco",
+        "category": "Sitios de patrimonio",
+        "description": "Centro urbano zapoteco con estelas y tumbas decoradas; importante por sus representaciones de gobernantes locales",
+        "latitude": "16,961667",
+        "longitude": "-96,523333",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Jardín Etnobotánico de Oaxaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín dedicado a la conservación de flora endémica de Oaxaca; educación ambiental y rescate de conocimiento tradicional sobre plantas",
+        "latitude": "17,065278",
+        "longitude": "-96,719444",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.jardinethnobotanico.org"
+    },
+    {
+        "name": "Mercado Benito Juárez",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional central; artesanías",
+        "latitude": "17,064167",
+        "longitude": "-96,724444",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Centro Cultural Santo Domingo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Complejo cultural que incluye biblioteca",
+        "latitude": "17,073056",
+        "longitude": "-96,718889",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Casa de la Ciudad de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural dedicado a exposiciones de arte contemporáneo y actividades comunitarias",
+        "latitude": "17,064444",
+        "longitude": "-96,724722",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Biblioteca Pública Central del Estado",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Biblioteca pública con acervo histórico; programas de fomento a la lectura y preservación documental",
+        "latitude": "17,067778",
+        "longitude": "-96,725556",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": ""
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio zapoteco post-clásico con palacio de los Seis Patios; fortaleza natural con vistas panorámicas del valle de Tlacolula",
+        "latitude": "16,942222",
+        "longitude": "-96,408333",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Mercado de Ocotlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional de los viernes; famoso por artesanías de cuchillos",
+        "latitude": "16,788889",
+        "longitude": "-96,673889",
+        "lugar": "Ocotlán de Morelos",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Zona Arqueológica de Zaachila",
+        "category": "Sitios de patrimonio",
+        "description": "Última capital zapoteca antes de la conquista española; tumbas con decoración policromada y ofrendas de oro",
+        "latitude": "16,943056",
+        "longitude": "-96,765",
+        "lugar": "Villa de Zaachila",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Mercado de Zaachila",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional de los jueves; centro de intercambio con fuerte presencia de ganadería y productos del campo",
+        "latitude": "16,943056",
+        "longitude": "-96,765",
+        "lugar": "Villa de Zaachila",
+        "url_media": ""
+    },
+    {
+        "name": "Templo de Cuilápam de Guerrero (Ex-Convento)",
+        "category": "Sitios de patrimonio",
+        "description": "Ex-convento dominico del siglo XVI; lugar histórico donde fue ejecutado Vicente Guerrero en 1831; arquitectura inacabada monumental",
+        "latitude": "17,004722",
+        "longitude": "-96,790556",
+        "lugar": "Cuilápam de Guerrero",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Museo Comunitario de Santa Ana del Valle",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Museo comunitario zapoteco que preserva tradiciones textiles ancestrales; exhibiciones de tejido en telar de pedal",
+        "latitude": "17,006944",
+        "longitude": "-96,424167",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Museo Comunitario Balaa Xtee Guech Gulal (Teotitlán del Valle)",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Museo comunitario dedicado a la tradición textil zapoteca; preservación de técnicas ancestrales de teñido natural",
+        "latitude": "17,020556",
+        "longitude": "-96,529722",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de San José El Mogote",
+        "category": "Sitios de patrimonio",
+        "description": "Uno de los asentamientos más antiguos del Valle de Oaxaca; ocupación desde 1500 a.C.; antecedente de Monte Albán",
+        "latitude": "17,228889",
+        "longitude": "-96,762222",
+        "lugar": "San José El Mogote",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Hierve el Agua",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cascadas petrificadas naturales formadas por minerales; sistema de riego prehispánico; paisaje espectacular y sitio sagrado",
+        "latitude": "16,868056",
+        "longitude": "-96,276389",
+        "lugar": "San Lorenzo Albarradas",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Santuario de la Virgen de Juquila (Basílica)",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro de peregrinación mariana; importante festividad religiosa cada 8 de diciembre; sincretismo religioso indígena-católico",
+        "latitude": "16,236111",
+        "longitude": "-97,294167",
+        "lugar": "Santa Catarina Juquila",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Centro Cultural Comunitario San Martín Tilcajete",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Centro dedicado a la artesanía de alebrijes; talleres de tallado en madera de copal y técnicas de pintura tradicional",
+        "latitude": "16,931389",
+        "longitude": "-96,666111",
+        "lugar": "San Martín Tilcajete",
+        "url_media": ""
+    },
+    {
+        "name": "Mercado de Abastos de Oaxaca",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado más grande de la ciudad; centro de distribución de productos regionales; gastronomía y productos tradicionales",
+        "latitude": "17,056667",
+        "longitude": "-96,7025",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Teatro Macedonio Alcalá",
+        "category": "Espacios culturales y artísticos",
+        "description": "Teatro histórico inaugurado en 1909; arquitectura neoclásica francesa; sede de eventos culturales y artísticos de alto nivel",
+        "latitude": "17,064167",
+        "longitude": "-96,723056",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Instituto de Artes Gráficas de Oaxaca (IAGO)",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Centro de enseñanza y difusión de las artes gráficas; biblioteca especializada y exposiciones; legado del maestro Francisco Toledo",
+        "latitude": "17,064722",
+        "longitude": "-96,722778",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.institutodeartesgraficas.org"
+    },
+    {
+        "name": "Casa de las Artesanías de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Exhibición y venta de artesanías tradicionales oaxaqueñas; promoción de artesanos y oficios tradicionales",
+        "latitude": "17,065",
+        "longitude": "-96,723333",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Museo de los Pintores Oaxaqueños (MUPO)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo dedicado a pintores oaxaqueños; exposiciones temporales y permanentes de arte contemporáneo regional",
+        "latitude": "17,063889",
+        "longitude": "-96,722778",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Cerro del Fortín",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mirador natural de la ciudad; sede de la Guelaguetza; anfiteatro donde se celebra la máxima fiesta cultural de Oaxaca",
+        "latitude": "17,073333",
+        "longitude": "-96,733333",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica del Cerro de la Campana",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio ceremonial zapoteco con estructuras y tumbas; vista panorámica de los Valles Centrales",
+        "latitude": "17,100556",
+        "longitude": "-96,789722",
+        "lugar": "Suchilquitongo",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Talleres de Barro Rojo",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Comunidad reconocida por la tradición ancestral de alfarería en barro rojo; talleres artesanales familiares principalmente dirigidos por mujeres artesanas",
+        "latitude": "16,911389",
+        "longitude": "-96,523611",
+        "lugar": "San Marcos Tlapazola",
+        "url_media": "https://lolomercadito.com/blogs/news/crafted-in-barro-rojo-the-women-artisans-of-san-marcos-tlapazola"
+    },
+    {
+        "name": "Templo de San Marcos Tlapazola",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Templo comunitario donde se celebran festividades patronales; centro de la vida religiosa y social zapoteca",
+        "latitude": "16,911389",
+        "longitude": "-96,523611",
+        "lugar": "San Marcos Tlapazola",
+        "url_media": ""
+    },
+    {
+        "name": "Plaza Central de San Marcos Tlapazola",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro de reunión comunitaria donde se realizan festividades y actividades tradicionales zapotecas",
+        "latitude": "16,911389",
+        "longitude": "-96,523611",
+        "lugar": "San Marcos Tlapazola",
+        "url_media": ""
+    },
+    {
+        "name": "Mercado de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional dominical con más de 500 años de historia; centro de intercambio cultural zapoteco con gastronomía",
+        "latitude": "17",
+        "longitude": "-96,477778",
+        "lugar": "",
+        "url_media": "Tlacolula de Matamoros"
+    },
+    {
+        "name": "Capilla del Señor de Tlacolula",
+        "category": "Sitios de patrimonio",
+        "description": "Joya del barroco mexicano del siglo XVI anexa al templo de Santa María la Asunción; relieves en cal decorados con hoja de oro y representaciones de santos y arcángeles",
+        "latitude": "17,001389",
+        "longitude": "-96,4775",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.oaxaca-mio.com/mezcalesdeoaxaca/tlacolula.htm"
+    },
+    {
+        "name": "Templo de Santa María la Asunción de Tlacolula",
+        "category": "Sitios de patrimonio",
+        "description": "Monumento histórico erigido en 1531 con planta rectangular y cúpula principal; ejemplo destacado de arquitectura colonial religiosa",
+        "latitude": "17,001389",
+        "longitude": "-96,4775",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/tlacolula.htm"
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio zapoteco post-clásico con el Palacio de los Seis Patios; fortaleza natural con vistas panorámicas del Valle de Tlacolula",
+        "latitude": "16,942222",
+        "longitude": "-96,408333",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Cuevas Prehistóricas de Yagul y Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Patrimonio Mundial UNESCO; evidencia de ocupación humana prehistórica y desarrollo de agricultura temprana en Mesoamérica",
+        "latitude": "16,935",
+        "longitude": "-96,383889",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://whc.unesco.org"
+    },
+    {
+        "name": "Zona Arqueológica de Lambityeco",
+        "category": "Sitios de patrimonio",
+        "description": "Centro urbano zapoteco con estelas y tumbas decoradas; importantes representaciones de gobernantes locales y arquitectura clásica",
+        "latitude": "16,961667",
+        "longitude": "-96,523333",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Centro ceremonial zapoteco conocido por sus grecas únicas en toda Mesoamérica; lugar sagrado que significa 'lugar de los muertos'",
+        "latitude": "16,928611",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Museo de Arte Zapoteco de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo que exhibe la riqueza cultural zapoteca con piezas arqueológicas y arte tradicional; documentación de la historia local",
+        "latitude": "16,928611",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Casa de la Cultura de Mitla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural comunitario que preserva y difunde tradiciones zapotecas; talleres de lengua zapoteca y textiles",
+        "latitude": "16,928611",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Museo Comunitario Balaa Xtee Guech Gulal",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Museo comunitario zapoteco creado en 1995 dedicado a la tradición textil; exhibe piezas arqueológicas",
+        "latitude": "17,020556",
+        "longitude": "-96,529722",
+        "lugar": "",
+        "url_media": "Teotitlán del Valle"
+    },
+    {
+        "name": "Templo de la Preciosa Sangre de Cristo (Teotitlán)",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico del siglo XVI de estilo barroco; patrimonio arquitectónico ubicado en la plaza central de la comunidad",
+        "latitude": "17,020556",
+        "longitude": "-96,529722",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Talleres de Tapetes de Teotitlán del Valle",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Comunidad zapoteca reconocida mundialmente por sus tapetes tejidos en telar de pedal con tintes naturales; tradición textil ancestral",
+        "latitude": "17,020556",
+        "longitude": "-96,529722",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://programadestinosmexico.com"
+    },
+    {
+        "name": "El Picacho (Cerro Sagrado)",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cerro considerado sagrado y místico por la comunidad; ofrece vista panorámica del Valle de Tlacolula y es sitio de ceremonias tradicionales",
+        "latitude": "17,03",
+        "longitude": "-96,54",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Cueva del Pedimento (Teotitlán)",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Sitio de peregrinación tradicional en Año Nuevo; lugar sagrado donde los habitantes hacen peticiones a la imagen de la virgen",
+        "latitude": "17,025",
+        "longitude": "-96,535",
+        "lugar": "Teotitlán del Valle",
+        "url_media": ""
+    },
+    {
+        "name": "Museo Comunitario Shan Dany",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Museo comunitario ubicado junto al mercado de textiles y la plaza central; contiene cuatro salas dedicadas a arqueología",
+        "latitude": "17,006944",
+        "longitude": "-96,424167",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://arkeopatias.wordpress.com"
+    },
+    {
+        "name": "Templo de Santa Ana (Santa Ana del Valle)",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico del siglo XVIII de estilo barroco; patrimonio arquitectónico religioso en el centro de la comunidad zapoteca",
+        "latitude": "17,006944",
+        "longitude": "-96,424167",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Talleres Textiles de Santa Ana del Valle",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Comunidad zapoteca que conserva su lengua nativa y tradición de tejido en telar de pedal; producción de tapetes 100% artesanales de lana",
+        "latitude": "17,006944",
+        "longitude": "-96,424167",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.envia.org"
+    },
+    {
+        "name": "Teatro al Aire Libre de Santa Ana del Valle",
+        "category": "Espacios culturales y artísticos",
+        "description": "Espacio cultural al aire libre ubicado en el centro urbano; sede de presentaciones comunitarias y eventos tradicionales",
+        "latitude": "17,007",
+        "longitude": "-96,424",
+        "lugar": "Santa Ana del Valle",
+        "url_media": ""
+    },
+    {
+        "name": "Zona Arqueológica de Dainzú",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteco famoso por sus bajorrelieves de jugadores de pelota tallados en piedra; florecimiento entre 300 a.C. y 350 d.C.",
+        "latitude": "17",
+        "longitude": "-96,527778",
+        "lugar": "San Macario Trinidad",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años de antigüedad; uno de los árboles más anchos del mundo ubicado en el atrio de Santa María",
+        "latitude": "17,046389",
+        "longitude": "-96,636667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Templo de Santa María de la Asunción (El Tule)",
+        "category": "Sitios de patrimonio",
+        "description": "Templo católico del siglo XVI que alberga en su atrio el famoso Árbol del Tule; arquitectura colonial religiosa",
+        "latitude": "17,046389",
+        "longitude": "-96,636667",
+        "lugar": "Santa María del Tule",
+        "url_media": ""
+    },
+    {
+        "name": "Plaza de Santa María del Tule",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza central frente al Árbol del Tule; espacio de encuentro comunitario y festividades tradicionales",
+        "latitude": "17,046389",
+        "longitude": "-96,636667",
+        "lugar": "Santa María del Tule",
+        "url_media": ""
+    },
+    {
+        "name": "Zona Arqueológica de Monte Albán",
+        "category": "Sitios de patrimonio",
+        "description": "Antigua capital zapoteca fundada hacia 500 a.C.; Patrimonio Mundial UNESCO 1987; incluye la Gran Plaza",
+        "latitude": "17,043333",
+        "longitude": "-96,767778",
+        "lugar": "",
+        "url_media": "Santa Cruz Xoxocotlán"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín (CASA)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Primer centro de las artes ecológico de Latinoamérica en antigua fábrica textil; talleres artísticos",
+        "latitude": "17,189167",
+        "longitude": "-96,774722",
+        "lugar": "",
+        "url_media": "San Agustín Etla"
+    },
+    {
+        "name": "Palenques de Mezcal Artesanal",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta de palenques tradicionales del Valle de Tlacolula donde se produce mezcal artesanal con técnicas ancestrales zapotecas",
+        "latitude": "16,98",
+        "longitude": "-96,45",
+        "lugar": "Santiago Matatlán",
+        "url_media": "https://www.oaxaca-mio.com"
+    },
+    {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex-convento del siglo XVI; exhibe arte prehispánico y colonial con salas de arqueología e historia del ferrocarril",
+        "latitude": "17,27708118",
+        "longitude": "-96,88349664",
+        "lugar": "San Pablo Huitzo",
+        "url_media": "https://www.youtube.com/watch?v=Z2YzGSaJ_DI"
+    },
+    {
+        "name": "Zona Arqueológica de Atzompa",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico en el Cerro El Bonete complemento de Monte Albán; palacios zapotecos y la extraordinaria Tumba 3",
+        "latitude": "17,066667",
+        "longitude": "-96,791667",
+        "lugar": "Santa María Atzompa",
+        "url_media": "https://sic.cultura.gob.mx"
+    },
+    {
+        "name": "Mercado de Ocotlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional de los viernes famoso por artesanías de cuchillos",
+        "latitude": "16,788889",
+        "longitude": "-96,673889",
+        "lugar": "",
+        "url_media": "Ocotlán de Morelos"
+    },
+    {
+        "name": "Jardín Etnobotánico de Oaxaca",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín dedicado a la conservación de flora endémica oaxaqueña; educación ambiental y rescate de conocimiento tradicional sobre plantas",
+        "latitude": "17,065278",
+        "longitude": "-96,719444",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.jardinethnobotanico.org"
+    },
+    {
+        "name": "Museo de las Culturas de Oaxaca",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo ubicado en el ex-convento de Santo Domingo; exhibe panorama arqueológico y cultural con énfasis en culturas zapoteca y mixteca",
+        "latitude": "17,073056",
+        "longitude": "-96,718889",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://sic.gob.mx"
+    },
+    {
+        "name": "Centro Cultural Santo Domingo",
+        "category": "Espacios culturales y artísticos",
+        "description": "Complejo cultural que incluye biblioteca",
+        "latitude": "17,073056",
+        "longitude": "-96,718889",
+        "lugar": "",
+        "url_media": "Oaxaca de Juárez"
+    },
+    {
+        "name": "Instituto de Artes Gráficas de Oaxaca (IAGO)",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Centro de enseñanza y difusión de artes gráficas; biblioteca especializada y exposiciones; legado del maestro Francisco Toledo",
+        "latitude": "17,064722",
+        "longitude": "-96,722778",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.institutodeartesgraficas.org"
+    },
+    {
+        "name": "Mercado Benito Juárez",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional central con artesanías",
+        "latitude": "17,064167",
+        "longitude": "-96,724444",
+        "lugar": "",
+        "url_media": ""
+    },
+    {
+        "name": "Cerro del Fortín",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mirador natural de la ciudad y sede de la Guelaguetza; anfiteatro donde se celebra la máxima fiesta cultural oaxaqueña cada julio",
+        "latitude": "17,073333",
+        "longitude": "-96,733333",
+        "lugar": "Oaxaca de Juárez",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica Hierve el Agua",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Cascadas petrificadas naturales formadas por carbonato de calcio; sistema de riego prehispánico zapoteco y paisaje sagrado",
+        "latitude": "16,868056",
+        "longitude": "-96,276389",
+        "lugar": "San Lorenzo Albarradas",
+        "url_media": "https://www.oaxaca.gob.mx"
+    },
+    {
+        "name": "Zona Arqueológica de Zaachila",
+        "category": "Sitios de patrimonio",
+        "description": "Última capital zapoteca antes de la conquista española; tumbas con decoración policromada y ofrendas de oro y turquesa",
+        "latitude": "16,943056",
+        "longitude": "-96,765",
+        "lugar": "Villa de Zaachila",
+        "url_media": "https://inah.gob.mx"
+    },
+    {
+        "name": "Plaza Central de San Bartolomé Quialana",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se celebra la fiesta patronal de San Bartolomé el 24 de agosto con danzas tradicionales zapotecas y muestras gastronómicas",
+        "latitude": "16,9",
+        "longitude": "-96,5",
+        "lugar": "San Bartolomé Quialana",
+        "url_media": "https://www.facebook.com/quialana/"
+    },
+    {
+        "name": "Templo de San Bartolomé Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que resguarda la imagen del santo patrono; centro de las festividades religiosas de la comunidad zapoteca",
+        "latitude": "16,9005",
+        "longitude": "-96,5002",
+        "lugar": "San Bartolomé Quialana",
+        "url_media": "https://www.municipiodesanbartolomequialana.gob.mx/"
+    },
+    {
+        "name": "Picacho San Bartolomé Quialana",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta de senderismo de nivel intermedio-difícil hacia el picacho que ofrece vistas panorámicas de los Valles Centrales; espacio natural con presencia de flora endémica",
+        "latitude": "16,91",
+        "longitude": "-96,49",
+        "lugar": "San Bartolomé Quialana",
+        "url_media": "https://www.alltrails.com/trail/mexico/oaxaca/picacho-san-bartolome-quialana"
+    },
+    {
+        "name": "Centro Comunitario de San Bartolomé Quialana",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio comunitario donde se imparten talleres de tejido tradicional y lengua zapoteca; punto de encuentro para las asambleas comunitarias",
+        "latitude": "16,9003",
+        "longitude": "-96,5001",
+        "lugar": "San Bartolomé Quialana",
+        "url_media": "https://www.municipiodesanbartolomequialana.gob.mx/"
+    },
+    {
+        "name": "Tianguis Dominical de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional que se celebra cada domingo desde época prehispánica; punto de encuentro de comunidades zapotecas donde se venden productos agrícolas tradicionales y artesanías",
+        "latitude": "16,954722",
+        "longitude": "-96,474722",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.mexicodesconocido.com.mx/mercado-dominguero-de-tlacolula.html"
+    },
+    {
+        "name": "Templo de Santa María de la Asunción",
+        "category": "Sitios de patrimonio",
+        "description": "Iglesia del siglo XVI con impresionante capilla del Santo Cristo de Tlacolula; famosa por sus retablos barrocos y pinturas murales; considerada joya del barroco novohispano",
+        "latitude": "16,953889",
+        "longitude": "-96,474167",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://es.wikipedia.org/wiki/Tlacolula_de_Matamoros"
+    },
+    {
+        "name": "Plaza Central de Tlacolula",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Zócalo municipal donde confluye el tianguis dominical y se realizan festividades cívicas y religiosas; punto neurálgico de la vida comunitaria",
+        "latitude": "16,954444",
+        "longitude": "-96,474444",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.oaxacarifa.com/lugares/visita-el-paraiso-gastronomico-del-mercado-de-tlacolula-de-matamoros/453"
+    },
+    {
+        "name": "Casa de la Cultura de Tlacolula",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que ofrece talleres de danza folklórica",
+        "latitude": "16,953333",
+        "longitude": "-96,475",
+        "lugar": "Tlacolula de Matamoros",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Zona Arqueológica de Yagul",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio prehispánico zapoteca declarado Patrimonio Mundial por UNESCO en 2010; incluye palacios",
+        "latitude": "16,95",
+        "longitude": "-96,4",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-yagul"
+    },
+    {
+        "name": "Zona Arqueológica de Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca-mixteca famoso por sus grecas y mosaicos de piedra; considerado centro religioso y necrópolis de los reyes zapotecas; Patrimonio Mundial UNESCO",
+        "latitude": "16,926667",
+        "longitude": "-96,359722",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.inah.gob.mx/zonas/18-zona-arqueologica-de-mitla"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol y el Calvario",
+        "category": "Sitios de patrimonio",
+        "description": "Conjunto arquitectónico colonial del siglo XVI construido sobre estructuras prehispánicas; incluye templo católico y vestigios arqueológicos en su interior",
+        "latitude": "16,9275",
+        "longitude": "-96,358889",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://es.wikipedia.org/wiki/Mitla"
+    },
+    {
+        "name": "Museo Comunitario Shan-Dany",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario que exhibe piezas arqueológicas zapotecas y mixtecas; muestra la historia local y tradiciones vivas de Mitla; incluye taller de tejido de lana",
+        "latitude": "16,927222",
+        "longitude": "-96,359444",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Mercado de Artesanías de Mitla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional donde artesanos locales venden tejidos de lana con diseños prehispánicos; punto de venta de bordados zapotecos y mezcal artesanal",
+        "latitude": "16,927778",
+        "longitude": "-96,359167",
+        "lugar": "San Pablo Villa de Mitla",
+        "url_media": "https://www.oaxaca-mio.com/"
+    },
+    {
+        "name": "Zona Arqueológica de Dainzú",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca conocido por sus bajorrelieves de jugadores de pelota; considerado uno de los primeros asentamientos urbanos del valle con ocupación desde el 800 a.C.",
+        "latitude": "16,976667",
+        "longitude": "-96,543333",
+        "lugar": "San Pedro Ixtlahuaca",
+        "url_media": "https://www.inah.gob.mx/zonas/145-zona-arqueologica-de-dainzu"
+    },
+    {
+        "name": "Zona Arqueológica de Lambityeco",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca famoso por sus estucados y retratos realistas de gobernantes; importante centro productor de sal en época prehispánica",
+        "latitude": "16,953333",
+        "longitude": "-96,516667",
+        "lugar": "San Dionisio Ocotepec",
+        "url_media": "https://www.inah.gob.mx/zonas/147-zona-arqueologica-de-lambityeco"
+    },
+    {
+        "name": "Teotitlán del Valle - Pueblo Textil",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Comunidad zapoteca reconocida internacionalmente por sus tapetes y textiles de lana teñidos con tintes naturales; cada familia mantiene tradiciones ancestrales de tejido",
+        "latitude": "17,016667",
+        "longitude": "-96,516667",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Museo Comunitario Balaa Xtee Guech Gulal",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo comunitario que exhibe el proceso completo del tejido tradicional; incluye colección de textiles históricos y tintes naturales; talleres de aprendizaje comunitario",
+        "latitude": "17,016944",
+        "longitude": "-96,516944",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://museoscomunitarios.org/"
+    },
+    {
+        "name": "Templo de la Preciosa Sangre de Cristo",
+        "category": "Sitios de patrimonio",
+        "description": "Templo del siglo XVI con portada renacentista y altar barroco; conocido por sus celebraciones de Semana Santa con danzas de Moros y cristianos",
+        "latitude": "17,017222",
+        "longitude": "-96,516389",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://es.wikipedia.org/wiki/Teotitlán_del_Valle"
+    },
+    {
+        "name": "Plaza Central de Teotitlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Centro ceremonial donde se realizan festividades patronales del 2 de julio; espacio de venta de textiles y encuentro comunitario",
+        "latitude": "17,017",
+        "longitude": "-96,5165",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Santa Ana del Valle - Pueblo Textil",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Comunidad zapoteca hermana de Teotitlán; reconocida por sus tapetes de lana y técnicas ancestrales de tejido; menos turística pero igualmente auténtica",
+        "latitude": "17,041667",
+        "longitude": "-96,483333",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Museo Comunitario Shan-Dany de Santa Ana",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo que resguarda piezas arqueológicas encontradas en el valle y exhibe el trabajo textil tradicional; administrado por la comunidad",
+        "latitude": "17,041944",
+        "longitude": "-96,483611",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://museoscomunitarios.org/"
+    },
+    {
+        "name": "Cerro de la Culebra - Santa Ana",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Sitio sagrado con vestigios arqueológicos y vistas panorámicas del valle; utilizado para ceremonias tradicionales zapotecas; ruta de senderismo comunitario",
+        "latitude": "17,05",
+        "longitude": "-96,48",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de Santa Ana",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que resguarda la imagen de Santa Ana; centro de festividades patronales del 26 de julio con danzas tradicionales y calenda",
+        "latitude": "17,041111",
+        "longitude": "-96,483056",
+        "lugar": "Santa Ana del Valle",
+        "url_media": "https://es.wikipedia.org/wiki/Santa_Ana_del_Valle"
+    },
+    {
+        "name": "San Jerónimo Tlacochahuaya - Patrimonio Musical",
+        "category": "Sitios de patrimonio",
+        "description": "Pueblo reconocido por su templo del siglo XVI con órgano tubular restaurado del año 1735; considerado joya del barroco oaxaqueño; sede de conciertos internacionales",
+        "latitude": "17,026667",
+        "longitude": "-96,6",
+        "lugar": "San Jerónimo Tlacochahuaya",
+        "url_media": "https://www.inah.gob.mx/"
+    },
+    {
+        "name": "Jardín Etnobotánico de San Jerónimo",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Espacio de conservación de plantas medicinales tradicionales zapotecas; incluye senderos interpretativos y talleres de medicina tradicional",
+        "latitude": "17,026389",
+        "longitude": "-96,599722",
+        "lugar": "San Jerónimo Tlacochahuaya",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Centro de las Artes de San Agustín",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural ubicado en antigua fábrica textil; ofrece talleres de artes plásticas",
+        "latitude": "16,919444",
+        "longitude": "-96,686111",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.casantiguacultural.org/"
+    },
+    {
+        "name": "Árbol del Tule",
+        "category": "Sitios de patrimonio",
+        "description": "Ahuehuete milenario con más de 2000 años de antigüedad; considerado el árbol con el diámetro de tronco más grande del mundo; símbolo natural de Oaxaca",
+        "latitude": "17,046667",
+        "longitude": "-96,636667",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.inah.gob.mx/"
+    },
+    {
+        "name": "Plaza y Jardín del Tule",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Espacio público que rodea el árbol milenario; incluye mercado de artesanías y antojitos oaxaqueños; punto de encuentro turístico y comunitario",
+        "latitude": "17,046389",
+        "longitude": "-96,636389",
+        "lugar": "Santa María del Tule",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Palenques de Mezcal Artesanal",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta de palenques familiares donde se produce mezcal artesanal con métodos tradicionales; incluye cultivos de maguey y proceso completo de destilación",
+        "latitude": "16,96",
+        "longitude": "-96,45",
+        "lugar": "Santiago Matatlán",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Museo del Mezcal de Matatlán",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo dedicado a la historia y proceso de elaboración del mezcal; exhibe herramientas tradicionales y variedades de maguey; incluye degustación",
+        "latitude": "16,961111",
+        "longitude": "-96,451111",
+        "lugar": "Santiago Matatlán",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Centro Comunitario de San Pablo Huixtepec",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio que ofrece talleres de agricultura tradicional y conservación de semillas nativas; incluye biblioteca comunitaria y clases de zapoteco",
+        "latitude": "16,933333",
+        "longitude": "-96,483333",
+        "lugar": "San Pablo Huixtepec",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de San Pablo Huixtepec",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial con festividades patronales del 25 de enero; conocido por sus mayordomías tradicionales y organización comunitaria zapoteca",
+        "latitude": "16,933056",
+        "longitude": "-96,483056",
+        "lugar": "San Pablo Huixtepec",
+        "url_media": "https://es.wikipedia.org/wiki/San_Pablo_Huixtepec"
+    },
+    {
+        "name": "Ruta del Mezcal - Valle de Tlacolula",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor de palenques artesanales que une comunidades productoras de mezcal; incluye plantaciones de maguey espadín y tobalá; experiencias de producción tradicional",
+        "latitude": "16,95",
+        "longitude": "-96,4",
+        "lugar": "Región Tlacolula",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Mercado Orgánico de Teotitlán",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado de productos orgánicos y medicina tradicional que se realiza los sábados; espacio de intercambio de saberes ancestrales sobre agricultura",
+        "latitude": "17,0165",
+        "longitude": "-96,5162",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Cuevas Prehistóricas de Yagul y Mitla",
+        "category": "Sitios de patrimonio",
+        "description": "Sistema de cuevas con evidencias de ocupación humana de hace 10000 años; sitio Patrimonio Mundial UNESCO; incluye pinturas rupestres y restos de domesticación temprana de plantas",
+        "latitude": "16,94",
+        "longitude": "-96,38",
+        "lugar": "Valle de Tlacolula",
+        "url_media": "https://whc.unesco.org/"
+    },
+    {
+        "name": "Casa de la Cacica - Teotitlán",
+        "category": "Sitios de patrimonio",
+        "description": "Casa tradicional zapoteca del siglo XIX que funciona como espacio cultural; exhibe arquitectura vernácula y ofrece talleres de cocina tradicional",
+        "latitude": "17,0168",
+        "longitude": "-96,5166",
+        "lugar": "Teotitlán del Valle",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Plaza Central de San Gabriel Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza comunitaria donde se celebran festividades patronales y asambleas comunitarias; centro de la vida social de esta comunidad de 472 habitantes",
+        "latitude": "17,2",
+        "longitude": "-96,75",
+        "lugar": "San Gabriel Etla",
+        "url_media": "https://www.facebook.com/SanGabrielEtlaOax/"
+    },
+    {
+        "name": "Templo de San Gabriel Arcángel",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que resguarda la imagen del santo patrono; centro de celebraciones religiosas y tradiciones zapotecas de la comunidad",
+        "latitude": "17,2002",
+        "longitude": "-96,7498",
+        "lugar": "San Gabriel Etla",
+        "url_media": "https://www.facebook.com/SanGabrielEtlaOax/"
+    },
+    {
+        "name": "Laguna Azul - La Cieneguilla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Paraje natural ubicado a 10 kilómetros de San Gabriel; laguna de aguas azules rodeada de bosque donde se practican actividades recreativas y ecoturismo comunitario",
+        "latitude": "17,23",
+        "longitude": "-96,72",
+        "lugar": "San Gabriel Etla",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Arroyo Guacamaya",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor natural con sendero que conduce a Teococuilco de Marcos Pérez; espacio de biodiversidad con flora y fauna nativa de los valles centrales",
+        "latitude": "17,21",
+        "longitude": "-96,74",
+        "lugar": "San Gabriel Etla",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Centro de las Artes San Agustín (CaSa)",
+        "category": "Espacios culturales y artísticos",
+        "description": "Primer centro de artes ecológico de Latinoamérica fundado por Francisco Toledo en antigua fábrica textil de 1883; ofrece más de 300 talleres anuales de grabado",
+        "latitude": "17,232778",
+        "longitude": "-96,686667",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://casa.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Jardín Etnobotánico CaSa",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Jardín con plantas medicinales y tintóreas tradicionales de Oaxaca; incluye senderos interpretativos sobre usos ancestrales de la flora regional",
+        "latitude": "17,2325",
+        "longitude": "-96,6865",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://casa.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Ex Fábrica de Hilados Vista Hermosa",
+        "category": "Sitios de patrimonio",
+        "description": "Antigua fábrica textil fundada en 1883 que producía hilazas y mantas; restaurada ecológicamente para albergar el Centro de las Artes; ejemplo de arquitectura industrial del siglo XIX",
+        "latitude": "17,2329",
+        "longitude": "-96,6868",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.atlasobscura.com/places/centro-de-las-artes-de-san-agustin-arts-center-of-st-augustine"
+    },
+    {
+        "name": "Plaza Central de San Agustín Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se realizan festividades patronales el 28 de agosto; espacio de mercado local y encuentros comunitarios",
+        "latitude": "17,233333",
+        "longitude": "-96,687222",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de San Agustín de Hipona",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial del siglo XVI; centro de celebraciones religiosas y festividades tradicionales de la comunidad",
+        "latitude": "17,2335",
+        "longitude": "-96,687",
+        "lugar": "San Agustín Etla",
+        "url_media": "https://es.wikipedia.org/wiki/San_Agustín_Etla"
+    },
+    {
+        "name": "Zona Arqueológica de San José Mogote",
+        "category": "Sitios de patrimonio",
+        "description": "Sitio arqueológico zapoteca con más de 3500 años de antigüedad; fue el centro urbano más importante del Valle de Etla antes de Monte Albán; exhibe una de las escrituras más antiguas de Mesoamérica",
+        "latitude": "17,266667",
+        "longitude": "-96,716667",
+        "lugar": "San José Mogote",
+        "url_media": "https://www.inah.gob.mx/"
+    },
+    {
+        "name": "Museo Comunitario de San José Mogote",
+        "category": "Espacios culturales y artísticos",
+        "description": "Museo ubicado en la ex hacienda El Cacique; exhibe piezas arqueológicas zapotecas desde 1986; incluye salas de arqueología",
+        "latitude": "17,266944",
+        "longitude": "-96,716389",
+        "lugar": "San José Mogote",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=315"
+    },
+    {
+        "name": "Plaza Central de San José Mogote",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza comunitaria adyacente a la zona arqueológica; espacio donde se mantienen tradiciones zapotecas y celebraciones patronales",
+        "latitude": "17,267222",
+        "longitude": "-96,716111",
+        "lugar": "San José Mogote",
+        "url_media": "https://www.oaxaca-mio.com/"
+    },
+    {
+        "name": "Templo de San José Mogote",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial construido sobre antigua plataforma prehispánica; integra arquitectura colonial con vestigios arqueológicos",
+        "latitude": "17,267",
+        "longitude": "-96,7162",
+        "lugar": "San José Mogote",
+        "url_media": "https://www.oaxaca-mio.com/"
+    },
+    {
+        "name": "Ex Hacienda El Cacique",
+        "category": "Sitios de patrimonio",
+        "description": "Antigua hacienda donde se realizaron excavaciones arqueológicas desde 1964; actualmente alberga el museo comunitario y es centro de investigación",
+        "latitude": "17,2671",
+        "longitude": "-96,7165",
+        "lugar": "San José Mogote",
+        "url_media": "https://sic.gob.mx/ficha.php?table=museo&table_id=315"
+    },
+    {
+        "name": "Villa de Etla - Plaza Central",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal de la cabecera municipal; centro del tianguis de los miércoles donde se venden productos agrícolas y artesanías de toda la región",
+        "latitude": "17,199722",
+        "longitude": "-96,788611",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Mercado Municipal de Villa de Etla",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Mercado tradicional que cobra vida los miércoles con el tianguis regional; punto de encuentro de comunidades del valle donde se comercializan productos locales",
+        "latitude": "17,199444",
+        "longitude": "-96,788333",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo del Señor de las Peñas",
+        "category": "Sitios de patrimonio",
+        "description": "Santuario colonial construido en 1740; destino de peregrinaciones regionales durante la Semana Santa y las festividades del Señor de las Peñas",
+        "latitude": "17,2",
+        "longitude": "-96,788889",
+        "lugar": "Villa de Etla",
+        "url_media": "https://cvc.cervantes.es/artes/ciudades_patrimonio/oaxaca/paseo/etla.htm"
+    },
+    {
+        "name": "Casa de la Cultura de Villa de Etla",
+        "category": "Espacios culturales y artísticos",
+        "description": "Centro cultural que ofrece talleres de danza folklórica",
+        "latitude": "17,199611",
+        "longitude": "-96,788722",
+        "lugar": "Villa de Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "San Pablo Etla - Plaza y Templo",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza central donde se celebra la fiesta patronal de San Pablo Apóstol el 25 de enero con calendas",
+        "latitude": "17,218889",
+        "longitude": "-96,762778",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanpablo.htm"
+    },
+    {
+        "name": "Palenques de Mezcal San Pablo Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta de palenques artesanales que producen mezcal Premium y Ultra Premium; incluye conservación de agaves en peligro de extinción y procesos tradicionales",
+        "latitude": "17,219167",
+        "longitude": "-96,7625",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanpablo.htm"
+    },
+    {
+        "name": "Templo de San Pablo Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial del siglo XVI; centro de tradiciones religiosas zapotecas y celebraciones de Semana Santa y Todos Santos",
+        "latitude": "17,219",
+        "longitude": "-96,7626",
+        "lugar": "San Pablo Etla",
+        "url_media": "https://www.oaxaca-mio.com/rutasturisticas/sanpablo.htm"
+    },
+    {
+        "name": "San Andrés Zautla - Plaza Comunal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se realizan festividades patronales del 30 de noviembre; espacio de mercado local y danzas tradicionales",
+        "latitude": "17,183333",
+        "longitude": "-96,733333",
+        "lugar": "San Andrés Zautla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de San Andrés Apóstol",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que alberga la imagen del santo patrono; centro de celebraciones religiosas y tradiciones comunitarias zapotecas",
+        "latitude": "17,1835",
+        "longitude": "-96,7332",
+        "lugar": "San Andrés Zautla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Guadalupe Etla - Plaza y Mercado",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza central con mercado local donde se venden productos agrícolas tradicionales y quesillo artesanal; punto de encuentro comunitario",
+        "latitude": "17,217222",
+        "longitude": "-96,799167",
+        "lugar": "Guadalupe Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de Nuestra Señora de Guadalupe",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a la Virgen de Guadalupe; centro de festividades patronales del 12 de diciembre con peregrinaciones y danzas",
+        "latitude": "17,217333",
+        "longitude": "-96,799",
+        "lugar": "Guadalupe Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Talleres Queseros de Guadalupe Etla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres familiares de producción artesanal de quesillo oaxaqueño; espacio donde se mantienen técnicas tradicionales de elaboración del queso de hebra",
+        "latitude": "17,217",
+        "longitude": "-96,7992",
+        "lugar": "Guadalupe Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Soledad Etla - Centro Histórico",
+        "category": "Sitios de patrimonio",
+        "description": "Pueblo colonial con arquitectura tradicional; conocido por sus celebraciones religiosas y producción de textiles de lana",
+        "latitude": "17,25",
+        "longitude": "-96,783333",
+        "lugar": "Soledad Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de Nuestra Señora de la Soledad",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial del siglo XVII; centro de veneración de la Virgen de la Soledad con festividades el 18 de diciembre",
+        "latitude": "17,2502",
+        "longitude": "-96,7832",
+        "lugar": "Soledad Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Talleres Textiles de Soledad Etla",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Talleres comunitarios de tejido de lana y algodón; mantienen técnicas ancestrales de hilado y teñido con tintes naturales",
+        "latitude": "17,2501",
+        "longitude": "-96,7834",
+        "lugar": "Soledad Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "San Juan Bautista Guelache - Plaza Central",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal del municipio al que pertenece San Gabriel Etla; centro de celebraciones del 24 de junio con danzas y festividades patronales",
+        "latitude": "17,216667",
+        "longitude": "-96,733333",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Templo de San Juan Bautista",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial que resguarda la imagen de San Juan Bautista; centro religioso de la comunidad con tradiciones zapotecas ancestrales",
+        "latitude": "17,2168",
+        "longitude": "-96,7332",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Centro Comunitario de Guelache",
+        "category": "Centros de enseñanza y difusión",
+        "description": "Espacio comunitario que ofrece talleres de lengua zapoteca",
+        "latitude": "17,2165",
+        "longitude": "-96,7334",
+        "lugar": "San Juan Bautista Guelache",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "San Miguel Etla - Plaza Principal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza central donde se celebran festividades de San Miguel Arcángel el 29 de septiembre con danzas tradicionales y calendas",
+        "latitude": "17,183333",
+        "longitude": "-96,766667",
+        "lugar": "San Miguel Etla",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Templo de San Miguel Arcángel",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial del siglo XVI; arquitectura religiosa que combina elementos barrocos con tradiciones zapotecas locales",
+        "latitude": "17,1835",
+        "longitude": "-96,7665",
+        "lugar": "San Miguel Etla",
+        "url_media": "https://www.viveoaxaca.org/2018/03/Guelache.html"
+    },
+    {
+        "name": "Reyes Etla - Plaza Comunal",
+        "category": "Lugares de expresión popular y tradicional",
+        "description": "Plaza principal donde se realizan festividades del 6 de enero con representaciones de los Reyes Magos y danzas tradicionales",
+        "latitude": "17,2",
+        "longitude": "-96,816667",
+        "lugar": "Reyes Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo de los Santos Reyes",
+        "category": "Sitios de patrimonio",
+        "description": "Templo colonial dedicado a los Reyes Magos; centro de celebraciones religiosas con fuerte tradición de mayordomías",
+        "latitude": "17,2002",
+        "longitude": "-96,8165",
+        "lugar": "Reyes Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Nazareno Etla - Centro Histórico",
+        "category": "Sitios de patrimonio",
+        "description": "Pueblo colonial conocido por sus celebraciones de Semana Santa; mantiene tradiciones ancestrales de procesiones y representaciones de la Pasión",
+        "latitude": "17,216667",
+        "longitude": "-96,816667",
+        "lugar": "Nazareno Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Templo del Señor de Nazareno",
+        "category": "Sitios de patrimonio",
+        "description": "Templo del siglo XVII que alberga la imagen del Nazareno; destino de peregrinaciones durante la Cuaresma y Semana Santa",
+        "latitude": "17,2168",
+        "longitude": "-96,8165",
+        "lugar": "Nazareno Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Corredor Biocultural Valle de Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Ruta que conecta las comunidades del valle incluyendo zonas arqueológicas",
+        "latitude": "17,216667",
+        "longitude": "-96,75",
+        "lugar": "Región Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    },
+    {
+        "name": "Río Atoyac - Tramo Etla",
+        "category": "Rutas y espacios bioculturales",
+        "description": "Corredor fluvial que atraviesa el valle de Etla; espacio natural con presencia de flora riparia y fauna nativa; importante para la agricultura tradicional",
+        "latitude": "17,2",
+        "longitude": "-96,78",
+        "lugar": "Región Etla",
+        "url_media": "https://www.oaxaca.gob.mx/"
+    }
+]
