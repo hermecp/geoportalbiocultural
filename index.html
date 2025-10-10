@@ -230,16 +230,17 @@
       <div class="acc-item open">
         <div class="acc-h" data-acc role="button" tabindex="0" aria-expanded="true">
           <div class="acc-left"><i class="fa-solid fa-draw-polygon" style="color:#8bd3c7"></i><span>Geometrías del corredor</span></div>
-          <div class="right"><span class="badge" data-badge>3</span> <i class="fa-solid fa-chevron-down chev"></i></div>
+          <div class="right"><span class="badge" data-badge>4</span> <i class="fa-solid fa-chevron-down chev"></i></div>
         </div>
         <div class="acc-body">
           <label class="item"><input type="checkbox" id="lyr-pts" checked> Puntos (municipios)</label>
           <label class="item"><input type="checkbox" id="lyr-concave" checked> Polígono cóncavo</label>
           <label class="item"><input type="checkbox" id="lyr-convex" checked> Polígono convexo</label>
+          <!-- NUEVO: toggle de POIs Huitzo -->
+          <label class="item"><input type="checkbox" id="lyr-pois-huitzo" checked> POIs Huitzo</label>
         </div>
       </div>
 
-      <!-- Otras categorías (idénticas a tu versión previa) -->
       <div class="acc-item">
         <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-rotate-left" style="color:#4ecdc4"></i><span>Cambio Temporal</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
         <div class="acc-body">
@@ -424,6 +425,80 @@ const placesWithCoordinates = [
 ];
 const fcPoints={type:'FeatureCollection',features:placesWithCoordinates.map(p=>({type:'Feature',geometry:{type:'Point',coordinates:[p.longitude,p.latitude]},properties:{name:p.name}}))};
 
+/* ===== POIs Huitzo (GeoJSON externo) ===== */
+const POIS_URL = 'huitzo_pois.geojson';
+const CAT_COLORS = {
+  'espacios culturales y artísticos': '#d97706',
+  'sitios de patrimonio': '#8b5cf6',
+  'lugares de expresión popular y tradicional': '#06b6d4',
+  'rutas y espacios bioculturales': '#22c55e',
+  'centros de enseñanza y difusión': '#ef4444',
+  'Zona arqueológica': '#f59e0b'
+};
+function iconPOI(cat=''){
+  const c = CAT_COLORS[cat] || '#00D1A0';
+  const html = `
+    <div class="mk-pin" title="${cat}">
+      <svg viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <path d="M14 2c-6.1 0-11 4.64-11 10.36 0 7.24 9.5 18.56 10.08 19.28a1.2 1.2 0 0 0 1.84 0C15.5 30.92 25 19.6 25 12.36 25 6.64 20.1 2 14 2z" fill="#fff"/>
+        <path d="M14 3.4c-5.35 0-9.65 4.07-9.65 9.1 0 6.38 8.35 16.35 8.86 16.98.33.4.95.4 1.28 0 .51-.63 8.86-10.6 8.86-16.98 0-5.03-4.3-9.1-9.65-9.1z" fill="${c}" stroke="#1f2937" stroke-width="1"/>
+        <circle cx="14" cy="12.5" r="3.2" fill="rgba(255,255,255,.95)" />
+      </svg>
+    </div>`;
+  return L.divIcon({className:'', html, iconSize:[28,38], iconAnchor:[14,38]});
+}
+function mediaHTML(media){
+  if(!media) return '';
+  const isURL = /^https?:\/\//i.test(media);
+  const isImg = /\.(png|jpe?g|webp|gif)$/i.test(media);
+  if(isImg) return `<img src="${media}" alt="" style="max-width:220px;display:block;margin-top:6px;border-radius:6px">`;
+  if(isURL) return `<a href="${media}" target="_blank" rel="noopener">Ver recurso</a>`;
+  return '';
+}
+function popupPOI(p){
+  const coords = p && p._coords ? p._coords : null;
+  const link = p.source_citation ? `<div style="margin-top:6px"><small>Fuente: <a href="${p.source_citation}" target="_blank" rel="noopener">enlace</a></small></div>` : '';
+  const lugar = p.Lugar ? `<div><small>${p.Lugar}</small></div>` : '';
+  const media = p.media ? mediaHTML(p.media) : '';
+  return `
+    <div style="min-width:220px;max-width:280px">
+      <strong>${p.name||'POI'}</strong>
+      <div style="opacity:.9">${p.category||''}</div>
+      ${lugar}
+      <div style="margin-top:6px">${p.description||''}</div>
+      ${link}
+      ${media}
+      ${coords ? `<div style="margin-top:6px;opacity:.8"><small>${coords}</small></div>` : ''}
+    </div>`;
+}
+let layerPoisHuitzo = L.layerGroup();
+async function loadPOIs(){
+  try{
+    const res = await fetch(POIS_URL, {cache:'no-store'});
+    const gj = await res.json();
+    layerPoisHuitzo = L.geoJSON(gj, {
+      pointToLayer: (f, latlng)=>{
+        const cat = (f.properties && f.properties.category) || '';
+        const m = L.marker(latlng, { icon: iconPOI(cat), riseOnHover:true });
+        const coords = `${latlng.lat.toFixed(6)}, ${latlng.lng.toFixed(6)}`;
+        f.properties._coords = coords;
+        m.bindPopup(popupPOI(f.properties));
+        return m;
+      }
+    }).addTo(map);
+
+    toggleMap.set('lyr-pois-huitzo', layerPoisHuitzo);
+    updateSelected(); renderLegend(); recalcTotals(); refreshBadges();
+
+    const nPois = layerPoisHuitzo.getLayers().length;
+    const baseCount = parseInt(document.getElementById('kpi-pts').textContent.replace(/[^0-9]/g,'')) || 0;
+    document.getElementById('kpi-pts').textContent = Math.max(baseCount, nPois);
+  }catch(err){
+    console.error('No se pudo cargar los POIs:', err);
+  }
+}
+loadPOIs();
+
 /* ===== Estilos ===== */
 function colorFromString(str){
   let h=0; for(let i=0;i<str.length;i++) h=(h*31+str.charCodeAt(i))>>>0;
@@ -592,6 +667,7 @@ $('btn-export').onclick=()=>{
     {name:'municipios_puntos.geojson',data:fcPoints},
     {name:'poligono_concavo.geojson',data:polyConcave},
     {name:'poligono_convexo.geojson',data:polyConvex},
+    {name:'pois_huitzo.geojson',data: layerPoisHuitzo.toGeoJSON()}, /* NUEVO: exporta POIs */
     {name:'dibujos.geojson',data:drawn.toGeoJSON()}
   ];
   files.forEach((f,i)=>{const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(f.data)],{type:'application/geo+json'})); a.download=f.name; setTimeout(()=>a.click(),i*150);});
@@ -610,7 +686,8 @@ $('btn-geo').onclick=()=>{
 const _updateSelected=()=>{const box=$('selected-list'); box.innerHTML=''; let count=0; toggleMap.forEach((lyr,id)=>{if(map.hasLayer(lyr)){count++; const row=document.createElement('div'); row.className='row'; row.innerHTML=`<span>${labelOf(id)}</span><a href="#" data-id="${id}">quitar</a>`; row.querySelector('a').onclick=(e)=>{e.preventDefault(); const el=$(id); if(el){el.checked=false; el.dispatchEvent(new Event('change'));}}; box.appendChild(row);}}); $('active-layers').textContent=count;};
 const updateSelected=debounce(_updateSelected,80);
 function labelOf(id){
-  return ({'lyr-pts':'Puntos (municipios)','lyr-concave':'Polígono cóncavo','lyr-convex':'Polígono convexo','night':'VIIRS Night','timelapse-coverage':'Timelapse Cobertura','ndvi-seasonal':'NDVI Estacional','recovery':'Recuperación Forestal','hillshade':'World Hillshade','elevation':'MDE (Terrain Base)','slopes':'Pendientes','curvature':'Curvatura','viewshed':'Visibilidad','boundaries':'Boundaries & Places','hydro-ref':'World Hydro','streams':'Red fluvial','springs':'Nacimientos','water-quality':'Calidad del agua','irrigation':'Sistemas de riego','soundscapes':'Grabaciones de campo','testimonios':'Testimonios','festivals':'Festividades','plant-network':'Red etnobotánica','medicinal-plants':'Plantas medicinales','seasonal-calendar':'Calendario estacional','languages':'Lenguas originarias','field-routes':'Recorridos de campo','waypoints':'Puntos de interés','agreements':'Acuerdos comunitarios','fires':'Incendios','dumps':'Tiraderos','extraction':'Extracción de recursos','projects':'Proyectos de infraestructura','invasive':'Especies invasoras','climate-risk':'Vulnerabilidad climática','participation':'Participación comunitaria','forest-cover':'Cobertura forestal','agreements-status':'Estado de acuerdos','custom-indicator':'Indicador personalizado'})[id]||id;
+  const base = {'lyr-pts':'Puntos (municipios)','lyr-concave':'Polígono cóncavo','lyr-convex':'Polígono convexo','night':'VIIRS Night','timelapse-coverage':'Timelapse Cobertura','ndvi-seasonal':'NDVI Estacional','recovery':'Recuperación Forestal','hillshade':'World Hillshade','elevation':'MDE (Terrain Base)','slopes':'Pendientes','curvature':'Curvatura','viewshed':'Visibilidad','boundaries':'Boundaries & Places','hydro-ref':'World Hydro','streams':'Red fluvial','springs':'Nacimientos','water-quality':'Calidad del agua','irrigation':'Sistemas de riego','soundscapes':'Grabaciones de campo','testimonios':'Testimonios','festivals':'Festividades','plant-network':'Red etnobotánica','medicinal-plants':'Plantas medicinales','seasonal-calendar':'Calendario estacional','languages':'Lenguas originarias','field-routes':'Recorridos de campo','waypoints':'Puntos de interés','agreements':'Acuerdos comunitarios','fires':'Incendios','dumps':'Tiraderos','extraction':'Extracción de recursos','projects':'Proyectos de infraestructura','invasive':'Especies invasoras','climate-risk':'Vulnerabilidad climática','participation':'Participación comunitaria','forest-cover':'Cobertura forestal','agreements-status':'Estado de acuerdos','custom-indicator':'Indicador personalizado','lyr-pois-huitzo':'POIs Huitzo'};
+  return base[id]||id;
 }
 function recalcTotals(){const all=[...document.querySelectorAll('.acc-body input[type="checkbox"], .group .item input')]; $('total-layers').textContent=all.length; $('active-layers').textContent=all.filter(i=>i.checked).length;}
 recalcTotals(); updateSelected();
@@ -619,6 +696,7 @@ function renderLegend(){
   if(map.hasLayer(layerConcave)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#bfe8d2;border:1px solid #22675a"></span> Área cóncava</div>`);
   if(map.hasLayer(layerConvex)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;border:2px dashed #236b55"></span> Área convexa</div>`);
   if(map.hasLayer(layerPoints) || map.hasLayer(clusterGroup)) items.push(`<div><span class="bi bi-geo-alt-fill" style="display:inline-block;transform:translateY(2px);font-size:16px;color:var(--mk);-webkit-text-stroke:1px var(--mk-stroke)"></span> Municipios</div>`);
+  if(typeof layerPoisHuitzo!=='undefined' && map.hasLayer(layerPoisHuitzo)) items.push(`<div><span class="bi bi-geo-alt-fill" style="display:inline-block;transform:translateY(2px);font-size:16px"></span> POIs Huitzo</div>`);
   if(map.hasLayer(lyrHillshade)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:linear-gradient(45deg,#444,#777)"></span> Sombreado</div>`);
   if(map.hasLayer(lyrHydroRef)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#7ec8e3"></span> Red hidro</div>`);
   if(map.hasLayer(lyrNight)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#0b0f2b"></span> Luces nocturnas</div>`);
@@ -647,7 +725,7 @@ function setBodyHeight(body,open){
 }
 qsa('[data-acc]').forEach(h=>{h.addEventListener('click',()=>{const it=h.closest('.acc-item'); const open=!it.classList.contains('open'); it.classList.toggle('open',open); h.setAttribute('aria-expanded',String(open)); setBodyHeight(it.querySelector('.acc-body'),open);});});
 
-/* ===== Sidebar toggle (sin “negro”, mapa se expande) ===== */
+/* ===== Sidebar toggle ===== */
 const appEl=$('app');
 const sidebarEl=$('sidebar');
 $('btn-toggle-sidebar').onclick=()=>{
@@ -695,9 +773,7 @@ map.on('click',e=>{
   analysisGroup.clearLayers();
   analysisLast=buf;
   pintarGeom(buf);
-  // Colocar un marcador visual en el centro
   L.marker(e.latlng,{icon:L.divIcon({className:'',html:pinHTML('Centro buffer'),iconSize:[28,38],iconAnchor:[14,38]})}).addTo(analysisGroup);
-  // Resumen
   sumarizar(buf);
 });
 
@@ -731,16 +807,13 @@ async function addExternal(){
   let layer, nameShown='';
   try{
     if(url.includes('{z}') && url.includes('{x}') && url.includes('{y}')){
-      // XYZ
       layer=L.tileLayer(url,{maxZoom:19,attribution:'externo'});
       nameShown='XYZ';
     }else if(/wms/i.test(url)){
-      // WMS
       if(!layerName){ alert('Para WMS especifica el nombre de la capa'); return; }
       layer=L.tileLayer.wms(url,{layers:layerName, format:'image/png', transparent:true});
       nameShown='WMS '+layerName;
     }else if(/wmts/i.test(url)){
-      // Intento simple para WMTS como XYZ (requiere URL ya a plantilla tiles)
       if(url.includes('{z}') && url.includes('{x}') && url.includes('{y}')){
         layer=L.tileLayer(url,{maxZoom:19,attribution:'wmts'});
         nameShown='WMTS';
@@ -749,7 +822,6 @@ async function addExternal(){
         return;
       }
     }else{
-      // fallback: intentar como XYZ
       layer=L.tileLayer(url,{maxZoom:19,attribution:'externo'});
       nameShown='XYZ';
     }
@@ -796,6 +868,18 @@ restoreState();
 /* ===== Binds finales ===== */
 function refreshBadges(){qsa('.acc-item').forEach(it=>{const on=[...it.querySelectorAll('.acc-body input[type="checkbox"]')].filter(i=>i.checked).length; const b=it.querySelector('[data-badge]'); if(b) b.textContent=on;});}
 renderLegend(); refreshBadges();
+
+/* Conecta el toggle de POIs al cargar DOM (por si se desactiva) */
+document.addEventListener('DOMContentLoaded', ()=>{
+  const el = document.getElementById('lyr-pois-huitzo');
+  if(el){
+    el.addEventListener('change', e=>{
+      if(e.target.checked){ layerPoisHuitzo.addTo(map); }
+      else{ map.removeLayer(layerPoisHuitzo); }
+      updateSelected(); renderLegend(); saveState();
+    });
+  }
+});
 </script>
 </body>
 </html>
