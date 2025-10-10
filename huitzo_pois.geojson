@@ -1,0 +1,743 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.883497,
+          17.277081
+        ]
+      },
+      "properties": {
+        "name": "Museo Comunitario de San Pablo Huitzo (Ex Convento)",
+        "category": "espacios culturales y artísticos",
+        "description": "Museo comunitario ubicado en el ex‑convento del siglo XVI; exhibe arte prehispánico y colonial y contiene salas de arqueología, historia del convento y del ferrocarril.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://sic.cultura.gob.mx/ficha.php?table=museo&table_id=570#:~:text=Museo%20Comunitario%20de%20San%20Pablo",
+        "media": "San-Pablo-Huitzo-.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.884605,
+          17.277072
+        ]
+      },
+      "properties": {
+        "name": "Casa de la Cultura Federico Flores Aguilar",
+        "category": "espacios culturales y artísticos",
+        "description": "Centro cultural municipal que ofrece talleres de artes plásticas, danza, música y alberga biblioteca y auditorio.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://sic.cultura.gob.mx/ficha.php?table=centro_cultural&table_id=922#:~:text=Ayuntamiento%20de%20San%20Pablo%20Huitzohttps://www.google.com/maps?q=17.277072610000000",
+        "media": "casa.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.884605,
+          17.277072
+        ]
+      },
+      "properties": {
+        "name": "Biblioteca Pública Municipal Miguel Cruz Caballero",
+        "category": "espacios culturales y artísticos",
+        "description": "Biblioteca pública municipal ubicada dentro de la Casa de la Cultura; brinda servicios de lectura y préstamo de libros.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://directorio-dgb.cultura.gob.mx/ficha.php?idbiblio=343#:~:text=Espacios",
+        "media": "bibloteca.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88334,
+          17.27706
+        ]
+      },
+      "properties": {
+        "name": "Iglesia y ex‑convento de San Pablo Huitzo",
+        "category": "sitios de patrimonio",
+        "description": "Templo y ex‑convento del siglo XVI donde se fundó el pueblo; estructura de piedra con capillas, atrio y claustro; actual parroquia y sede del museo comunitario.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5446412968#:~:text=Latitudhttps://sitiosymonumentos.cultura.gob.mx/iii-estudios-monograficos/san-pedro-y-san-pablo/#:~:text=El%20ex",
+        "media": "Ex Convento San Pablo Huitzo - YouTube"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.86595,
+          17.24338
+        ]
+      },
+      "properties": {
+        "name": "Cerro de la Campana (Huijazoo) Zona Arqueológica",
+        "category": "sitios de patrimonio",
+        "description": "Zona arqueológica zapoteca situada en el cerro de la Campana; alberga la tumba 5 con pinturas murales y esculturas; se accede por el camino al Calvario, 2 km al norte del templo.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://lugares.inah.gob.mx/es/node/4417#:~:text=Sin%20costohttps://mapcarta.com/N12453625922#:~:text=Latitude",
+        "media": "Cerro de la Campana.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88464,
+          17.2767
+        ]
+      },
+      "properties": {
+        "name": "Parque Municipal Huitzo",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Parque central de la cabecera municipal con jardines, juegos y áreas de convivencia; colinda con el kiosco y la fuente.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565536990#:~:text=Latitud",
+        "media": "https://www.google.com/local/place/fid/0x85c6e485c0efd1a7:0xe93c72c3b4212370/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3DOwRDd_MPW6y10ga7_g8_ng%26cb_client%3Dlu.gallery.gps%26w%3D160%26h%3D106%26yaw%3D322.6988%26pitch%3D0%26thumbfov%3D100&ik=CAISFk93UkRkX01QVzZ5MTBnYTdfZzhfbmc%3D"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88455,
+          17.27707
+        ]
+      },
+      "properties": {
+        "name": "Plaza cívica H. Ayuntamiento de Huitzo",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Plaza cívica donde se realizan eventos comunitarios y ceremonias; contigua al palacio municipal y a la casa de la cultura.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W566828087#:~:text=Latitud",
+        "media": "Plaza cívica.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88608,
+          17.2753
+        ]
+      },
+      "properties": {
+        "name": "Parque ‘Los Sabinos’",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Área verde con árboles sabinos y espacios de recreación ubicada al suroeste de la cabecera.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/W566788197#:~:text=Latitude",
+        "media": "Parque los sabinos Huitzo.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88481,
+          17.27688
+        ]
+      },
+      "properties": {
+        "name": "Cancha de básquetbol Primera Sección",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Cancha deportiva de uso comunitario ubicada en la primera sección sobre la avenida Cuauhxilotitlán.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N12452598245#:~:text=Latitud",
+        "media": "Cancha de Básquetbol.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88454,
+          17.2767
+        ]
+      },
+      "properties": {
+        "name": "Fuente Municipio Huitzo",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Fuente ornamental en el parque municipal utilizada como punto de referencia y descanso.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565536991#:~:text=Latitud",
+        "media": "fuente Municipio Huitzo.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88493,
+          17.27739
+        ]
+      },
+      "properties": {
+        "name": "Jardín del Arte",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Pequeño jardín junto a la casa de la cultura; espacio para exposiciones al aire libre y descanso.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565536995#:~:text=Latitud",
+        "media": "Jardin del arte.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88389,
+          17.27722
+        ]
+      },
+      "properties": {
+        "name": "Andador Ex Convento",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Andador peatonal que conecta el ex‑convento con el parque y plazas circundantes.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/W565537001#:~:text=Latitude",
+        "media": "Huitzo Andador.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88392,
+          17.27687
+        ]
+      },
+      "properties": {
+        "name": "Zona verde atrio de la iglesia",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Áreas verdes que rodean el atrio de la iglesia; sirven para convivencia y eventos religiosos.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/W565537000#:~:text=Latitude",
+        "media": "Zona verde atrio de la Iglesia.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88334,
+          17.2769
+        ]
+      },
+      "properties": {
+        "name": "Jardín Ex Convento",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Jardín adyacente al ex‑convento con árboles y bancas para el esparcimiento.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/W566788169#:~:text=17",
+        "media": "Jardin exconvento.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88361,
+          17.27684
+        ]
+      },
+      "properties": {
+        "name": "Jardín de la Fé",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Jardín pequeño próximo al ex‑convento utilizado por vecinos y visitantes para descanso.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/W566788171#:~:text=Latitude",
+        "media": "Jardin de la fe o exconvento.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88176,
+          17.27853
+        ]
+      },
+      "properties": {
+        "name": "Andador Huitzo",
+        "category": "rutas y espacios bioculturales",
+        "description": "Sendero peatonal arbolado que atraviesa barrios al norte del centro y conecta con espacios recreativos.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565537003#:~:text=Latitud",
+        "media": "https://www.facebook.com/reel/1096583408971901"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88922,
+          17.28193
+        ]
+      },
+      "properties": {
+        "name": "Plaza Huitzolandia (parque)",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Espacio recreativo en la segunda sección con juegos infantiles y canchas; colinda con comercios y puestos temporales.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565581240#:~:text=Latitud",
+        "media": "Plaza Huitzolandia (parque).jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88141,
+          17.2821
+        ]
+      },
+      "properties": {
+        "name": "Taller de gráfica Enrique Flores",
+        "category": "centros de enseñanza y difusión",
+        "description": "Taller de grabado y artes gráficas que ofrece cursos de monotipo y técnicas tradicionales de impresión.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N12433515804#:~:text=Latitud",
+        "media": "taller de gráfica Enrique Flores.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.87279,
+          17.26895
+        ]
+      },
+      "properties": {
+        "name": "Zona Arqueológica tumba No. 5",
+        "category": "Zona arqueológica",
+        "description": "Salón de baile donde se imparten clases de zumba y se realizan eventos de danza para la comunidad.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/W565994369",
+        "media": "Tumba no. 5(1).jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.87897,
+          17.28074
+        ]
+      },
+      "properties": {
+        "name": "Salón de baile Zumba",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N12465615455#:~:text=Latitud",
+        "media": "Salón Bailes y Zumba.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88454,
+          17.27725
+        ]
+      },
+      "properties": {
+        "name": "Palacio Municipal de San Pablo Huitzo",
+        "category": "sitios de patrimonio",
+        "description": "Sede del ayuntamiento y autoridad local; edificio histórico situado frente a la plaza cívica.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/N5446412967#:~:text=Latitude",
+        "media": "Palacio Municipal de San Pablo Huitzo.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88424,
+          17.27723
+        ]
+      },
+      "properties": {
+        "name": "Monumento a Don Benito Juárez García",
+        "category": "sitios de patrimonio",
+        "description": "Monumento conmemorativo dedicado al ex presidente Benito Juárez, ubicado en la explanada frente a la casa de la cultura.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917312#:~:text=Latitud",
+        "media": "Monumento BJ.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88427,
+          17.27715
+        ]
+      },
+      "properties": {
+        "name": "Busto del Benemérito de las Américas",
+        "category": "sitios de patrimonio",
+        "description": "Busto de Benito Juárez (Benemérito de las Américas) ubicado en el parque central.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917318#:~:text=Latitud",
+        "media": "Busto BJ.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88479,
+          17.27681
+        ]
+      },
+      "properties": {
+        "name": "Monumento a la Naturaleza y la libertad",
+        "category": "sitios de patrimonio",
+        "description": "Escultura que celebra la naturaleza y la libertad ubicada cerca del parque municipal.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/N5457917319#:~:text=Latitude",
+        "media": "https://drive.google.com/file/d/15eEKw10-ZmrS34C5fXzVqqzFPu-Edyvq/view?usp=drive_link"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88444,
+          17.27695
+        ]
+      },
+      "properties": {
+        "name": "Monumento a la Cultura Oaxaqueña",
+        "category": "sitios de patrimonio",
+        "description": "Monumento que rinde homenaje a la cultura oaxaqueña, situado en la plaza principal.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/N5457917316#:~:text=Latitude",
+        "media": "Centro del palacio.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88472,
+          17.27692
+        ]
+      },
+      "properties": {
+        "name": "Monumento al misticismo y magia de los pueblos de Oaxaca",
+        "category": "sitios de patrimonio",
+        "description": "",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917317#:~:text=Latitud",
+        "media": "Plaza central de San Pablo Huitzo.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88488,
+          17.27742
+        ]
+      },
+      "properties": {
+        "name": "Monumento a la Madre",
+        "category": "sitios de patrimonio",
+        "description": "Monumento dedicado al misticismo y la magia de los pueblos de Oaxaca, localizado en la plaza central.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917315#:~:text=Latitud",
+        "media": "Monumento Huitzo.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88455,
+          17.27729
+        ]
+      },
+      "properties": {
+        "name": "Placa conmemorativa pintor ilustre huitzeño",
+        "category": "sitios de patrimonio",
+        "description": "Placa en honor a un pintor ilustre del municipio, situada en la explanada cercana a la casa de la cultura.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457918421#:~:text=Latitud",
+        "media": "arte huitzo.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8842,
+          17.27712
+        ]
+      },
+      "properties": {
+        "name": "Placa conmemorativa del Bicentenario de la Independencia de México",
+        "category": "sitios de patrimonio",
+        "description": "Placa de bronce que conmemora el bicentenario de la independencia nacional; instalada en la plaza central.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917320#:~:text=Latitud",
+        "media": "Placa de la Independencia.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88357,
+          17.27719
+        ]
+      },
+      "properties": {
+        "name": "Placa Bendición del Convento",
+        "category": "sitios de patrimonio",
+        "description": "Placa que recuerda la bendición del ex‑convento de San Pablo Huitzo, colocada en el muro exterior del templo.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mapcarta.com/es/N5457917314#:~:text=Latitud",
+        "media": "B exc.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88922,
+          17.28193
+        ]
+      },
+      "properties": {
+        "name": "Mercado Municipal de San Pablo Huitzo",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Mercado principal del municipio ubicado en la segunda sección sobre la calle Lázaro Cárdenas; los domingos se convierte en placita donde se venden tamales, atole, tlayudas y otros platillos tradicionales.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://xn----4mcbrl8gextf60e.cybo.com/MX/san-pablo-huitzo/%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D8%A7%D8%AF-%D8%BA%D8%B0%D8%A7%DB%8C%DB%8C-%D9%88-%D8%B3%D9%88%D9%BE%D8%B1-%D9%85%D8%A7%D8%B1%DA%A9%D8%AA-%D9%87%D8%A7/#:~:text=%7B",
+        "media": "Mercado Huitzo.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.88455,
+          17.27707
+        ]
+      },
+      "properties": {
+        "name": "Feria anual de San Pablo Huitzo",
+        "category": "lugares de expresión popular y tradicional",
+        "description": "Fiesta patronal que se celebra cada 21‑27 de enero (octava el 1–2 de febrero) con convites, calenda, cabalgata, expo feria, presentación de la Guelaguetza, competencias deportivas y eventos en la casa de la cultura y la plaza central.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://www.oaxaca.gob.mx/sectur/compartira-san-pablo-huitzo-su-riqueza-cultural-en-feria-anual-2025/#:~:text=%E2%80%A2%20Actividades%20culturales%2C%20deportivas%20y",
+        "media": "Feria-Huitzo.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Centro educativo Plantel 42 Huitzo (COBAO)",
+        "category": "centros de enseñanza y difusión",
+        "description": "Colegio de Bachilleres del Estado de Oaxaca (Plantel 42) que imparte educación media superior; ubicado sobre la carretera internacional en la cabecera municipal.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Cobao Huitzo.jpeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Aquiles Serdán",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria pública del municipio situada en la cabecera; ofrece educación básica a niñas y niños.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Primaria Aquiles Serdán.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Secundaria Técnica No. 76",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela secundaria técnica que brinda educación secundaria con orientación técnica.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Secundaria Técnica No. 76.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Fernando Montes de Oca",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria pública que atiende a estudiantes del municipio en nivel básico.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Primaria Fernando Montes de Oca.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Francisco Villa",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria ubicada en San Pablo Huitzo con servicio educativo público.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Primaria Francisco Villa.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Ignacio Zaragoza",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria que ofrece educación básica en la cabecera municipal.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Primaria Ignacio Zaragoza.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Jean Piaget",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela privada o comunitaria con nombre Jean Piaget que brinda educación básica.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Escuela Primaria Jean Piaget.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Josefa Ortiz de Domínguez",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria pública nombrada en honor a la heroína de la Independencia; ubicada en San Pablo Huitzo.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "Esc.Prim Josefa Ortiz de Domínguez.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -96.8845,
+          17.2774
+        ]
+      },
+      "properties": {
+        "name": "Escuela Primaria Sor Juana Inés de la Cruz",
+        "category": "centros de enseñanza y difusión",
+        "description": "Escuela primaria con nombre de la poetisa Sor Juana Inés de la Cruz; brinda educación básica en el municipio.",
+        "Lugar": "San pablo Huitzo",
+        "source_citation": "https://mexico.pueblosamerica.com/cc/san-pablo-huitzo#:~:text=Aquiles%20Serdan%20Escuela%20Secundaria%20Tecnica",
+        "media": "ESC. Prim SJIC.webp"
+      }
+    }
+  ]
+}
