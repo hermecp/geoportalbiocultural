@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Waze Turístico — Corredor Biocultural (demo con datos simulados)</title>
+
+<!-- Leaflet -->
+<link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Utilidades -->
+<script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+<script src="https://unpkg.com/leaflet-hash@0.2.1/leaflet-hash.js"></script>
+
+<!-- Geocoder (buscador) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.css" />
+<script src="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.js"></script>
+
+<!-- Clustering -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+<!-- Mi ubicación -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol@0.78.0/dist/L.Control.Locate.min.css">
+<script src="https://unpkg.com/leaflet.locatecontrol@0.78.0/dist/L.Control.Locate.min.js"></script>
+
+<!-- Iconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --guinda:#7a003c; --guinda2:#4e0026; --oro:#c9a24e;
+    --bg:#0b0e13; --panel:#0f1220; --btn:#172032; --btn2:#0e1523;
+    --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444; --info:#06b6d4;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:#e5e7eb;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+
+  #app{min-height:100vh;display:grid;grid-template-areas:"header" "main" "footer";grid-template-rows:64px 1fr 48px}
+  header{grid-area:header;background:linear-gradient(135deg,var(--guinda),var(--guinda2));color:#fff;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 12px}
+  header .brand{display:flex;align-items:center;gap:10px}
+  header .brand img{height:40px;border-radius:8px}
+  header .title strong{display:block;font-weight:800}
+  header .title small{opacity:.9}
+  header .kpis{display:flex;gap:8px}
+  header .stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:6px 10px}
+  header .stat .v{font-weight:800}
+
+  main{grid-area:main;position:relative;display:grid;grid-template-columns:420px 1fr}
+  #sidebar{background:var(--panel);border-right:1px solid rgba(255,255,255,.08);overflow:auto}
+  #map{position:relative}
+
+  /* buscador centrado */
+  .geocoder-wrap{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:540;background:rgba(15,18,24,.95);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:6px 8px}
+  .leaflet-control-geocoder{background:transparent;border:none;box-shadow:none}
+  .leaflet-control-geocoder-form input{width:min(70vw,520px);background:#111827;color:#e5e7eb;border:1px solid #374151;border-radius:10px;padding:10px 12px}
+
+  /* panel lateral */
+  .panel{padding:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .tabs{display:flex;gap:8px;margin-bottom:8px}
+  .tab{padding:8px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);cursor:pointer;font-size:13px}
+  .tab.active{background:rgba(255,255,255,.14)}
+  .row{display:flex;gap:8px;align-items:center;margin:6px 0}
+  .row input, .row select{flex:1;background:#111827;color:#e5e7eb;border:1px solid #374151;border-radius:10px;padding:10px 12px;font-size:13px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:#0b1220;font-size:12px}
+  .chip input{margin:0}
+  .chip .sw{display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid rgba(0,0,0,.25)}
+  .sep{height:1px;background:rgba(255,255,255,.08);margin:10px 0}
+
+  /* lista */
+  #list{padding:10px}
+  .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px;margin:10px 0;cursor:pointer}
+  .card:hover{background:rgba(255,255,255,.07)}
+  .card .title{font-weight:700}
+  .meta{display:flex;gap:8px;align-items:center;font-size:12px;opacity:.9;margin-top:4px}
+  .tag{padding:2px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font-size:11px}
+  .stars{color:#fbbf24}
+  .actions{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:6px;justify-content:center;padding:8px 10px;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(180deg,var(--btn),var(--btn2));color:#eaf2fb;cursor:pointer;font-size:13px}
+  .btn.ghost{background:transparent}
+  .badge{padding:2px 6px;border-radius:8px;font-size:11px;background:#1f2937;border:1px solid rgba(255,255,255,.12)}
+
+  /* leyenda + fabs */
+  .legend{position:absolute;left:12px;bottom:12px;z-index:500;background:rgba(15,18,24,.95);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px 12px;font-size:12px;min-width:220px}
+  .legend .sw{display:inline-block;width:14px;height:14px;margin-right:6px;border:1px solid #173a34;vertical-align:middle}
+  .map-actions{position:absolute;right:12px;bottom:12px;z-index:510;display:flex;flex-direction:column;gap:8px}
+  .btn.circle{width:44px;height:44px;border-radius:999px;padding:0}
+
+  /* modal reseñas */
+  dialog{border:none;border-radius:12px;background:#111827;color:#e5e7eb;padding:0;max-width:min(92vw,520px)}
+  dialog .dlg-h{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid #222}
+  dialog .dlg-b{padding:12px 14px}
+  dialog form input, dialog form select, dialog form textarea{width:100%;background:#0f1220;color:#e5e7eb;border:1px solid #374151;border-radius:10px;padding:10px 12px;margin:6px 0 10px}
+  dialog .actions{display:flex;gap:8px;justify-content:flex-end;padding:12px 14px;border-top:1px solid #222}
+
+  footer{grid-area:footer;background:#0e0f14;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:12px}
+  footer img{height:24px;border-radius:6px}
+  footer a{color:var(--oro);text-decoration:none}
+
+  @media(max-width:1100px){
+    main{grid-template-columns:1fr}
+    #sidebar{position:absolute;z-index:600;inset:12px auto auto 12px;width:min(92vw,420px);max-height:82vh;border-radius:12px;background:rgba(11,14,19,.98);box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12)}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand">
+      <img src="IPN-Logo.png" alt="IPN" />
+      <div class="title">
+        <strong>Waze Turístico — Corredor Biocultural de Oaxaca</strong>
+        <small>IPN · CVDR Oaxaca • Recomienda, califica y descubre</small>
+      </div>
+    </div>
+    <div class="kpis">
+      <div class="stat"><div style="font-size:12px;opacity:.8">POIs visibles</div><div class="v" id="kpi-vis">—</div></div>
+      <div class="stat"><div style="font-size:12px;opacity:.8">Categorías</div><div class="v" id="kpi-cats">—</div></div>
+      <div class="stat"><div style="font-size:12px;opacity:.8">⭐ Promedio</div><div class="v" id="kpi-avg">—</div></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="explorar"><i class="fa-solid fa-compass"></i> Explorar</button>
+          <button class="tab" data-tab="top"><i class="fa-solid fa-trophy"></i> Top</button>
+          <button class="tab" data-tab="cerca"><i class="fa-solid fa-location-crosshairs"></i> Cerca</button>
+        </div>
+        <div class="row">
+          <input id="q" type="text" placeholder="Buscar por nombre, descripción, lugar…" />
+          <button class="btn" id="btn-clear" title="Limpiar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="row">
+          <select id="min-rate">
+            <option value="0">⭐ Mínimo (todas)</option>
+            <option value="3">⭐ 3+</option>
+            <option value="4">⭐ 4+</option>
+            <option value="4.5">⭐ 4.5+</option>
+          </select>
+          <select id="sort">
+            <option value="score">Orden: Recomendado</option>
+            <option value="rating">Orden: Mejor calificados</option>
+            <option value="name">Orden: A-Z</option>
+          </select>
+        </div>
+        <div style="font-size:12px;opacity:.85;margin:6px 0 4px">Categorías</div>
+        <div id="chips" class="chips"></div>
+        <div class="sep"></div>
+        <div class="row" title="Activa el ranking dinámico (más reseñas recientes pesan más)">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px">
+            <input type="checkbox" id="cb-trending" checked> modo tendencia
+          </label>
+        </div>
+      </div>
+
+      <div id="list"></div>
+    </aside>
+
+    <!-- Mapa -->
+    <div id="map">
+      <div class="geocoder-wrap" id="gc-wrap"></div>
+      <div class="legend" id="legend"></div>
+      <div class="map-actions">
+        <button class="btn circle" id="btn-focus" title="Enfocar corredor"><i class="fa-regular fa-square"></i></button>
+        <button class="btn circle" id="btn-add" title="Sugerir nuevo lugar (demo)"><i class="fa-solid fa-plus"></i></button>
+        <button class="btn circle" id="btn-export" title="Exportar filtrados"><i class="fa-solid fa-file-export"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="display:flex;align-items:center;gap:8px">
+      <img src="logocvdr.jpg" alt="CVDR Oaxaca" />
+      <span>Centro de Vinculación y Desarrollo Regional Oaxaca · Instituto Politécnico Nacional</span>
+    </div>
+    <a href="#" class="privacy">Aviso de privacidad</a>
+  </footer>
+</div>
+
+<!-- Modal reseña -->
+<dialog id="dlg-review">
+  <div class="dlg-h">
+    <strong>Escribe una reseña</strong>
+    <button class="btn" id="rv-x"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="dlg-b">
+    <form id="form-review">
+      <input type="hidden" id="rv-id">
+      <label>Tu nombre (opcional)</label>
+      <input id="rv-name" placeholder="Ej. Ana">
+      <label>Calificación</label>
+      <select id="rv-stars" required>
+        <option value="">Selecciona…</option>
+        <option>5</option><option>4.5</option><option>4</option><option>3.5</option>
+        <option>3</option><option>2.5</option><option>2</option><option>1.5</option><option>1</option>
+      </select>
+      <label>Comentario</label>
+      <textarea id="rv-text" rows="3" placeholder="¿Qué te gustó? ¿Algún tip?"></textarea>
+      <label>URL de foto (opcional)</label>
+      <input id="rv-photo" type="url" placeholder="https://…">
+    </form>
+  </div>
+  <div class="actions">
+    <button class="btn" id="rv-cancel">Cancelar</button>
+    <button class="btn" id="rv-save"><i class="fa-solid fa-paper-plane"></i> Publicar</button>
+  </div>
+</dialog>
+
+<script>
+/* =====================  DATOS SIMULADOS (SEMILLA)  ===================== */
+const SEED_GEOJSON = /* pega aquí tu FeatureCollection completa */  {
+  "type": "FeatureCollection",
+  "features": [/* —recortado por brevedad en esta muestra—  pega tu JSON completo aquí — */]
+};
+
+/* =====================  HELPERS  ===================== */
+const $=s=>document.querySelector(s);
+const $$=s=>Array.from(document.querySelectorAll(s));
+const slug=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$|_/g,'');
+const fmt = n => new Intl.NumberFormat('es-MX').format(n);
+const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+const rnd=(a,b)=>a+Math.random()*(b-a);
+
+/* =====================  MAPA  ===================== */
+const map=L.map('map',{center:[17.27,-96.88],zoom:15,zoomControl:false,preferCanvas:true});
+new L.Hash(map);
+L.control.zoom({position:'bottomright'}).addTo(map);
+L.control.locate({position:'bottomright',showPopup:false,keepCurrentZoomLevel:true,strings:{title:"Mi ubicación"}}).addTo(map);
+
+const baseDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+  maxZoom:20, attribution:'© OpenStreetMap, © CARTO'
+}).addTo(map);
+
+/* Buscador */
+const gc=L.Control.geocoder({defaultMarkGeocode:false, placeholder:'Buscar en el corredor…'});
+const gcCtrl=gc.addTo(map); $('#gc-wrap').appendChild(gcCtrl.getContainer());
+gc.on('markgeocode',e=>{
+  const b=e.geocode.bbox; const bb=L.latLngBounds(b.getSouthEast(),b.getNorthWest());
+  map.fitBounds(bb.pad(.12));
+});
+
+/* =====================  CATEGORÍAS / COLORES  ===================== */
+const CAT_COLORS={
+  'espacios culturales y artísticos':'#d97706',
+  'sitios de patrimonio':'#8b5cf6',
+  'lugares de expresión popular y tradicional':'#06b6d4',
+  'rutas y espacios bioculturales':'#22c55e',
+  'centros de enseñanza y difusión':'#ef4444',
+  'Zona arqueológica':'#f59e0b'
+};
+function iconPOI(cat='',rating=4){
+  const c=CAT_COLORS[cat]||'#00D1A0';
+  const pulse = clamp((rating-3.5),0,1)*6+10; // tamaño según rating
+  const html=`<div style="transform:translate(-50%,-100%);filter:drop-shadow(0 3px 8px rgba(0,0,0,.35))">
+    <svg viewBox="0 0 28 38" width="${pulse+18}" height="${pulse+28}">
+      <path d="M14 2c-6.1 0-11 4.64-11 10.36 0 7.24 9.5 18.56 10.08 19.28a1.2 1.2 0 0 0 1.84 0C15.5 30.92 25 19.6 25 12.36 25 6.64 20.1 2 14 2z" fill="#fff"/>
+      <path d="M14 3.4c-5.35 0-9.65 4.07-9.65 9.1 0 6.38 8.35 16.35 8.86 16.98.33.4.95.4 1.28 0 .51-.63 8.86-10.6 8.86-16.98 0-5.03-4.3-9.1-9.65-9.1z" fill="${c}" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="14" cy="12.5" r="3.2" fill="rgba(255,255,255,.95)"/>
+    </svg></div>`;
+  return L.divIcon({className:'',html,iconSize:[28,38],iconAnchor:[14,38]});
+}
+function stars(n){
+  const full=Math.floor(n), half = (n-full)>=0.5 ? 1:0, empty=5-full-half;
+  return '★'.repeat(full)+'½'.repeat(half)+'☆'.repeat(empty);
+}
+
+/* =====================  SEMILLA + RESEÑAS FAKE ===================== */
+const REV_KEY='waze_turistico_reviews';
+const SAV_KEY='waze_turistico_saves';
+
+let DB = SEED_GEOJSON.features.map(f=>{
+  const id = slug(f.properties.name)+'-'+Math.abs((f.geometry.coordinates[0]*100000|0));
+  return { id, ...f };
+});
+
+// si no existen reseñas, crear algunas de ejemplo
+if(!localStorage.getItem(REV_KEY)){
+  const fake = {};
+  DB.forEach(p=>{
+    const n = Math.random()<0.6 ? 1+ (Math.random()*4|0) : 0; // algunos sin reseñas
+    fake[p.id]=Array.from({length:n}).map(()=>({
+      user:['Ana','Luis','Mar','Dani','Fer','Itzel','Leo','Sofi'][Math.random()*8|0],
+      stars: [5,4.5,4,3.5,3][Math.random()*5|0],
+      text: ['Hermoso para fotos','Muy tranquilo','Buena experiencia','Ideal en atardecer','Recomendado para familias','Rico antojito cerca'].sort(()=>.5-Math.random())[0],
+      photo: '', ts: Date.now() - (Math.random()*86400*1000*20|0)
+    }));
+  });
+  localStorage.setItem(REV_KEY, JSON.stringify(fake));
+}
+if(!localStorage.getItem(SAV_KEY)) localStorage.setItem(SAV_KEY, JSON.stringify({}));
+
+function getReviews(id){ const all=JSON.parse(localStorage.getItem(REV_KEY)||'{}'); return all[id]||[]; }
+function saveReview(id,rev){
+  const all=JSON.parse(localStorage.getItem(REV_KEY)||'{}'); all[id]=[...(all[id]||[]),rev];
+  localStorage.setItem(REV_KEY, JSON.stringify(all));
+}
+function toggleSave(id){ const all=JSON.parse(localStorage.getItem(SAV_KEY)||'{}'); all[id]=!all[id]; localStorage.setItem(SAV_KEY, JSON.stringify(all)); return all[id]; }
+function isSaved(id){ const all=JSON.parse(localStorage.getItem(SAV_KEY)||'{}'); return !!all[id]; }
+
+function ratingFor(id){
+  const rs = getReviews(id);
+  if(rs.length===0) return {avg:0,n:0,trend:0};
+  const now=Date.now();
+  let sum=0, wsum=0;
+  rs.forEach(r=>{
+    const ageDays = (now - r.ts)/(86400*1000);
+    const w = $('#cb-trending')?.checked ? (1/Math.max(1,ageDays*0.6)) : 1; // reseñas recientes pesan más
+    sum += r.stars*w; wsum+=w;
+  });
+  return {avg: +(sum/wsum).toFixed(2), n: rs.length, trend: +((sum/wsum)*Math.log10(rs.length+1)).toFixed(3)};
+}
+
+/* =====================  UI / FILTROS  ===================== */
+let activeTab='explorar';
+let activeCats=[];
+const cluster = L.markerClusterGroup({disableClusteringAtZoom:16}).addTo(map);
+let markersIndex = []; // {id, marker, data}
+
+function buildChips(){
+  const set=new Set(DB.map(p=>p.properties.category));
+  const box=$('#chips');
+  box.innerHTML = Array.from(set).sort((a,b)=>a.localeCompare(b)).map(c=>{
+    const col = CAT_COLORS[c] || '#00D1A0';
+    const id='chip-'+slug(c);
+    return `<label class="chip"><input type="checkbox" id="${id}" value="${c}" checked>
+      <span class="sw" style="background:${col}"></span>${c}</label>`;
+  }).join('');
+  activeCats=Array.from(set);
+  $$('#chips input').forEach(ch=> ch.addEventListener('change',()=>{
+    const val=ch.value; if(ch.checked){ if(!activeCats.includes(val)) activeCats.push(val); }else{ activeCats=activeCats.filter(x=>x!==val); }
+    render();
+  }));
+}
+
+function filterAll(){
+  const q = $('#q').value.trim().toLowerCase();
+  const min = parseFloat($('#min-rate').value||'0');
+  return DB.filter(p=>{
+    const {avg}=ratingFor(p.id);
+    const inCats = activeCats.length===0 ? true : activeCats.includes(p.properties.category);
+    const inText = !q || [p.properties.name,p.properties.description,p.properties.Lugar,p.properties.category]
+      .some(v=>String(v||'').toLowerCase().includes(q));
+    return inCats && inText && (avg>=min || getReviews(p.id).length===0 && min===0);
+  });
+}
+
+function sortItems(arr){
+  const how = $('#sort').value;
+  if(how==='name') return arr.sort((a,b)=>a.properties.name.localeCompare(b.properties.name));
+  if(how==='rating') return arr.sort((a,b)=> ratingFor(b.id).avg - ratingFor(a.id).avg );
+  // score: rating * log(#reseñas+1) y ligera prioridad a favoritos
+  return arr.sort((a,b)=>{
+    const sb = ratingFor(b.id).trend + (isSaved(b.id)?0.2:0);
+    const sa = ratingFor(a.id).trend + (isSaved(a.id)?0.2:0);
+    return sb-sa;
+  });
+}
+
+function popupHTML(p, ll){
+  const r = ratingFor(p.id);
+  const foto = p.properties.media?.match(/^https?:\/\//i) ? `<div style="margin-top:6px"><img src="${p.properties.media}" style="max-width:240px;border-radius:8px"></div>`:'';
+  const coords=`${ll.lat.toFixed(6)}, ${ll.lng.toFixed(6)}`;
+  return `<div style="min-width:240px;max-width:280px">
+    <strong>${p.properties.name}</strong>
+    <div class="meta"><span class="tag">${p.properties.category}</span> <span>${stars(r.avg||4)} <b>${r.avg? r.avg.toFixed(1):'N/A'}</b> (${r.n})</span></div>
+    <div style="margin-top:6px">${p.properties.description||''}</div>
+    ${foto}
+    <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+      <button class="btn" onclick="openReview('${p.id}')"><i class="fa-solid fa-pen"></i> Reseñar</button>
+      <button class="btn" onclick="sharePlace('${p.id}')"><i class="fa-solid fa-share-nodes"></i> Compartir</button>
+    </div>
+    <div style="margin-top:6px;opacity:.75"><small>${coords}</small></div>
+  </div>`;
+}
+
+function featureToMarker(p){
+  const [x,y]=p.geometry.coordinates; const ll=L.latLng(y,x);
+  const r = ratingFor(p.id); const m=L.marker(ll,{icon:iconPOI(p.properties.category,r.avg||4), riseOnHover:true});
+  m.bindPopup(popupHTML(p,ll));
+  return m;
+}
+
+function renderMap(list){
+  cluster.clearLayers(); markersIndex=[];
+  list.forEach(p=>{
+    const m = featureToMarker(p);
+    cluster.addLayer(m);
+    markersIndex.push({id:p.id, marker:m, data:p});
+  });
+}
+
+function cardHTML(p){
+  const r = ratingFor(p.id);
+  const fav = isSaved(p.id);
+  const color = CAT_COLORS[p.properties.category]||'#00D1A0';
+  return `<div class="card" data-id="${p.id}">
+    <div class="title" style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+      <span>${p.properties.name}</span>
+      <span class="badge" style="border-color:${color};color:${color}">${p.properties.category}</span>
+    </div>
+    <div class="meta"><span class="stars">${stars(r.avg||4)}</span> <span>${r.avg? r.avg.toFixed(1):'N/A'} • ${r.n} reseñas</span></div>
+    <div style="margin-top:6px;opacity:.9">${p.properties.description?.slice(0,140)||''}${(p.properties.description||'').length>140?'…':''}</div>
+    <div class="actions">
+      <button class="btn" data-act="ver"><i class="fa-solid fa-magnifying-glass-location"></i> Ver</button>
+      <button class="btn" data-act="resena"><i class="fa-solid fa-pen"></i> Reseñar</button>
+      <button class="btn ghost" data-act="fav"><i class="${fav?'fa-solid':'fa-regular'} fa-bookmark"></i> Guardar</button>
+    </div>
+  </div>`;
+}
+
+function renderList(list){
+  const box=$('#list'); box.innerHTML='';
+  const frag=document.createDocumentFragment();
+  list.forEach(p=>{
+    const el=document.createElement('div'); el.innerHTML=cardHTML(p); const card=el.firstElementChild;
+    card.addEventListener('click',e=>{
+      const act = e.target.closest('button')?.dataset?.act;
+      const mk = markersIndex.find(k=>k.id===p.id);
+      if(act==='ver'){ map.flyTo(mk.marker.getLatLng(), 17, {duration:.6}); mk.marker.openPopup(); }
+      else if(act==='resena'){ openReview(p.id); }
+      else if(act==='fav'){ const now=toggleSave(p.id); e.target.closest('button').querySelector('i').className = (now?'fa-solid':'fa-regular')+' fa-bookmark'; }
+    });
+    frag.appendChild(card);
+  });
+  box.appendChild(frag);
+}
+
+function renderKPIs(list){
+  $('#kpi-vis').textContent=list.length;
+  $('#kpi-cats').textContent=new Set(list.map(p=>p.properties.category)).size;
+  const all = list.map(p=>ratingFor(p.id)).filter(r=>r.n>0);
+  const avg = all.length? (all.reduce((a,b)=>a+b.avg,0)/all.length).toFixed(2) : '—';
+  $('#kpi-avg').textContent = avg;
+}
+
+function renderLegend(){
+  const rows=[];
+  rows.push(`<div><span class="sw" style="background:#bfe8d2;border-color:#00b894"></span> Área del corredor</div>`);
+  rows.push(`<div style="margin-top:6px"><b>Categorías</b></div>`);
+  Object.entries(CAT_COLORS).forEach(([k,v])=> rows.push(`<div><span class="sw" style="background:${v};border-color:${v}"></span> ${k}</div>`));
+  rows.push(`<div style="margin-top:6px"><b>Tips</b><div>• Pulsa ⭐ en listado para ver los mejores.<br>• “Modo tendencia” pondera reseñas recientes.</div></div>`);
+  $('#legend').innerHTML = `<strong>Leyenda</strong><div style="margin-top:6px">${rows.join('')}</div>`;
+}
+
+/* =====================  CORREDOR ENVOLVENTE  ===================== */
+const pts = DB.map(p=>({type:'Feature',geometry:{type:'Point',coordinates:p.geometry.coordinates}}));
+let polyConcave=null; try{polyConcave=turf.concave({type:'FeatureCollection',features:pts},{maxEdge:3,units:'kilometers'});}catch{}
+if(!polyConcave){
+  let uni=turf.buffer(pts[0],.8,{units:'kilometers'});
+  for(let i=1;i<pts.length;i++) uni=turf.union(uni,turf.buffer(pts[i],.8,{units:'kilometers'}));
+  polyConcave=uni;
+}
+const lyrConcave=L.geoJSON(polyConcave,{style:{color:'#00b894',weight:2,fillColor:'#bfe8d2',fillOpacity:.12}}).addTo(map);
+map.fitBounds(lyrConcave.getBounds().pad(.08));
+
+/* =====================  EVENTOS / RENDER ===================== */
+function render(){
+  let list = filterAll();
+  list = sortItems(list);
+  renderMap(list);
+  renderList(list);
+  renderKPIs(list);
+}
+$('#q').addEventListener('input', render);
+$('#btn-clear').addEventListener('click', ()=>{ $('#q').value=''; render(); });
+$('#min-rate').addEventListener('change', render);
+$('#sort').addEventListener('change', render);
+$('#cb-trending').addEventListener('change', render);
+$('#btn-focus').addEventListener('click', ()=> map.fitBounds(lyrConcave.getBounds().pad(.08)));
+$('#btn-export').addEventListener('click', ()=>{
+  const feats = filterAll().map(p=>({type:'Feature',geometry:p.geometry,properties:p.properties}));
+  const fc = {type:'FeatureCollection',features:feats};
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(fc)],{type:'application/geo+json'}));
+  a.download='waze_turistico_filtrados.geojson'; a.click();
+});
+$('#btn-add').addEventListener('click',()=> alert('Demo: la creación de lugares se habilita en producción.\nAhora puedes añadir reseñas en los existentes.'));
+
+$$('.tab').forEach(t=> t.addEventListener('click', ()=>{
+  $$('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+  activeTab=t.dataset.tab;
+  if(activeTab==='cerca'){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(pos=>{
+        const me=[pos.coords.latitude,pos.coords.longitude];
+        DB.sort((a,b)=> turf.distance([a.geometry.coordinates[0],a.geometry.coordinates[1]],[me[1],me[0]]) -
+                          turf.distance([b.geometry.coordinates[0],b.geometry.coordinates[1]],[me[1],me[0]]) );
+        map.flyTo(me,15,{duration:.5});
+        render();
+      }, _=> render(), {enableHighAccuracy:true,timeout:4000});
+    }else render();
+  }else if(activeTab==='top'){
+    $('#sort').value='rating'; render();
+  }else{ $('#sort').value='score'; render(); }
+}));
+
+/* =====================  RESEÑAS  ===================== */
+function openReview(id){
+  $('#rv-id').value=id; $('#rv-name').value=''; $('#rv-stars').value=''; $('#rv-text').value=''; $('#rv-photo').value='';
+  $('#dlg-review').showModal();
+}
+$('#rv-x, #rv-cancel').addEventListener('click', ()=> $('#dlg-review').close());
+$('#rv-save').addEventListener('click', ()=>{
+  const id=$('#rv-id').value, name=$('#rv-name').value.trim()||'Anónimo', stars=parseFloat($('#rv-stars').value), text=$('#rv-text').value.trim(), photo=$('#rv-photo').value.trim();
+  if(!id || !stars){ alert('Faltan datos.'); return; }
+  saveReview(id,{user:name,stars, text, photo, ts:Date.now()});
+  $('#dlg-review').close(); render();
+});
+
+/* compartir (web share api si existe) */
+function sharePlace(id){
+  const p = DB.find(x=>x.id===id);
+  const url = location.origin+location.pathname+'#'+slug(p.properties.name);
+  if(navigator.share){ navigator.share({title:p.properties.name,text:'Te recomiendo este lugar',url}); }
+  else { navigator.clipboard.writeText(url); alert('Enlace copiado: '+url); }
+}
+window.openReview=openReview; window.sharePlace=sharePlace;
+
+/* =====================  INICIO ===================== */
+function init(){
+  buildChips();
+  renderLegend();
+  render();
+}
+init();
+</script>
+</body>
+</html>
