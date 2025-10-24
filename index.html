@@ -3,446 +3,434 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cartografía de Saberes Comunitarios — Corredor Biocultural</title>
+<title>Geoportal Corredor Biocultural — Interactivo y Animado</title>
 
-<!-- Tailwind (CDN para el modal/card y tipografía grande) -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          bosque: { 50:'#ecfdf5', 100:'#d1fae5', 300:'#86efac', 500:'#16a34a', 600:'#0e7a3a', 800:'#065f46' },
-          marco:{ 300:'rgba(147,243,192,.25)' }
-        },
-        boxShadow: {
-          fino: '0 8px 24px rgba(6,95,70,.18)',
-          verde: '0 16px 40px rgba(6,95,70,.35)'
-        }
-      }
-    }
-  }
-</script>
-
-<!-- Leaflet + utilidades -->
-<link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+<!-- Leaflet -->
+<link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+
+<!-- Plugins UI y análisis -->
+<link href="https://unpkg.com/leaflet-minimap/dist/Control.MiniMap.min.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-minimap/dist/Control.MiniMap.min.js"></script>
+<link href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" rel="stylesheet" />
+<script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
 <script src="https://unpkg.com/leaflet-hash"></script>
+<!-- Geocoder -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<!-- Clustering -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<!-- Heatmap -->
+<script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
-<!-- Iconos / tipografía -->
+<!-- Turf (geoprocesos) -->
+<script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+
+<!-- Iconografía / fuentes -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --primary:#16a34a; --primary-2:#0e7a3a; --accent:#93f3c0;
-    --bg:#0b0f0c; --panel:rgba(15,24,19,.95); --line:rgba(147,243,192,.25);
-    --text:#e6f7ee; --muted:#a7b7ad;
+    --guinda:#7a003c; --guinda2:#4e0026; --oro:#c9a24e;
+    --bg:#0f1218; --bg2:#121826; --txt:#e2e8f0; --sidebarW:380px;
+    --mk:#00D1A0; --mk-stroke:#0a6b55; --mk-glow:rgba(0,209,160,.45);
+    --footerH:64px;
   }
   *{box-sizing:border-box}
   html,body{height:100%}
-  body{
-    margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
-    background:radial-gradient(1200px 600px at 70% -10%, #0f1a14, var(--bg)); color:var(--text)
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0b0e13;color:#eee}
+
+  /* ===== Layout con footer ===== */
+  #app{
+    min-height:100vh;
+    display:grid;
+    grid-template-areas:"header header" "sidebar main" "footer footer";
+    grid-template-columns:var(--sidebarW) 1fr;
+    grid-template-rows:64px 1fr var(--footerH);
+    overflow:hidden;
   }
-  #app{min-height:100vh; display:grid; grid-template-areas:"header" "main" "footer"; grid-template-rows:64px 1fr 48px}
-  header{
-    grid-area:header; background:linear-gradient(135deg,var(--primary),var(--primary-2));
-    color:#042d19; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:0 12px; border-bottom:1px solid var(--line)
+  #app.sidebar-hidden{ grid-template-columns:0 1fr; }
+
+  header{grid-area:header;background:linear-gradient(135deg,var(--guinda),var(--guinda2));color:#fff;
+         display:flex;align-items:center;gap:16px;padding:0 16px;z-index:10;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  header .logo{display:flex;align-items:center;gap:12px}
+  .title-stack{display:flex;flex-direction:column}
+  .btn-hamb{padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,.35);
+            background:rgba(0,0,0,.22);color:#fff;display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+
+  /* Sidebar */
+  .sidebar{grid-area:sidebar;background:var(--bg);color:var(--txt);overflow:auto;
+           border-right:1px solid rgba(201,162,78,.18);position:relative;transition:transform .28s ease;will-change:transform;z-index:5}
+  #app.sidebar-hidden .sidebar{ transform:translateX(-100%); }
+
+  .sidebar .box{padding:16px;border-bottom:1px solid #2b2b2b;background:#0c111b}
+  .sidebar input[type="text"], .sidebar input[type="url"], .sidebar input[type="number"]{
+    width:100%;padding:10px 12px;border:1px solid #3b3b3b;background:#111;color:#ddd;border-radius:8px
   }
-  header .brand{display:flex;align-items:center;gap:10px}
-  header .brand img{height:40px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-  header .brand .title strong{display:block;font-weight:800;letter-spacing:.2px}
-  header .nav{display:flex;gap:8px;flex-wrap:wrap}
-  header .nav a{
-    display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:12px;
-    background:rgba(255,255,255,.18);color:#042d19;text-decoration:none;border:1px solid rgba(255,255,255,.35); font-size:13px; transition:.2s
-  }
-  header .nav a.active, header .nav a:hover{ background:#fff; color:#065f46; border-color:#fff }
-  .kpis{display:flex;gap:8px}
-  .kpi{ background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35); border-radius:10px;padding:6px 10px;font-size:12px;text-align:center;color:#043722 }
+  .group{padding:10px 16px}
+  .group h3{margin:10px 0;font-weight:800;font-size:13px;letter-spacing:.3px;color:var(--oro)}
+  .item{display:flex;align-items:center;gap:10px;padding:8px 0;border-left:3px solid transparent;padding-left:10px;cursor:pointer}
+  .item:hover{background:#160a10;border-left-color:var(--oro)}
+  .item input{margin:0}
+
+  /* Map */
+  .map{grid-area:main;position:relative;background:#070a11}
+  #map{width:100%;height:100%}
+  .leaflet-tile{opacity:0;animation:tilefade .6s ease forwards}
+  @keyframes tilefade{to{opacity:1}}
+  .ripple{position:absolute;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%);border:2px solid rgba(255,255,255,.65);opacity:.8;animation:ripple .8s ease-out forwards}
+  @keyframes ripple{0%{width:0;height:0;opacity:.9}100%{width:180px;height:180px;opacity:0}}
+
+  .controls{position:absolute;right:16px;top:16px;z-index:600;display:flex;flex-direction:column;gap:8px}
+  .btn{width:40px;height:40px;border-radius:10px;border:1px solid rgba(201,162,78,.35);background:linear-gradient(180deg,#1b1018,#0f0a0d);color:#f6f0f4;display:grid;place-items:center;cursor:pointer}
+  .selected{position:absolute;right:16px;bottom:16px;background:#100a12;border:1px solid rgba(201,162,78,.25);border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.35);padding:12px;z-index:550;min-width:260px;color:#f1e8ee}
+  .selected h4{margin:0 0 8px 0;font-size:14px}
+  .selected .row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #eee}
+  .selected .row:last-child{border-bottom:0}
+  .legend{position:absolute;left:16px;bottom:16px;background:#120913;color:#f4e9ef;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.35);padding:12px;z-index:500;font-size:13px;border:1px solid rgba(201,162,78,.28);max-width:280px}
+
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-left:auto}
+  .kpi{background:#1a1520;color:#f1e8ee;border-radius:8px;padding:8px 10px;text-align:center;font-size:12px;border:1px solid rgba(201,162,78,.25)}
   .kpi .v{font-weight:800;font-size:16px}
+  .label-mpio{font-weight:700;color:#0b4f46;background:rgba(255,255,255,.78);padding:2px 6px;border-radius:6px;border:1px solid #cde7d8}
 
-  main{grid-area:main;position:relative}
-  #map{position:absolute;inset:0}
+  /* Accordion */
+  .acc{padding:8px 12px}
+  .acc-item{border-bottom:1px solid #2b2b2b}
+  .acc-h{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 4px;cursor:pointer;user-select:none}
+  .acc-left{display:flex;align-items:center;gap:10px}
+  .acc-h .badge{background:#2e7d32;color:#eaffee;border-radius:999px;padding:2px 8px;font-size:11px}
+  .acc-item .acc-body{height:0;overflow:hidden;transition:height .24s ease;padding-left:26px}
+  .acc-item.open .acc-h .chev{transform:rotate(180deg)}
 
-  /* Geocoder centrado */
-  .geocoder-wrap{
-    position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:540;
-    background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:14px;padding:6px 8px; box-shadow:0 10px 24px rgba(5,94,40,.25)
-  }
-  .leaflet-control-geocoder{background:transparent;border:none;box-shadow:none}
-  .leaflet-control-geocoder-form input{
-    width:320px;max-width:60vw;background:#ffffff;color:#0b1a12;
-    border:1px solid #d6efe2;border-radius:10px;padding:10px 12px; outline:none;
-  }
-  .leaflet-control-geocoder-form input:focus{ box-shadow:0 0 0 3px rgba(34,197,94,.25); border-color:#9ee9c2 }
+  /* Pin animado */
+  .mk-pin{position:relative; display:inline-grid; place-items:center;width:28px; height:38px; transform:translate(-50%,-100%); animation:mk-bob 2.2s ease-in-out infinite}
+  .mk-pin svg{width:28px;height:38px; filter:drop-shadow(0 3px 10px var(--mk-glow))}
+  .mk-pin::after{content:""; position:absolute; left:50%; bottom:6px; width:10px; height:10px; border-radius:999px; transform:translateX(-50%); background:rgba(255,255,255,.9); filter:blur(5px); animation:mk-pulse 1.8s ease-out infinite; opacity:.65}
+  @keyframes mk-bob{0%,100%{transform:translate(-50%,-100%) translateY(0)}50%{transform:translate(-50%,-100%) translateY(-3px)}}
+  @keyframes mk-pulse{0%{transform:translateX(-50%) scale(.5); opacity:.55}70%{transform:translateX(-50%) scale(1.9); opacity:0}100%{opacity:0}}
+  .marching{stroke-dasharray:8 6;animation:march 3s linear infinite}
+  @keyframes march{to{stroke-dashoffset:-56}}
+  .soft-glow{filter:drop-shadow(0 0 6px rgba(34,103,90,.35))}
 
-  /* Panel de capas */
-  .panel{
-    position:absolute;right:12px;top:12px;z-index:520; background:var(--panel); border:1px solid var(--line);
-    border-radius:16px; min-width:300px; max-width:min(380px,92vw); padding:12px 12px 14px 12px; max-height:70vh; overflow:auto;
-    box-shadow:0 18px 48px rgba(5,94,40,.35)
-  }
-  .panel h4{margin:0 0 8px 0;font-size:14px;color:#bbffe0}
-  .block{margin:10px 0}
-  .block b{display:block;margin-bottom:6px;font-size:12px;color:#d1f5e4}
-  .item{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:13px}
-  .sep{height:1px;background:var(--line);margin:10px 0}
-
-  .btn{
-    width:100%;height:38px;margin-top:6px;border-radius:12px;border:1px solid #b3f0d0;
-    background:linear-gradient(180deg,#ffffff,#ecfdf5); color:#064e3b; cursor:pointer;
-    box-shadow:0 6px 14px rgba(5,94,40,.2); transition:.15s
-  }
-  .btn:hover{transform:translateY(-1px)}
-
-  /* Leyenda */
-  .legend{
-    position:absolute;left:12px;bottom:12px;z-index:500;background:rgba(255,255,255,.92); color:#0d2f20;
-    border:1px solid var(--line); border-radius:12px; padding:10px 12px;font-size:12px;min-width:220px; box-shadow:0 12px 28px rgba(5,94,40,.25)
-  }
-  .legend .sw{ display:inline-block;width:14px;height:14px;margin-right:6px; border:1px solid #0f3d26; vertical-align:middle; border-radius:3px }
-
-  footer{
-    grid-area:footer; background:#0c1411; border-top:1px solid var(--line);
-    display:flex;align-items:center;justify-content:space-between;padding:0 12px;font-size:12px;color:var(--muted)
-  }
-  footer img{height:24px;border-radius:6px}
-  footer a.privacy{color:var(--accent);text-decoration:none}
+  /* Footer */
+  footer{grid-area:footer;background:#0e0f14;border-top:1px solid rgba(201,162,78,.18);
+         display:flex;align-items:center;justify-content:space-between;padding:0 16px;color:#e8e0ea}
+  footer .left, footer .right{display:flex;align-items:center;gap:12px}
+  footer .tag{font-size:12px;opacity:.85}
+  footer img{height:28px;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.3)}
 
   @media(max-width:900px){
-    .panel{max-height:56vh}
-    .leaflet-control-geocoder-form input{width:220px}
+    :root{--sidebarW:86vw}
+    footer .tag{display:none}
   }
 </style>
 </head>
 <body>
 <div id="app">
   <header>
-    <div class="brand">
-      <img src="IPN-Logo.png" alt="IPN" />
-      <div class="title">
-        <strong class="text-lg md:text-xl">Cartografía de Saberes Comunitarios</strong>
-        <small>IPN · CVDR Oaxaca</small>
+    <div class="logo">
+      <img src="IPN-Logo.png" alt="IPN" style="height:40px;filter:drop-shadow(0 1px 0 rgba(0,0,0,.1))"/>
+      <div class="title-stack">
+        <strong>Corredor Biocultural de Oaxaca</strong>
+        <div class="bar-under">
+          <button class="btn-hamb" id="btn-toggle-sidebar" title="Mostrar/ocultar panel">
+            <i class="fa-solid fa-bars"></i> <span>Capas y herramientas</span>
+          </button>
+        </div>
       </div>
     </div>
 
-    <nav class="nav">
-      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a>
-      <a href="pois.html"><i class="fa-solid fa-landmark"></i> POIs & Patrimonio</a>
-      <a href="modelos.html"><i class="fa-solid fa-diagram-project"></i> Modelos de idoneidad</a>
-      <a href="#"><i class="fa-solid fa-users"></i> Participación</a>
-      <a href="#"><i class="fa-solid fa-database"></i> Datos</a>
-    </nav>
-
     <div class="kpis">
-      <div class="kpi"><div class="v" id="kpi-pts">—</div><div>Puntos</div></div>
-      <div class="kpi"><div class="v" id="kpi-area">—</div><div>Área corredor</div></div>
+      <div class="kpi" style="background:linear-gradient(180deg,rgba(122,0,60,.95),rgba(78,0,38,.95));border:1px solid rgba(255,255,255,.08)"><div class="v" id="kpi-pts">—</div><div>Puntos</div></div>
+      <div class="kpi" style="background:#1b0b12;border:1px solid rgba(255,255,255,.06)"><div class="v" id="kpi-area-concave">—</div><div>Área cóncava</div></div>
+      <div class="kpi" style="background:#1b0b12;border:1px solid rgba(255,255,255,.06)"><div class="v" id="kpi-area-convex">—</div><div>Área convexa</div></div>
+    </div>
+
+    <div style="margin-left:16px">
+      <img src="logocvdr.jpg" alt="CVDR Oaxaca" style="height:40px;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.25)"/>
     </div>
   </header>
 
-  <main>
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="box">
+      <input type="text" id="search" placeholder="Buscar capas o lugares…" />
+      <div style="display:flex;gap:12px;margin-top:10px;font-size:12px;opacity:.9">
+        <div><i class="fa-solid fa-layer-group"></i> <span id="total-layers">0</span> capas</div>
+        <div><i class="fa-solid fa-check"></i> <span id="active-layers">0</span> activas</div>
+      </div>
+    </div>
+
+    <!-- Bases -->
+    <div class="group">
+      <h3><i class="fa-solid fa-map"></i> Bases</h3>
+      <label class="item"><input type="radio" name="base" id="base-osm" checked> OSM Standard</label>
+      <label class="item"><input type="radio" name="base" id="base-sat"> ESRI Satélite</label>
+      <label class="item"><input type="radio" name="base" id="base-topo"> ESRI Topo</label>
+      <label class="item"><input type="checkbox" id="labels-toggle" checked> Etiquetas HOT</label>
+      <div class="item" style="gap:8px"><i class="fa-solid fa-circle-half-stroke"></i> Opacidad satélite <input id="sat-opacity" type="range" min="0" max="1" step="0.05" value="1" style="width:120px"></div>
+      <div class="item" style="gap:8px"><i class="fa-regular fa-square"></i> Opacidad de polígonos <input id="poly-opacity" type="range" min="0" max="0.6" step="0.02" value="0.12" style="width:120px"></div>
+    </div>
+
+    <!-- Geocodificación -->
+    <div class="group">
+      <h3><i class="fa-solid fa-magnifying-glass-location"></i> Geocodificador</h3>
+      <div class="item" style="opacity:.8">Usa el cuadro de la esquina superior izquierda del mapa para buscar lugares (Nominatim).</div>
+      <label class="item"><input type="checkbox" id="toggle-geocoder" checked> Mostrar geocoder</label>
+    </div>
+
+    <!-- Análisis (buffer + intersect) -->
+    <div class="group">
+      <h3><i class="fa-solid fa-compass-drafting"></i> Análisis</h3>
+      <div class="item" style="flex-direction:column;align-items:flex-start">
+        <label style="font-size:12px;opacity:.9">Radio de buffer (km): <span id="buf-km-val">2</span></label>
+        <input id="buf-km" type="range" min="0.2" max="20" step="0.2" value="2">
+      </div>
+      <label class="item"><input type="checkbox" id="buffer-on-click" checked> Crear buffer al hacer clic</label>
+      <div class="item" style="gap:8px">
+        <button id="btn-clear-analysis" class="btn" title="Limpiar análisis"><i class="fa-solid fa-eraser"></i></button>
+        <button id="btn-export-analysis" class="btn" title="Exportar análisis"><i class="fa-solid fa-download"></i></button>
+      </div>
+      <div class="item" style="flex-direction:column;align-items:flex-start">
+        <div style="font-size:12px;opacity:.9">Resultados:</div>
+        <div id="analysis-res" style="font-size:12px;line-height:1.4"></div>
+      </div>
+    </div>
+
+    <!-- Clustering & Heatmap -->
+    <div class="group">
+      <h3><i class="fa-solid fa-bullseye"></i> Visualización de puntos</h3>
+      <label class="item"><input type="checkbox" id="toggle-cluster"> Agrupar (MarkerCluster)</label>
+      <label class="item"><input type="checkbox" id="toggle-heat"> Heatmap (densidad)</label>
+    </div>
+
+    <!-- Capas externas (OGC) -->
+    <div class="group">
+      <h3><i class="fa-solid fa-plug"></i> Capas externas (WMS/WMTS/XYZ)</h3>
+      <div class="item" style="flex-direction:column;align-items:flex-start">
+        <input id="ext-url" type="url" placeholder="URL del servicio (WMS/WMTS/XYZ)" />
+        <input id="ext-layer" type="text" placeholder="Nombre de capa (WMS/WMTS). Para XYZ déjalo vacío." style="margin-top:8px" />
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="btn-add-wms" class="btn" title="Agregar capa"><i class="fa-solid fa-circle-plus"></i></button>
+          <button id="btn-clear-ext" class="btn" title="Quitar capas externas"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </div>
+      <div id="ext-list" style="font-size:12px;opacity:.9;padding:6px 0 0 0"></div>
+    </div>
+
+    <!-- === MENÚ DE CATEGORÍAS (acordeón) === -->
+    <div class="acc" id="acc">
+      <!-- Geometrías -->
+      <div class="acc-item open">
+        <div class="acc-h" data-acc role="button" tabindex="0" aria-expanded="true">
+          <div class="acc-left"><i class="fa-solid fa-draw-polygon" style="color:#8bd3c7"></i><span>Geometrías del corredor</span></div>
+          <div class="right"><span class="badge" data-badge>4</span> <i class="fa-solid fa-chevron-down chev"></i></div>
+        </div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="lyr-pts" checked> Puntos (municipios)</label>
+          <label class="item"><input type="checkbox" id="lyr-concave" checked> Polígono cóncavo</label>
+          <label class="item"><input type="checkbox" id="lyr-convex" checked> Polígono convexo</label>
+          <!-- NUEVO: capa de POIs de Huitzo -->
+          <label class="item"><input type="checkbox" id="lyr-pois-huitzo" checked> POIs Huitzo</label>
+        </div>
+      </div>
+
+      <!-- Otras categorías (idénticas a tu versión previa) -->
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-rotate-left" style="color:#4ecdc4"></i><span>Cambio Temporal</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="night"> Luces nocturnas (VIIRS)</label>
+          <label class="item"><input type="checkbox" id="timelapse-coverage"> Timelapse Cobertura (1990–2024)</label>
+          <label class="item"><input type="checkbox" id="ndvi-seasonal"> NDVI Estacional</label>
+          <label class="item"><input type="checkbox" id="recovery"> Recuperación Forestal</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-mountain" style="color:#45b7d1"></i><span>Modelo de Terreno</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="hillshade"> Sombreado (Hillshade)</label>
+          <label class="item"><input type="checkbox" id="elevation"> MDE (terrain base)</label>
+          <label class="item"><input type="checkbox" id="slopes"> Pendientes (demo)</label>
+          <label class="item"><input type="checkbox" id="curvature"> Curvatura (demo)</label>
+          <label class="item"><input type="checkbox" id="viewshed"> Visibilidad (demo)</label>
+          <label class="item"><input type="checkbox" id="boundaries"> Límites y lugares</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-water" style="color:#96ceb4"></i><span>Red Hidro-Cultural</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="hydro-ref"> Red Hidro (referencia)</label>
+          <label class="item"><input type="checkbox" id="streams"> Red fluvial (demo)</label>
+          <label class="item"><input type="checkbox" id="springs"> Nacimientos (demo)</label>
+          <label class="item"><input type="checkbox" id="water-quality"> Calidad del agua (demo)</label>
+          <label class="item"><input type="checkbox" id="irrigation"> Sistemas de riego (demo)</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-volume-high" style="color:#feca57"></i><span>Paisajes Sonoros</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="soundscapes"> Grabaciones de campo (demo)</label>
+          <label class="item"><input type="checkbox" id="testimonios"> Testimonios (demo)</label>
+          <label class="item"><input type="checkbox" id="festivals"> Festividades (demo)</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-diagram-project" style="color:#ff9ff3"></i><span>Atlas de Saberes</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="plant-network"> Red etnobotánica (demo)</label>
+          <label class="item"><input type="checkbox" id="medicinal-plants"> Plantas medicinales (demo)</label>
+          <label class="item"><input type="checkbox" id="seasonal-calendar"> Calendario estacional (demo)</label>
+          <label class="item"><input type="checkbox" id="languages"> Lenguas originarias (demo)</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-route" style="color:#54a0ff"></i><span>Rutas Narrativas</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="field-routes"> Recorridos de campo (demo)</label>
+          <label class="item"><input type="checkbox" id="waypoints"> Puntos de interés (demo)</label>
+          <label class="item"><input type="checkbox" id="agreements"> Acuerdos comunitarios (demo)</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-triangle-exclamation" style="color:#ff6348"></i><span>Riesgos y Presiones</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="fires"> Incendios (demo)</label>
+          <label class="item"><input type="checkbox" id="dumps"> Tiraderos (demo)</label>
+          <label class="item"><input type="checkbox" id="extraction"> Extracción de recursos (demo)</label>
+          <label class="item"><input type="checkbox" id="projects"> Proyectos de infraestructura (demo)</label>
+          <label class="item"><input type="checkbox" id="invasive"> Especies invasoras (demo)</label>
+          <label class="item"><input type="checkbox" id="climate-risk"> Vulnerabilidad climática (demo)</label>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-h" data-acc><div class="acc-left"><i class="fa-solid fa-chart-line" style="color:#2ed573"></i><span>Indicadores Comunitarios</span></div><div class="right"><span class="badge" data-badge>0</span><i class="fa-solid fa-chevron-down chev"></i></div></div>
+        <div class="acc-body">
+          <label class="item"><input type="checkbox" id="participation"> Participación comunitaria (demo)</label>
+          <label class="item"><input type="checkbox" id="forest-cover"> % Cobertura forestal (demo)</label>
+          <label class="item"><input type="checkbox" id="agreements-status"> Estado de acuerdos (demo)</label>
+          <label class="item"><input type="checkbox" id="custom-indicator"> Indicador personalizado (demo)</label>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== Map ===== -->
+  <main class="map">
     <div id="map"></div>
 
-    <!-- Botón info (abre modal Tailwind) -->
-    <button id="btn-info"
-      class="absolute left-3 top-3 z-[560] h-11 px-4 rounded-xl bg-white text-emerald-900 font-extrabold border border-emerald-100 shadow-md hover:-translate-y-0.5 transition flex items-center gap-2">
-      <i class="fa-solid fa-circle-info"></i> ¿Qué es esto?
-    </button>
-
-    <!-- Geocoder (único buscador, centrado) -->
-    <div class="geocoder-wrap" id="gc-wrap"></div>
-
-<!-- Panel de capas (versión completa con comunidades) -->
-<aside class="panel" id="panel">
-  <h4><i class="fa-solid fa-layer-group"></i> Capas principales</h4>
-
-  <!-- Base -->
-  <div class="block">
-    <b>Base</b>
-    <label class="item"><input type="radio" name="base" id="base-osm" checked> OSM Estándar</label>
-    <label class="item"><input type="radio" name="base" id="base-sat"> Esri Satélite</label>
-    <label class="item"><input type="radio" name="base" id="base-topo"> Esri Topo</label>
-    <div class="item" id="sat-op-row" style="display:none">
-      <span>Opacidad satélite</span>
-      <input id="sat-opacity" type="range" min="0.2" max="1" step="0.05" value="1">
+    <div style="position:absolute;left:16px;top:16px;background:#120913a8;color:#f1e8ee;border:1px solid rgba(201,162,78,.28);padding:6px 10px;border-radius:8px;font-size:12px">IPN · CVDR Oaxaca</div>
+    <div class="controls">
+      <button class="btn" id="btn-zoom-in" title="Acercar"><i class="fa-solid fa-plus"></i></button>
+      <button class="btn" id="btn-zoom-out" title="Alejar"><i class="fa-solid fa-minus"></i></button>
+      <button class="btn" id="btn-focus" title="Enfocar corredor"><i class="fa-regular fa-square"></i></button>
+      <button class="btn" id="btn-export" title="Exportar GeoJSON"><i class="fa-solid fa-download"></i></button>
+      <button class="btn" id="btn-geo" title="Mi ubicación"><i class="fa-solid fa-crosshairs"></i></button>
     </div>
-  </div>
 
-  <div class="sep"></div>
-
-  <!-- Comunidades -->
-  <div class="block">
-    <b>Comunidades del corredor</b>
-    <ul style="list-style:none; padding-left:10px; margin-top:6px; line-height:1.6;">
-      <li>🌿 San Pablo Huitzo</li>
-      <li>🌿 San Francisco Telixtlahuaca</li>
-      <li>🌿 Santiago Suchilquitongo</li>
-      <li>🌿 San Pablo Villa de Mitla</li>
-      <li>🌿 La Unión Zapata</li>
-      <li>🌿 Villa Díaz Ordaz</li>
-      <li>🌿 San Juan Bautista Guelache</li>
-      <li>🌿 San Miguel Etla</li>
-      <li>🌿 Tlalixtac de Cabrera</li>
-      <li>🌿 San Antonio de la Cal</li>
-      <li>🌿 San Agustín de las Juntas</li>
-      <li>🌿 San Marcos Tlapazola</li>
-      <li>🌿 San Bartolomé Quialana</li>
-      <li>🌿 San Gabriel Etla</li>
-    </ul>
-  </div>
-
-  <div class="sep"></div>
-
-  <!-- Geometrías -->
-  <div class="block">
-    <b>Geometrías del corredor</b>
-    <label class="item"><input type="checkbox" id="lyr-pts" checked> Municipios (puntos)</label>
-    <label class="item"><input type="checkbox" id="lyr-concave" checked> Área del corredor (cóncavo)</label>
-    <label class="item"><input type="checkbox" id="lyr-convex"> Envolvente (convexo)</label>
-    <div class="item">
-      <span>Opacidad área</span>
-      <input id="poly-opacity" type="range" min="0" max="0.6" step="0.02" value="0.12">
+    <div class="selected" id="selected-panel">
+      <h4>Capas seleccionadas</h4>
+      <div id="selected-list"></div>
     </div>
-  </div>
-
-  <!-- POIs -->
-  <div class="block">
-    <b>San Pablo Huitzo</b>
-    <label class="item"><input type="checkbox" id="pois-all" checked> POIs (todas las categorías)</label>
-    <div id="pois-cats" style="margin-left:8px"></div>
-  </div>
-
-  <!-- Agua y accesos -->
-  <div class="block">
-    <b>Agua y accesos</b>
-    <label class="item"><input type="checkbox" id="springs" checked> Manantiales (demo)</label>
-    <label class="item"><input type="checkbox" id="roads" checked> Caminos (demo)</label>
-  </div>
-
-  <!-- Presiones -->
-  <div class="block">
-    <b>Presiones</b>
-    <label class="item"><input type="checkbox" id="dumps" checked> Tiraderos (demo)</label>
-    <label class="item"><input type="checkbox" id="fires"> Incendios (demo)</label>
-  </div>
-
-  <div class="sep"></div>
-
-  <!-- Botones -->
-  <div class="block">
-    <button class="btn" id="btn-focus"><i class="fa-regular fa-square"></i> Enfocar corredor</button>
-    <button class="btn" id="btn-export-gj"><i class="fa-solid fa-file-export"></i> Exportar GeoJSON</button>
-  </div>
-</aside>
-
 
     <div class="legend" id="legend"></div>
-<!-- MODAL / CARD — Cartografía de Saberes Comunitarios (versión panorámica y sintética) -->
-<div id="modal"
-  class="fixed inset-0 z-[580] bg-emerald-900/30 backdrop-blur-sm flex items-center justify-center p-6">
-  <div class="w-full max-w-full mx-10 rounded-3xl bg-gradient-to-br from-emerald-50 via-amber-50 to-lime-50 text-emerald-950 shadow-xl border border-emerald-100">
-    <div class="px-12 pt-8 pb-6">
-      <div class="flex items-start justify-between">
-        <h2 class="text-4xl font-extrabold tracking-tight text-emerald-900">
-          Cartografía de Saberes Comunitarios
-        </h2>
-        <button id="modal-close"
-          class="h-10 w-10 rounded-lg bg-emerald-100 text-emerald-800 font-bold hover:bg-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400">✕</button>
-      </div>
-
-      <p class="mt-4 text-lg leading-relaxed max-w-6xl">
-        Esta cartografía reúne <b>saberes, oficios, lugares, fiestas y memorias</b> que dan forma al territorio.  
-        Reconoce cómo las comunidades <b>habitan, cuidan y transmiten</b> su conocimiento en diálogo con la naturaleza.
-      </p>
-
-      <!-- Contenidos -->
-      <div class="mt-8 grid grid-cols-5 gap-5 text-[15px]">
-        <div class="rounded-xl border border-emerald-200 bg-white/90 p-4 text-center shadow-sm">
-          <div class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-leaf text-lime-700"></i></div>
-          <p><b>Saberes y oficios</b><br>Prácticas agrícolas, medicina tradicional, alfarería y arte popular.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-white/90 p-4 text-center shadow-sm">
-          <div class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-mountain-sun text-amber-700"></i></div>
-          <p><b>Lugares significativos</b><br>Manantiales, cerros, templos y senderos que sostienen la vida.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-white/90 p-4 text-center shadow-sm">
-          <div class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-house-chimney text-emerald-700"></i></div>
-          <p><b>Arquitectura vernácula</b><br>Casas de adobe, cal y palma: herencia y adaptación al entorno.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-white/90 p-4 text-center shadow-sm">
-          <div class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-route text-emerald-700"></i></div>
-          <p><b>Rutas bioculturales</b><br>Camino, trueque, festividades y peregrinaciones que unen comunidades.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-white/90 p-4 text-center shadow-sm">
-          <div class="font-semibold text-emerald-800 mb-1"><i class="fa-solid fa-people-group text-amber-700"></i></div>
-          <p><b>Custodios del territorio</b><br>Colectivos que conservan y transmiten prácticas de cuidado.</p>
-        </div>
-      </div>
-
-      <!-- Beneficios -->
-      <div class="mt-10 grid grid-cols-5 gap-5 text-[14px]">
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-lime-100 p-3 text-center">
-          <i class="fa-solid fa-seedling text-lime-700 text-xl"></i>
-          <p><b>Sostenibilidad</b><br>Conservación de biodiversidad y uso responsable del entorno.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-amber-50 to-emerald-50 p-3 text-center">
-          <i class="fa-solid fa-masks-theater text-amber-700 text-xl"></i>
-          <p><b>Identidad cultural</b><br>Preservación de tradiciones, lenguas y expresiones locales.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-lime-50 to-amber-50 p-3 text-center">
-          <i class="fa-solid fa-book-open text-emerald-700 text-xl"></i>
-          <p><b>Conciencia ambiental</b><br>Educación y sensibilización intergeneracional.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-amber-50 to-lime-100 p-3 text-center">
-          <i class="fa-solid fa-hand-holding-heart text-lime-700 text-xl"></i>
-          <p><b>Legado futuro</b><br>Uso sostenible de recursos para próximas generaciones.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-lime-100 p-3 text-center">
-          <i class="fa-solid fa-people-carry-box text-amber-700 text-xl"></i>
-          <p><b>Desarrollo local</b><br>Economía solidaria, oficios y turismo responsable.</p>
-        </div>
-      </div>
-
-      <!-- Principios -->
-      <div class="mt-10 grid grid-cols-3 gap-6 text-[14px] text-center">
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-100 to-white p-4">
-          <i class="fa-solid fa-handshake-angle text-emerald-700 text-xl"></i>
-          <p><b>Consentimiento</b><br>Libre, previo e informado.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-100 to-white p-4">
-          <i class="fa-solid fa-scale-balanced text-emerald-700 text-xl"></i>
-          <p><b>Gobernanza</b><br>Decisiones comunales y respeto a usos y costumbres.</p>
-        </div>
-        <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-100 to-white p-4">
-          <i class="fa-solid fa-user-shield text-emerald-700 text-xl"></i>
-          <p><b>Resguardo</b><br>Protección y reconocimiento del conocimiento local.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="px-12 pb-8">
-      <button id="modal-ok"
-        class="w-full h-12 rounded-xl bg-gradient-to-r from-emerald-600 to-lime-600 text-white font-extrabold text-lg shadow-md hover:from-emerald-700 hover:to-lime-700 focus:outline-none focus:ring-2 focus:ring-emerald-300 transition">
-        Entendido
-      </button>
-    </div>
-  </div>
-</div>
-
+    <div id="watermark" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:url('IPN-Logo.png') center 55% / 520px auto no-repeat;opacity:.06;mix-blend-mode:lighten"></div>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer>
-    <div style="display:flex;align-items:center;gap:8px">
+    <div class="left">
       <img src="logocvdr.jpg" alt="CVDR Oaxaca" />
-      <span>Centro de Vinculación y Desarrollo Regional Oaxaca · Instituto Politécnico Nacional</span>
+      <strong>Centro de Vinculación y Desarrollo Regional Oaxaca</strong>
+      <span class="tag">Instituto Politécnico Nacional</span>
     </div>
-    <a href="#" class="privacy">Aviso de privacidad</a>
+    <div class="right">
+      <span class="tag">© 2025 · Corredor Biocultural de Oaxaca</span>
+      <a href="#" style="color:#c9a24e;text-decoration:none">Aviso de privacidad</a>
+    </div>
   </footer>
 </div>
 
 <script>
-/* ========= Helpers ========= */
-const $ = (id)=>document.getElementById(id);
-const slug = (s)=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-  .replace(/[^a-z0-9]+/g,'-').replace(/^-|-$|_/g,'');
+/* ===== Helpers ===== */
+const $=id=>document.getElementById(id);
+const qsa=(s,el=document)=>[...el.querySelectorAll(s)];
+const debounce=(fn,ms=120)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),ms);}};
 
-/* ========= Mapa ========= */
-const map=L.map('map',{center:[17.05,-96.65],zoom:9,zoomControl:true,preferCanvas:true});
+/* ===== Mapa base ===== */
+const map=L.map('map',{center:[17.05,-96.65],zoom:9,zoomControl:false,preferCanvas:true,inertia:true,inertiaDeceleration:3000});
 new L.Hash(map);
-
-/* Bases */
 const baseOSM=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
 const baseSat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles © Esri/Maxar',opacity:1});
 const baseTopo=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Tiles © Esri'});
-baseOSM.addTo(map);
+const osmLabels=L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OSM HOT'});
+baseOSM.addTo(map); osmLabels.addTo(map);
+new L.Control.MiniMap(L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),{toggleDisplay:true}).addTo(map);
+L.control.scale({imperial:false}).addTo(map);
+
+/* Geocoder (Nominatim) */
+let geocoderCtrl=L.Control.geocoder({defaultMarkGeocode:false}).on('markgeocode',e=>{
+  const bbox=e.geocode.bbox; const b=L.latLngBounds(bbox.getSouthEast(),bbox.getNorthWest());
+  map.fitBounds(b.pad(.15));
+}).addTo(map);
+$('toggle-geocoder').onchange=e=>{ if(e.target.checked){geocoderCtrl.addTo(map);} else {geocoderCtrl.remove();} };
 
 function setBase(which){
-  const s=$('sat-opacity'), row=$('sat-op-row');
-  [baseOSM,baseSat,baseTopo].forEach(l=>map.removeLayer(l));
-  if(which==='osm'){baseOSM.addTo(map); row.style.display='none';}
-  if(which==='sat'){baseSat.addTo(map); row.style.display='flex'; s.disabled=false;}
-  if(which==='topo'){baseTopo.addTo(map); row.style.display='none';}
+  const s=$('sat-opacity');
+  if(which==='osm'){map.addLayer(baseOSM); map.removeLayer(baseSat); map.removeLayer(baseTopo); s.disabled=true;}
+  if(which==='sat'){map.addLayer(baseSat); map.removeLayer(baseOSM); map.removeLayer(baseTopo); s.disabled=false;}
+  if(which==='topo'){map.addLayer(baseTopo); map.removeLayer(baseOSM); map.removeLayer(baseSat); s.disabled=true;}
 }
 $('base-osm').onchange=e=>e.target.checked&&setBase('osm');
 $('base-sat').onchange=e=>e.target.checked&&setBase('sat');
 $('base-topo').onchange=e=>e.target.checked&&setBase('topo');
 $('sat-opacity').oninput=e=>baseSat.setOpacity(parseFloat(e.target.value));
+$('labels-toggle').onchange=e=> e.target.checked?map.addLayer(osmLabels):map.removeLayer(osmLabels);
+setBase('osm');
 
-/* Geocoder (único, centrado) */
-const gc=L.Control.geocoder({defaultMarkGeocode:false, placeholder:'San Pablo Huitzo, Oaxaca, 68220, México'});
-const gcCtrl=gc.addTo(map);
-$('gc-wrap').appendChild(gcCtrl.getContainer());
-gc.on('markgeocode',e=>{
-  const b=e.geocode.bbox; const bb=L.latLngBounds(b.getSouthEast(),b.getNorthWest());
-  map.fitBounds(bb.pad(.12));
+/* Ripple click */
+map.on('click',e=>{
+  const r=document.createElement('div'); r.className='ripple';
+  const p=map.latLngToContainerPoint(e.latlng); r.style.left=p.x+'px'; r.style.top=p.y+'px';
+  document.querySelector('.map').appendChild(r); setTimeout(()=>r.remove(),820);
 });
 
-/* ========= Municipios (puntos) ========= */
-const places=[
-  { name:"San Pablo Huitzo, Oaxaca, Mexico", lat:17.2667, lng:-96.8833 },
-  { name:"San Francisco Telixtlahuaca, Oaxaca, Mexico", lat:17.3167, lng:-96.9000 },
-  { name:"Santiago Suchilquitongo, Oaxaca, Mexico", lat:17.2333, lng:-96.8667 },
-  { name:"San Pablo Villa de Mitla, Oaxaca, Mexico", lat:16.9261, lng:-96.3597 },
-  { name:"La Unión Zapata, Oaxaca, Mexico", lat:17.1000, lng:-96.8000 },
-  { name:"Villa Díaz Ordaz, Oaxaca, Mexico", lat:17.2000, lng:-96.7500 },
-  { name:"San Juan Bautista Guelache, Oaxaca, Mexico", lat:17.1833, lng:-96.8167 },
-  { name:"San Miguel Etla, Oaxaca, Mexico", lat:17.2000, lng:-96.8000 },
-  { name:"Tlalixtac de Cabrera, Oaxaca, Mexico", lat:17.1167, lng:-96.6833 },
-  { name:"San Antonio de la Cal, Oaxaca, Mexico", lat:17.0833, lng:-96.7167 },
-  { name:"San Agustín de las Juntas, Oaxaca, Mexico", lat:17.0667, lng:-96.7333 },
-  { name:"San Marcos Tlapazola, Oaxaca, Mexico", lat:16.9500, lng:-96.7000 },
-  { name:"San Bartolomé Quialana, Oaxaca, Mexico", lat:16.8833, lng:-96.6167 },
-  { name:"San Gabriel Etla, Oaxaca, Mexico", lat:17.2136, lng:-96.7692 }
+/* ===== Datos de municipios ===== */
+const placesWithCoordinates = [
+  { name:"San Pablo Huitzo, Oaxaca, Mexico", latitude:17.2667, longitude:-96.8833 },
+  { name:"San Francisco Telixtlahuaca, Oaxaca, Mexico", latitude:17.3167, longitude:-96.9000 },
+  { name:"Santiago Suchilquitongo, Oaxaca, Mexico", latitude:17.2333, longitude:-96.8667 },
+  { name:"San Pablo Villa de Mitla, Oaxaca, Mexico", latitude:16.9261, longitude:-96.3597 },
+  { name:"La Unión Zapata, Oaxaca, Mexico", latitude:17.1000, longitude:-96.8000 },
+  { name:"Villa Díaz Ordaz, Oaxaca, Mexico", latitude:17.2000, longitude:-96.7500 },
+  { name:"San Juan Bautista Guelache, Oaxaca, Mexico", latitude:17.1833, longitude:-96.8167 },
+  { name:"San Miguel Etla, Oaxaca, Mexico", latitude:17.2000, longitude:-96.8000 },
+  { name:"Tlalixtac de Cabrera, Oaxaca, Mexico", latitude:17.1167, longitude:-96.6833 },
+  { name:"San Antonio de la Cal, Oaxaca, Mexico", latitude:17.0833, longitude:-96.7167 },
+  { name:"San Agustín de las Juntas, Oaxaca, Mexico", latitude:17.0667, longitude:-96.7333 },
+  { name:"San Marcos Tlapazola, Oaxaca, Mexico", latitude:16.9500, longitude:-96.7000 },
+  { name:"San Bartolomé Quialana, Oaxaca, Mexico", latitude:16.8833, longitude:-96.6167 },
+  { name:"San Gabriel Etla, Oaxaca, Mexico", latitude:17.2136, longitude:-96.7692 }
 ];
-const fcPoints={type:'FeatureCollection',features:places.map(p=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{name:p.name}}))};
+const fcPoints={type:'FeatureCollection',features:placesWithCoordinates.map(p=>({type:'Feature',geometry:{type:'Point',coordinates:[p.longitude,p.latitude]},properties:{name:p.name}}))};
 
-function pinHTML(c='#16a34a'){
-  return `<div style="transform:translate(-50%,-100%);filter:drop-shadow(0 3px 8px rgba(0,0,0,.35))">
-    <svg viewBox="0 0 28 38" width="28" height="38" aria-hidden="true">
-      <path d="M14 2c-6.1 0-11 4.64-11 10.36 0 7.24 9.5 18.56 10.08 19.28a1.2 1.2 0 0 0 1.84 0C15.5 30.92 25 19.6 25 12.36 25 6.64 20.1 2 14 2z" fill="#fff"/>
-      <path d="M14 3.4c-5.35 0-9.65 4.07-9.65 9.1 0 6.38 8.35 16.35 8.86 16.98.33.4.95.4 1.28 0 .51-.63 8.86-10.6 8.86-16.98 0-5.03-4.3-9.1-9.65-9.1z" fill="${c}" stroke="#0a6b55" stroke-width="1"/>
-      <circle cx="14" cy="12.5" r="3.2" fill="rgba(255,255,255,.95)"/>
-    </svg>
-  </div>`;
-}
-const labels=L.layerGroup();
-const layerPoints=L.geoJSON(fcPoints,{
-  pointToLayer:(f,latlng)=>{
-    const icon=L.divIcon({className:'',html:pinHTML(),iconSize:[28,38],iconAnchor:[14,38]});
-    const m=L.marker(latlng,{icon, riseOnHover:true});
-    const coords=`${latlng.lat.toFixed(5)}, ${latlng.lng.toFixed(5)}`;
-    m.bindPopup(`<b>${f.properties.name}</b><br><small>${coords}</small>`);
-    L.marker(latlng,{icon:L.divIcon({className:'label-mpio',html:`<div style="font-weight:700;color:#0b4f46;background:rgba(255,255,255,.86);padding:2px 6px;border-radius:6px;border:1px solid #cde7d8">${f.properties.name.replace(', Oaxaca, Mexico','')}</div>`,iconSize:[0,0],iconAnchor:[-6,44]})}).addTo(labels);
-    return m;
-  }
-});
-labels.addTo(map);
-
-/* Área corredor cóncavo/convexo */
-let polyConcave=null, polyConvex=null;
-try{polyConcave=turf.concave(fcPoints,{maxEdge:20,units:'kilometers'});}catch(e){}
-try{polyConvex=turf.convex(fcPoints);}catch(e){}
-if(!polyConcave){
-  const bufs=fcPoints.features.map(pt=>turf.buffer(pt,2,{units:'kilometers'}));
-  let uni=bufs[0]; for(let i=1;i<bufs.length;i++) uni=turf.union(uni,bufs[i]); polyConcave=uni;
-}
-const layerConcave=L.geoJSON(polyConcave,{style:{color:'#22675a',weight:2,fillColor:'#bfe8d2',fillOpacity:.12}});
-const layerConvex=L.geoJSON(polyConvex||{type:'FeatureCollection',features:[]},{style:{color:'#236b55',weight:2,fillOpacity:0, dashArray:'8 6'}});
-layerPoints.addTo(map); layerConcave.addTo(map);
-const fg=L.featureGroup([layerPoints,layerConcave]); map.fitBounds(fg.getBounds().pad(.08));
-
-/* KPIs */
-$('kpi-pts').textContent=fcPoints.features.length;
-$('kpi-area').textContent=(turf.area(polyConcave)/1e6).toFixed(2)+' km²';
-
-/* ========= POIs Huitzo ========= */
+/* ===== POIs Huitzo (GeoJSON externo) ===== */
+/* URL proporcionada (raw GitHub) */
 const POIS_URL='https://raw.githubusercontent.com/hermecp/geoportalbiocultural/refs/heads/main/huitzo_pois.geojson';
+
+/* Colores por categoría (para la leyenda y el icono) */
 const CAT_COLORS={
   'espacios culturales y artísticos':'#d97706',
   'sitios de patrimonio':'#8b5cf6',
@@ -451,13 +439,14 @@ const CAT_COLORS={
   'centros de enseñanza y difusión':'#ef4444',
   'Zona arqueológica':'#f59e0b'
 };
-let poisAllGroup = L.layerGroup().addTo(map);
-const poisByCat = new Map();
+/* Mantendremos las categorías presentes para construir la leyenda dinámica */
+let poisCategoriesPresent=new Set();
 
+/* Icono visual para POIs */
 function iconPOI(cat=''){
   const c=CAT_COLORS[cat]||'#00D1A0';
-  const html=`<div style="transform:translate(-50%,-100%);filter:drop-shadow(0 3px 8px rgba(0,0,0,.35))">
-    <svg viewBox="0 0 28 38" width="28" height="38" aria-hidden="true">
+  const html=`<div class="mk-pin" title="${cat}">
+    <svg viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
       <path d="M14 2c-6.1 0-11 4.64-11 10.36 0 7.24 9.5 18.56 10.08 19.28a1.2 1.2 0 0 0 1.84 0C15.5 30.92 25 19.6 25 12.36 25 6.64 20.1 2 14 2z" fill="#fff"/>
       <path d="M14 3.4c-5.35 0-9.65 4.07-9.65 9.1 0 6.38 8.35 16.35 8.86 16.98.33.4.95.4 1.28 0 .51-.63 8.86-10.6 8.86-16.98 0-5.03-4.3-9.1-9.65-9.1z" fill="${c}" stroke="#1f2937" stroke-width="1"/>
       <circle cx="14" cy="12.5" r="3.2" fill="rgba(255,255,255,.95)"/>
@@ -465,186 +454,476 @@ function iconPOI(cat=''){
   </div>`;
   return L.divIcon({className:'',html,iconSize:[28,38],iconAnchor:[14,38]});
 }
-function mediaHTML(m){
-  if(!m) return '';
-  const isURL=/^https?:\/\//i.test(m);
-  const isImg=/\.(png|jpe?g|webp|gif)$/i.test(m);
-  if(isImg) return `<img src="${m}" alt="" style="max-width:220px;display:block;margin-top:6px;border-radius:6px">`;
-  if(isURL) return `<a href="${m}" target="_blank" rel="noopener">Ver recurso</a>`;
-  return `<span>${m}</span>`;
+function mediaHTML(media){
+  if(!media) return '';
+  const isURL=/^https?:\/\//i.test(media); const isImg=/\.(png|jpe?g|webp|gif)$/i.test(media);
+  if(isImg) return `<img src="${media}" alt="" style="max-width:220px;display:block;margin-top:6px;border-radius:6px">`;
+  if(isURL) return `<a href="${media}" target="_blank" rel="noopener">Ver recurso</a>`;
+  return `<span>${media}</span>`;
 }
-function popupPOI(p, ll){
-  const coords=`${ll.lat.toFixed(6)}, ${ll.lng.toFixed(6)}`;
-  const fuente=p?.source_citation?`<div style="margin-top:6px"><small>Fuente: <a href="${p.source_citation}" target="_blank" rel="noopener">enlace</a></small></div>`:'';
+function popupPOI(p){
+  const coords=p && p._coords ? p._coords : '';
+  const link=p.source_citation?`<div style="margin-top:6px"><small>Fuente: <a href="${p.source_citation}" target="_blank" rel="noopener">enlace</a></small></div>`:'';
+  const lugar=p.Lugar?`<div><small>${p.Lugar}</small></div>`:'';
+  const media=p.media?mediaHTML(p.media):'';
   return `<div style="min-width:220px;max-width:280px">
-    <strong style="font-size:16px">${p?.name||'POI'}</strong>
-    <div style="opacity:.9">${p?.category||''}</div>
-    ${p?.Lugar?`<div><small>${p.Lugar}</small></div>`:''}
-    <div style="margin-top:6px">${p?.description||''}</div>
-    ${fuente}
-    ${p?.media?mediaHTML(p.media):''}
-    <div style="margin-top:6px;opacity:.75"><small>${coords}</small></div>
+    <strong>${p.name||'POI'}</strong>
+    <div style="opacity:.9">${p.category||''}</div>
+    ${lugar}
+    <div style="margin-top:6px">${p.description||''}</div>
+    ${link}
+    ${media}
+    ${coords?`<div style="margin-top:6px;opacity:.8"><small>${coords}</small></div>`:''}
   </div>`;
 }
 
-async function loadPOIsHuitzo(){
-  const boxCats = document.getElementById('pois-cats');
-  if(!boxCats) return;
-  boxCats.innerHTML = '<div style="font-size:12px;opacity:.8">Cargando…</div>';
+/* Capa de POIs + control de toggle */
+let layerPoisHuitzo=L.layerGroup();          // capa (se llenará al cargar)
+const poisToggleElId='lyr-pois-huitzo';      // checkbox en UI
 
+async function loadPOIs(){
   try{
-    poisAllGroup.clearLayers();
-    poisByCat.forEach(g=>g.clearLayers()); poisByCat.clear();
+    const res=await fetch(POIS_URL,{cache:'no-store'});
+    const gj=await res.json();
 
-    const res = await fetch(POIS_URL,{cache:'no-store'});
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const gj = await res.json();
+    // limpiar cualquier capa previa
+    if(layerPoisHuitzo){ map.removeLayer(layerPoisHuitzo); }
 
-    gj.features.forEach(f=>{
-      const cat = f.properties?.category || 'sin-categoria';
-      if(!poisByCat.has(cat)) poisByCat.set(cat, L.layerGroup());
-      const ll = L.latLng(f.geometry.coordinates[1], f.geometry.coordinates[0]);
-      const m = L.marker(ll,{icon:iconPOI(cat),riseOnHover:true});
-      m.bindPopup(popupPOI(f.properties||{}, ll));
-      poisByCat.get(cat).addLayer(m);
-      poisAllGroup.addLayer(m);
+    poisCategoriesPresent=new Set(); // reset categorías vistas
+
+    layerPoisHuitzo=L.geoJSON(gj,{
+      pointToLayer:(f,latlng)=>{
+        const cat=(f.properties&&f.properties.category)||'';
+        if(cat) poisCategoriesPresent.add(cat);
+        const m=L.marker(latlng,{icon:iconPOI(cat),riseOnHover:true});
+        const coords=`${latlng.lat.toFixed(6)}, ${latlng.lng.toFixed(6)}`;
+        f.properties._coords=coords;
+        m.bindPopup(popupPOI(f.properties));
+        return m;
+      }
     });
 
-    const sortedCats = [...poisByCat.keys()].sort((a,b)=>a.localeCompare(b));
-    boxCats.innerHTML = sortedCats.map(cat=>{
-      const id = `pois-cat-${slug(cat)}`;
-      const count = poisByCat.get(cat).getLayers().length;
-      const sw = CAT_COLORS[cat] || '#00D1A0';
-      return `
-        <label class="item">
-          <input type="checkbox" id="${id}" data-cat="${cat}" checked>
-          <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${sw};border:1px solid rgba(0,0,0,.25)"></span>
-          <span>${cat} <small style="opacity:.8">(${count})</small></span>
-        </label>`;
-    }).join('');
+    // Añadir sólo si el checkbox está activo
+    const chk=$(poisToggleElId);
+    if(chk && chk.checked){ layerPoisHuitzo.addTo(map); }
 
-    sortedCats.forEach(cat=>{
-      const id = `pois-cat-${slug(cat)}`;
-      const el = document.getElementById(id);
-      el?.addEventListener('change', e=>{
-        const on = e.target.checked;
-        const grp = poisByCat.get(cat);
-        if(!grp) return;
-        if(on){ grp.addTo(map); } else { map.removeLayer(grp); }
-        const allOn = [...document.querySelectorAll('#pois-cats input[type="checkbox"]')].every(i=>i.checked);
-        document.getElementById('pois-all').checked = allOn;
-        renderLegend();
-      });
-      poisByCat.get(cat).addTo(map);
-    });
+    // Registrar en el mapa de toggles (para estado persistente)
+    toggleMap.set(poisToggleElId,layerPoisHuitzo);
 
-    const master = document.getElementById('pois-all');
-    master.onchange = e=>{
-      const on = e.target.checked;
-      document.querySelectorAll('#pois-cats input[type="checkbox"]').forEach(i=>{
-        i.checked = on;
-        i.dispatchEvent(new Event('change'));
-      });
-    };
+    updateSelected(); renderLegend(); recalcTotals(); refreshBadges();
+
+    // KPI de puntos: muestra el mayor valor entre municipios y POIs
+    const nPois=layerPoisHuitzo.getLayers().length;
+    const baseCount=parseInt(document.getElementById('kpi-pts').textContent.replace(/[^0-9]/g,''))||0;
+    document.getElementById('kpi-pts').textContent=Math.max(baseCount,nPois);
   }catch(err){
-    console.error('POIs Huitzo no disponibles:', err);
-    poisAllGroup.clearLayers();
-    document.getElementById('pois-cats').innerHTML =
-      `<div style="font-size:12px;opacity:.8;color:#fca5a5">No se pudieron cargar los POIs (offline o red). El resto del mapa funciona.</div>`;
+    console.error('No se pudo cargar los POIs:',err);
   }
-
-  renderLegend();
 }
-loadPOIsHuitzo();
+loadPOIs();
 
-/* ========= Capas extra ========= */
-const lyrSprings=L.layerGroup([
-  L.circleMarker([17.24,-96.82],{radius:5,color:'#0ea5e9',fillColor:'#0ea5e9',fillOpacity:.9}).bindPopup('Manantial (demo)'),
-  L.circleMarker([17.18,-96.78],{radius:5,color:'#0ea5e9',fillColor:'#0ea5e9',fillOpacity:.9}).bindPopup('Manantial (demo)')
-]);
-const lyrRoads=L.polyline([[17.33,-96.98],[17.28,-96.90],[17.24,-96.83],[17.20,-96.75]],{color:'#9ca3af',weight:3,opacity:.7});
-const lyrDumps=L.layerGroup([
-  L.circleMarker([17.24,-96.88],{radius:6,color:'#b45309',fillColor:'#b45309',fillOpacity:.9}).bindPopup('Tiradero (demo)'),
-  L.circleMarker([17.18,-96.80],{radius:6,color:'#b45309',fillColor:'#b45309',fillOpacity:.9}).bindPopup('Tiradero (demo)')
-]);
-const lyrFires=L.layerGroup([
-  L.circleMarker([17.21,-96.70],{radius:6,color:'#ef4444',fillColor:'#ef4444',fillOpacity:.9}).bindPopup('Incendio (demo)')
-]);
+/* ===== Estilos (resto) ===== */
+function colorFromString(str){
+  let h=0; for(let i=0;i<str.length;i++) h=(h*31+str.charCodeAt(i))>>>0;
+  h=h%360; const s=72, l=52, l2=Math.max(38,l-10);
+  return {base:`hsl(${h} ${s}% ${l}%)`, dark:`hsl(${h} ${s}% ${l2}%)`};
+}
+function pinHTML(name){
+  const {base,dark}=colorFromString(name);
+  const gid='g'+Math.random().toString(36).slice(2);
+  return `<div class="mk-pin" aria-label="${name}">
+    <svg viewBox="0 0 28 38" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+      <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${base}"/><stop offset="100%" stop-color="${dark}"/></linearGradient></defs>
+      <path d="M14 2c-6.1 0-11 4.64-11 10.36 0 7.24 9.5 18.56 10.08 19.28a1.2 1.2 0 0 0 1.84 0C15.5 30.92 25 19.6 25 12.36 25 6.64 20.1 2 14 2z" fill="#fff"/>
+      <path d="M14 3.4c-5.35 0-9.65 4.07-9.65 9.1 0 6.38 8.35 16.35 8.86 16.98.33.4.95.4 1.28 0 .51-.63 8.86-10.6 8.86-16.98 0-5.03-4.3-9.1-9.65-9.1z" fill="url(#${gid})" stroke="${dark}" stroke-width="1"/>
+      <ellipse cx="11" cy="9" rx="4.8" ry="3.2" fill="rgba(255,255,255,.55)"/>
+      <circle cx="14" cy="12.5" r="3.2" fill="rgba(255,255,255,.95)" />
+    </svg>
+  </div>`;
+}
+function stylePoly({fill=.12, dashed=false, cls=''}={}){return{color:'#22675a',weight:2.2,fillColor:'#bfe8d2',fillOpacity:fill,dashArray:dashed?'8 6':null,className:cls};}
 
+/* ===== Capas principales ===== */
+const labels=L.layerGroup();
+const layerPoints=L.geoJSON(fcPoints,{
+  pointToLayer:(f,latlng)=>{
+    const icon=L.divIcon({className:'',html:pinHTML(f.properties.name),iconSize:[28,38],iconAnchor:[14,38]});
+    const m=L.marker(latlng,{icon, riseOnHover:true});
+    const coords=`${latlng.lat.toFixed(5)}, ${latlng.lng.toFixed(5)}`;
+    m.bindPopup(`<b>${f.properties.name}</b><br><small>${coords}</small><br><button id="z${coords}" style="margin-top:6px">Zoom aquí</button>`);
+    m.on('popupopen',()=>{const btn=document.getElementById(`z${coords}`); if(btn) btn.onclick=()=>map.flyTo(latlng,13,{animate:true,duration:.7});});
+    L.marker(latlng,{icon:L.divIcon({className:'label-mpio',html:f.properties.name.replace(', Oaxaca, Mexico',''),iconSize:[0,0],iconAnchor:[-6,44]})}).addTo(labels);
+    return m;
+  }
+});
+let polyConcave=null, polyConvex=null;
+try{polyConcave=turf.concave(fcPoints,{maxEdge:20,units:'kilometers'});}catch{}
+try{polyConvex=turf.convex(fcPoints);}catch{}
+if(!polyConcave){const bufs=fcPoints.features.map(pt=>turf.buffer(pt,2,{units:'kilometers'}));let uni=bufs[0];for(let i=1;i<bufs.length;i++) uni=turf.union(uni,bufs[i]);polyConcave=uni;}
+const layerConcave=L.geoJSON(polyConcave,{style:stylePoly({fill:.12,cls:'soft-glow'})});
+const layerConvex=L.geoJSON(polyConvex||{type:'FeatureCollection',features:[]},{style:{color:'#236b55',weight:2.2,fillColor:'#d7e9f4',fillOpacity:.05,className:'marching'}});
+
+const fg=L.featureGroup([layerPoints,layerConcave,layerConvex]);
+layerPoints.addTo(map); layerConcave.addTo(map); layerConvex.addTo(map); labels.addTo(map);
+map.fitBounds(fg.getBounds().pad(.08));
+
+/* KPIs */
+$('kpi-pts').textContent=fcPoints.features.length;
+$('kpi-area-concave').textContent=(turf.area(polyConcave)/1e6).toFixed(2)+' km²';
+$('kpi-area-convex').textContent=(polyConvex? turf.area(polyConvex):0/1e6).toFixed(2)+' km²';
+
+/* ===== Otras capas ===== */
+const lyrHillshade=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Esri World Hillshade'});
+const lyrElevation=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Esri World Terrain Base'});
+const lyrBoundaries=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Esri World Boundaries & Places'});
+const lyrNight=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level9/{z}/{y}/{x}.png',{maxZoom:8,attribution:'NASA GIBS Black Marble'});
+
+function demoRect(color,opacity=.12,cls=''){const g=L.layerGroup(); const b=fg.getBounds().pad(.15); L.rectangle(b,{color,weight:2,fillOpacity:opacity,fillColor:color,className:cls}).addTo(g); return g;}
+function demoPoints(color,label,coords){const g=L.layerGroup(); (coords||[[-96.78,17.12],[-96.66,17.28],[-96.74,17.21]]).forEach(([x,y],i)=>L.circleMarker([y,x],{radius:6,color,fillColor:color,fillOpacity:.9}).bindPopup(`${label} ${i+1}`).addTo(g)); return g;}
+function demoLines(color,cls=''){const g=L.layerGroup(); const b=fg.getBounds(); const c=b.getCenter(); L.polyline([[c.lat-0.35,c.lng-0.5],[c.lat,c.lng],[c.lat+0.45,c.lng+0.6]],{color,weight:3,opacity:.85,className:cls}).addTo(g); return g;}
+
+const lyrTimelapse=demoRect('#2dd4bf',.08,'marching');
+const lyrNDVI=demoRect('#22c55e',.08,'marching');
+const lyrRecovery=demoRect('#84cc16',.06,'marching');
+const lyrSlopes=demoLines('#eab308','marching');
+const lyrCurvature=demoLines('#a78bfa','marching');
+const lyrViewshed=demoRect('#60a5fa',.05,'marching');
+const lyrStreams=demoLines('#38bdf8','marching');
+const lyrSprings=demoPoints('#0ea5e9','Naciente');
+const lyrWaterQ=demoPoints('#22d3ee','Muestra agua',[[-96.6,17.05],[-96.82,17.22]]);
+const lyrIrrigation=demoRect('#10b981',.04,'marching');
+
+const lyrHydroRef=L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Hydro_Reference_Overlay/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'Esri World Hydro Reference'});
+
+const lyrSoundscapes=demoPoints('#fbbf24','Audio',[[-96.72,17.0],[-96.7,17.3]]);
+const lyrTestimonios=demoPoints('#fb7185','Testimonio',[[-96.68,17.1],[-96.9,17.18]]);
+const lyrFestivals=demoPoints('#f59e0b','Festival',[[-96.75,17.25],[-96.62,17.22]]);
+
+const lyrPlantNet=demoPoints('#34d399','Registro botánico',[[-96.85,17.06],[-96.7,17.35]]);
+const lyrMedPlants=demoPoints('#86efac','Planta medicinal',[[-96.9,17.28],[-96.65,17.18]]);
+const lyrSeasonCal=demoRect('#f472b6',.05,'marching');
+const lyrLanguages=demoPoints('#60a5fa','Lengua',[[-96.8,17.18],[-96.69,17.08],[-96.76,17.29]]);
+
+const lyrFieldRoutes=demoLines('#3b82f6','marching');
+const lyrWaypoints=demoPoints('#818cf8','Waypoint',[[-96.71,17.24],[-96.63,17.14]]);
+const lyrAgreements=demoPoints('#14b8a6','Acuerdo',[[-96.77,17.17],[-96.67,17.19]]);
+
+const lyrFires=demoPoints('#ef4444','Incendio',[[-96.78,17.12],[-96.66,17.28]]);
+const lyrDumps=demoPoints('#c87f1a','Tiradero',[[-96.74,17.21]]);
+const lyrExtraction=demoRect('#fb7185',.05,'marching');
+const lyrProjects=demoPoints('#f59e0b','Proyecto',[[-96.73,17.05],[-96.62,17.26]]);
+const lyrInvasive=demoPoints('#a3e635','Invasora',[[-96.86,17.22],[-96.7,17.12]]);
+const lyrClimateRisk=demoRect('#f97316',.05,'marching');
+
+const lyrParticipation=demoPoints('#06b6d4','Participación',[[-96.64,17.09],[-96.83,17.26]]);
+const lyrForestCover=demoRect('#16a34a',.04,'marching');
+const lyrAgreementStatus=demoPoints('#0ea5e9','Estatus acuerdo',[[-96.81,17.2],[-96.68,17.16]]);
+const lyrCustomInd=demoPoints('#e879f9','Indicador',[[-96.7,17.2],[-96.78,17.3]]);
+
+/* ===== Clustering & Heat ===== */
+const clusterGroup=L.markerClusterGroup({spiderfyOnEveryZoom:true, showCoverageOnHover:false, maxClusterRadius:50});
+const rawMarkers=[];
+layerPoints.eachLayer(m=>{ rawMarkers.push(m); });
+let heatLayer=null;
+
+function enableCluster(on){
+  if(on){
+    rawMarkers.forEach(m=>{ if(map.hasLayer(m)) map.removeLayer(m); });
+    clusterGroup.clearLayers(); clusterGroup.addLayers(rawMarkers); map.addLayer(clusterGroup);
+  }else{
+    map.removeLayer(clusterGroup);
+    rawMarkers.forEach(m=>{ if(!map.hasLayer(m)) m.addTo(map); });
+  }
+}
+$('toggle-cluster').onchange=e=>enableCluster(e.target.checked);
+
+function enableHeat(on){
+  if(on){
+    const pts=fcPoints.features.map(f=>[f.geometry.coordinates[1], f.geometry.coordinates[0], 0.7]);
+    heatLayer=L.heatLayer(pts,{radius:22, blur:18, maxZoom:17}).addTo(map);
+  }else{
+    if(heatLayer){ map.removeLayer(heatLayer); heatLayer=null; }
+  }
+}
+$('toggle-heat').onchange=e=>enableHeat(e.target.checked);
+
+/* ===== Dibujo ===== */
+const drawn=new L.FeatureGroup().addTo(map);
+new L.Control.Draw({edit:{featureGroup:drawn},draw:{polygon:{allowIntersection:false,showArea:true},polyline:true,rectangle:true,circle:false,marker:true,circlemarker:false}}).addTo(map);
+map.on(L.Draw.Event.CREATED,e=>drawn.addLayer(e.layer));
+
+/* ===== Vínculos inputs → capas ===== */
 const toggleMap=new Map([
-  ['lyr-pts',layerPoints], ['lyr-concave',layerConcave], ['lyr-convex',layerConvex],
-  ['springs',lyrSprings], ['roads',lyrRoads], ['dumps',lyrDumps], ['fires',lyrFires]
+  ['lyr-pts',layerPoints],['lyr-concave',layerConcave],['lyr-convex',layerConvex],
+  ['night',lyrNight],['timelapse-coverage',lyrTimelapse],['ndvi-seasonal',lyrNDVI],['recovery',lyrRecovery],
+  ['hillshade',lyrHillshade],['elevation',lyrElevation],['slopes',lyrSlopes],['curvature',lyrCurvature],['viewshed',lyrViewshed],['boundaries',lyrBoundaries],
+  ['hydro-ref',lyrHydroRef],['streams',lyrStreams],['springs',lyrSprings],['water-quality',lyrWaterQ],['irrigation',lyrIrrigation],
+  ['soundscapes',lyrSoundscapes],['testimonios',lyrTestimonios],['festivals',lyrFestivals],
+  ['plant-network',lyrPlantNet],['medicinal-plants',lyrMedPlants],['seasonal-calendar',lyrSeasonCal],['languages',lyrLanguages],
+  ['field-routes',lyrFieldRoutes],['waypoints',lyrWaypoints],['agreements',lyrAgreements],
+  ['fires',lyrFires],['dumps',lyrDumps],['extraction',lyrExtraction],['projects',lyrProjects],['invasive',lyrInvasive],['climate-risk',lyrClimateRisk],
+  ['participation',lyrParticipation],['forest-cover',lyrForestCover],['agreements-status',lyrAgreementStatus],['custom-indicator',lyrCustomInd]
 ]);
+
 function toggleById(id,on){
-  const lyr=toggleMap.get(id); if(!lyr) return;
+  const lyr=toggleMap.get(id);
+  if(!lyr){
+    // Si la capa POIs aún no está registrada (antes de load), salimos.
+    if(id===poisToggleElId){ saveState(); updateSelected(); renderLegend(); refreshBadges(); }
+    return;
+  }
   on?lyr.addTo(map):map.removeLayer(lyr);
-  renderLegend();
+  updateSelected(); renderLegend(); saveState(); refreshBadges();
 }
 for(const id of toggleMap.keys()){
   const el=$(id); if(el) el.addEventListener('change',e=>toggleById(id,e.target.checked));
 }
+/* Conectar explícitamente el toggle de POIs (por si se presiona antes de cargar) */
+$(poisToggleElId).addEventListener('change',e=>{
+  const on=e.target.checked;
+  if(layerPoisHuitzo){
+    on?layerPoisHuitzo.addTo(map):map.removeLayer(layerPoisHuitzo);
+    updateSelected(); renderLegend(); saveState();
+  }
+});
+
+/* Opacidad polígonos */
 $('poly-opacity').oninput=e=>{
   const op=parseFloat(e.target.value);
   layerConcave.setStyle({fillOpacity:op});
   layerConvex.setStyle({fillOpacity:Math.max(0,op-0.05)});
 };
-lyrSprings.addTo(map); lyrRoads.addTo(map); lyrDumps.addTo(map);
 
-/* ========= Leyenda ========= */
-function renderLegend(){
-  const Lg=$('legend'); const rows=[];
-  if(map.hasLayer(layerConcave)) rows.push(`<div><span class="sw" style="background:#bfe8d2;border-color:#22675a"></span> Área del corredor</div>`);
-  if(map.hasLayer(layerConvex)) rows.push(`<div><span class="sw" style="background:transparent;border:2px dashed #236b55"></span> Envolvente convexa</div>`);
-  if(map.hasLayer(layerPoints))  rows.push(`<div><i class="fa-solid fa-location-dot" style="margin-right:6px;color:#00D1A0"></i> Municipios</div>`);
-  if(map.hasLayer(lyrRoads)) rows.push(`<div><span class="sw" style="background:#9ca3af;border-color:#9ca3af"></span> Caminos</div>`);
-  if(map.hasLayer(lyrSprings)) rows.push(`<div><span class="sw" style="background:#0ea5e9;border-color:#0ea5e9"></span> Manantiales</div>`);
-  if(map.hasLayer(lyrDumps)) rows.push(`<div><span class="sw" style="background:#b45309;border-color:#b45309"></span> Tiraderos</div>`);
-  if(map.hasLayer(lyrFires)) rows.push(`<div><span class="sw" style="background:#ef4444;border-color:#ef4444"></span> Incendios</div>`);
-  const poisRows=[];
-  poisByCat.forEach((grp,cat)=>{
-    if(map.hasLayer(grp)){
-      const c = CAT_COLORS[cat] || '#00D1A0';
-      poisRows.push(`<div><span class="sw" style="background:${c};border-color:${c}"></span> ${cat}</div>`);
-    }
-  });
-  rows.push(`<div style="margin-top:8px"><b>POIs Huitzo</b><div style="margin-top:4px">${poisRows.join('') || '<div style="opacity:.7">Sin categorías visibles</div>'}</div></div>`);
-  Lg.innerHTML = `<strong style="font-size:16px">Leyenda</strong><div style="margin-top:6px">${rows.join('')}</div>`;
-}
-renderLegend();
-
-/* ========= Utilidades ========= */
-$('btn-focus').addEventListener('click',()=>map.fitBounds(fg.getBounds().pad(.08)));
-$('btn-export-gj').addEventListener('click',()=>{
+/* Botonera mapa */
+$('btn-zoom-in').onclick=()=>map.zoomIn();
+$('btn-zoom-out').onclick=()=>map.zoomOut();
+$('btn-focus').onclick=()=>map.fitBounds(fg.getBounds().pad(.08));
+$('btn-export').onclick=()=>{
   const files=[
     {name:'municipios_puntos.geojson',data:fcPoints},
-    {name:'area_concava.geojson',data:polyConcave},
-    {name:'area_convexa.geojson',data:polyConvex},
-    {name:'pois_huitzo.geojson',data:poisAllGroup.toGeoJSON()}
+    {name:'poligono_concavo.geojson',data:polyConcave},
+    {name:'poligono_convexo.geojson',data:polyConvex},
+    {name:'dibujos.geojson',data:drawn.toGeoJSON()},
+    {name:'pois_huitzo.geojson',data:layerPoisHuitzo.toGeoJSON()}
   ];
-  files.forEach((f,i)=>{
-    const a=document.createElement('a');
-    a.href=URL.createObjectURL(new Blob([JSON.stringify(f.data)],{type:'application/geo+json'}));
-    a.download=f.name;
-    setTimeout(()=>a.click(),i*150);
+  files.forEach((f,i)=>{const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(f.data)],{type:'application/geo+json'})); a.download=f.name; setTimeout(()=>a.click(),i*150);});
+};
+$('btn-geo').onclick=()=>{
+  if(!navigator.geolocation) return alert('Geolocalización no soportada');
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const {latitude,longitude}=pos.coords;
+    const mk=L.marker([latitude,longitude],{icon:L.divIcon({className:'',html:pinHTML('Yo'),iconSize:[28,38],iconAnchor:[14,38]})}).addTo(map);
+    mk.bindPopup('<b>Mi ubicación</b>').openPopup();
+    map.flyTo([latitude,longitude],13,{duration:.7});
+  },err=>alert('No se pudo obtener tu ubicación ('+err.message+')'),{enableHighAccuracy:true,timeout:10000,maximumAge:60000});
+};
+
+/* Panel seleccionadas + leyenda + contadores */
+const _updateSelected=()=>{const box=$('selected-list'); box.innerHTML=''; let count=0; toggleMap.forEach((lyr,id)=>{if(map.hasLayer(lyr)){count++; const row=document.createElement('div'); row.className='row'; row.innerHTML=`<span>${labelOf(id)}</span><a href="#" data-id="${id}">quitar</a>`; row.querySelector('a').onclick=(e)=>{e.preventDefault(); const el=$(id); if(el){el.checked=false; el.dispatchEvent(new Event('change'));}}; box.appendChild(row);}}); if(layerPoisHuitzo && map.hasLayer(layerPoisHuitzo) && !toggleMap.get(poisToggleElId)) count++; $('active-layers').textContent=count;};
+const updateSelected=debounce(_updateSelected,80);
+function labelOf(id){
+  return ({'lyr-pts':'Puntos (municipios)','lyr-concave':'Polígono cóncavo','lyr-convex':'Polígono convexo','lyr-pois-huitzo':'POIs Huitzo','night':'VIIRS Night','timelapse-coverage':'Timelapse Cobertura','ndvi-seasonal':'NDVI Estacional','recovery':'Recuperación Forestal','hillshade':'World Hillshade','elevation':'MDE (Terrain Base)','slopes':'Pendientes','curvature':'Curvatura','viewshed':'Visibilidad','boundaries':'Boundaries & Places','hydro-ref':'World Hydro','streams':'Red fluvial','springs':'Nacimientos','water-quality':'Calidad del agua','irrigation':'Sistemas de riego','soundscapes':'Grabaciones de campo','testimonios':'Testimonios','festivals':'Festividades','plant-network':'Red etnobotánica','medicinal-plants':'Plantas medicinales','seasonal-calendar':'Calendario estacional','languages':'Lenguas originarias','field-routes':'Recorridos de campo','waypoints':'Puntos de interés','agreements':'Acuerdos comunitarios','fires':'Incendios','dumps':'Tiraderos','extraction':'Extracción de recursos','projects':'Proyectos de infraestructura','invasive':'Especies invasoras','climate-risk':'Vulnerabilidad climática','participation':'Participación comunitaria','forest-cover':'Cobertura forestal','agreements-status':'Estado de acuerdos','custom-indicator':'Indicador personalizado'})[id]||id;
+}
+function recalcTotals(){const all=[...document.querySelectorAll('.acc-body input[type="checkbox"], .group .item input')]; $('total-layers').textContent=all.length; $('active-layers').textContent=all.filter(i=>i.checked).length;}
+recalcTotals(); updateSelected();
+
+/* ===== Leyenda con categorías de POIs ===== */
+function renderLegend(){
+  const el=$('legend'); if(!el) return;
+  const items=[];
+  if(map.hasLayer(layerConcave)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#bfe8d2;border:1px solid #22675a"></span> Área cóncava</div>`);
+  if(map.hasLayer(layerConvex)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;border:2px dashed #236b55"></span> Área convexa</div>`);
+  if(map.hasLayer(layerPoints) ) items.push(`<div><span class="bi bi-geo-alt-fill" style="display:inline-block;transform:translateY(2px);font-size:16px;color:var(--mk);-webkit-text-stroke:1px var(--mk-stroke)"></span> Municipios</div>`);
+
+  // Sección POIs Huitzo + subleyenda por categorías
+  if(layerPoisHuitzo && map.hasLayer(layerPoisHuitzo)){
+    items.push(`<div style="margin-top:6px"><strong>POIs Huitzo</strong></div>`);
+    const cats = poisCategoriesPresent.size? [...poisCategoriesPresent] : Object.keys(CAT_COLORS);
+    cats.forEach(cat=>{
+      const c=CAT_COLORS[cat]||'#00D1A0';
+      items.push(`<div style="display:flex;align-items:center;gap:6px;margin-left:8px">
+        <span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:${c};border:1px solid #1f2937"></span>
+        <span>${cat}</span>
+      </div>`);
+    });
+  }
+
+  if(map.hasLayer(lyrHillshade)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:linear-gradient(45deg,#444,#777)"></span> Sombreado</div>`);
+  if(map.hasLayer(lyrHydroRef)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#7ec8e3"></span> Red hidro</div>`);
+  if(map.hasLayer(lyrNight)) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:#0b0f2b"></span> Luces nocturnas</div>`);
+  if(heatLayer) items.push(`<div><span style="display:inline-block;width:14px;height:14px;background:radial-gradient(#fff,#999)"></span> Densidad de puntos</div>`);
+  el.innerHTML=`<strong>Leyenda</strong>${items.length?'<div style="margin-top:6px"></div>'+items.join(''): '<div style="margin-top:6px;opacity:.8">Activa capas para ver símbolos</div>'}`;
+}
+map.on('layeradd',renderLegend); map.on('layerremove',renderLegend); renderLegend();
+
+/* Búsqueda + badges */
+$('search').oninput=e=>{
+  const q=e.target.value.toLowerCase();
+  qsa('.group .item, .acc .item').forEach(li=>li.style.display=li.textContent.toLowerCase().includes(q)?'':'none');
+};
+function refreshBadges(){qsa('.acc-item').forEach(it=>{const on=[...it.querySelectorAll('.acc-body input[type="checkbox"]')].filter(i=>i.checked).length; const b=it.querySelector('[data-badge]'); if(b) b.textContent=on;});}
+qsa('.acc-body input[type="checkbox"]').forEach(i=>i.addEventListener('change',()=>{refreshBadges(); recalcTotals();}));
+
+/* Acordeón con transición de altura */
+function setBodyHeight(body,open){
+  if(!body)return;
+  if(open){
+    body.style.height='auto'; const h=body.scrollHeight+'px'; body.style.height='0px';
+    requestAnimationFrame(()=>{body.style.height=h; body.addEventListener('transitionend',e=>{if(e.propertyName==='height'){body.style.height='auto';}}, {once:true});});
+  } else {
+    const h=body.scrollHeight+'px'; body.style.height=h; requestAnimationFrame(()=>{body.style.height='0px';});
+  }
+}
+qsa('[data-acc]').forEach(h=>{h.addEventListener('click',()=>{const it=h.closest('.acc-item'); const open=!it.classList.contains('open'); it.classList.toggle('open',open); h.setAttribute('aria-expanded',String(open)); setBodyHeight(it.querySelector('.acc-body'),open);});});
+
+/* ===== Sidebar toggle ===== */
+const appEl=$('app');
+const sidebarEl=$('sidebar');
+$('btn-toggle-sidebar').onclick=()=>{
+  appEl.classList.toggle('sidebar-hidden');
+  const onEnd=(e)=>{ if(e && e.propertyName!=='transform') return; map.invalidateSize(); sidebarEl.removeEventListener('transitionend',onEnd); };
+  sidebarEl.addEventListener('transitionend',onEnd);
+  setTimeout(()=>map.invalidateSize(),320);
+};
+window.addEventListener('resize',debounce(()=>map.invalidateSize(),150));
+
+/* ===== Análisis: Buffer on click + intersecciones ===== */
+const analysisGroup=L.featureGroup().addTo(map);
+const bufSlider=$('buf-km'); const bufVal=$('buf-km-val'); bufVal.textContent=bufSlider.value;
+bufSlider.oninput=e=>bufVal.textContent=e.target.value;
+
+function mkBufferAt(latlng, km){
+  const pt=turf.point([latlng.lng, latlng.lat]);
+  const buf=turf.buffer(pt, km, {units:'kilometers'});
+  return buf;
+}
+function puntosDentro(geom){
+  return fcPoints.features.filter(f=>turf.booleanPointInPolygon(f, geom));
+}
+function intersecaConcavo(geom){ return turf.booleanIntersects(geom, polyConcave); }
+function intersecaConvexo(geom){ return polyConvex? turf.booleanIntersects(geom, polyConvex): false; }
+
+function pintarGeom(gj, style={color:'#c9a24e', weight:2, fillOpacity:.15}){
+  return L.geoJSON(gj,{style}).addTo(analysisGroup);
+}
+function sumarizar(geom){
+  const areaKm2=(turf.area(geom)/1e6).toFixed(2);
+  const inside=puntosDentro(geom);
+  const inConc=intersecaConcavo(geom); const inConv=intersecaConvexo(geom);
+  $('analysis-res').innerHTML=
+    `Área buffer: <b>${areaKm2} km²</b><br>`+
+    `Puntos dentro: <b>${inside.length}</b><br>`+
+    `Intersecta corredor cóncavo: <b>${inConc?'Sí':'No'}</b><br>`+
+    `Intersecta corredor convexo: <b>${inConv?'Sí':'No'}</b>`;
+}
+let analysisLast=null;
+map.on('click',e=>{
+  if(!$('buffer-on-click').checked) return;
+  const km=parseFloat(bufSlider.value);
+  const buf=mkBufferAt(e.latlng, km);
+  analysisGroup.clearLayers();
+  analysisLast=buf;
+  pintarGeom(buf);
+  L.marker(e.latlng,{icon:L.divIcon({className:'',html:pinHTML('Centro buffer'),iconSize:[28,38],iconAnchor:[14,38]})}).addTo(analysisGroup);
+  sumarizar(buf);
+});
+
+$('btn-clear-analysis').onclick=()=>{analysisGroup.clearLayers(); $('analysis-res').innerHTML=''; analysisLast=null;};
+$('btn-export-analysis').onclick=()=>{
+  if(!analysisLast){alert('No hay resultado para exportar'); return;}
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(analysisLast)],{type:'application/geo+json'}));
+  a.download='analisis_buffer.geojson'; a.click();
+};
+
+/* ===== Capas externas (WMS/WMTS/XYZ) ===== */
+const extLayers=[];
+function renderExtList(){
+  const box=$('ext-list'); if(!box) return;
+  if(!extLayers.length){ box.innerHTML='<em>Sin capas externas</em>'; return; }
+  box.innerHTML=extLayers.map((e,i)=>`<div style="display:flex;justify-content:space-between;gap:8px;margin:4px 0">
+    <span>${e.name}</span>
+    <a href="#" data-i="${i}" style="color:#c9a24e;text-decoration:none">quitar</a>
+  </div>`).join('');
+  box.querySelectorAll('a[data-i]').forEach(a=>{
+    a.onclick=(ev)=>{ev.preventDefault(); const idx=parseInt(a.dataset.i); const item=extLayers[idx]; if(item){ map.removeLayer(item.layer); extLayers.splice(idx,1); renderExtList(); saveState(); }};
   });
-});
+}
+renderExtList();
 
-/* Toggles extra */
-document.getElementById('lyr-convex').addEventListener('change',e=>{
-  e.target.checked?layerConvex.addTo(map):map.removeLayer(layerConvex);
-  renderLegend();
-});
-document.getElementById('fires').addEventListener('change',e=>{
-  e.target.checked?lyrFires.addTo(map):map.removeLayer(lyrFires);
-  renderLegend();
-});
+async function addExternal(){
+  const url=$('ext-url').value.trim();
+  const layerName=$('ext-layer').value.trim();
+  if(!url){ alert('Proporciona la URL del servicio'); return; }
+  let layer, nameShown='';
+  try{
+    if(url.includes('{z}') && url.includes('{x}') && url.includes('{y}')){
+      layer=L.tileLayer(url,{maxZoom:19,attribution:'externo'});
+      nameShown='XYZ';
+    }else if(/wms/i.test(url)){
+      if(!layerName){ alert('Para WMS especifica el nombre de la capa'); return; }
+      layer=L.tileLayer.wms(url,{layers:layerName, format:'image/png', transparent:true});
+      nameShown='WMS '+layerName;
+    }else if(/wmts/i.test(url)){
+      if(url.includes('{z}') && url.includes('{x}') && url.includes('{y}')){
+        layer=L.tileLayer(url,{maxZoom:19,attribution:'wmts'});
+        nameShown='WMTS';
+      }else{
+        alert('Para WMTS proporciona una plantilla {z}/{x}/{y} o usa su endpoint XYZ.');
+        return;
+      }
+    }else{
+      layer=L.tileLayer(url,{maxZoom:19,attribution:'externo'});
+      nameShown='XYZ';
+    }
+    layer.addTo(map);
+    extLayers.push({name:nameShown, layer, url, layerName});
+    renderExtList(); saveState();
+  }catch(err){ console.error(err); alert('No se pudo cargar la capa externa'); }
+}
+$('btn-add-wms').onclick=addExternal;
+$('btn-clear-ext').onclick=()=>{ extLayers.forEach(e=>map.removeLayer(e.layer)); extLayers.length=0; renderExtList(); saveState(); };
 
-/* ========= Modal (Tailwind) ========= */
-const modal = $('modal');
-$('btn-info').onclick = ()=> modal.classList.remove('hidden');
-$('modal-close').onclick = ()=> modal.classList.add('hidden');
-$('modal-ok').onclick = ()=> modal.classList.add('hidden');
-modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.classList.add('hidden'); });
+/* ===== Persistencia de estado ===== */
+function saveState(){
+  const active=[...toggleMap.keys()].filter(id=>map.hasLayer(toggleMap.get(id)));
+  const ext=extLayers.map(e=>({url:e.url, layerName:e.layerName, name:e.name}));
+  const ui={hidden:$('app').classList.contains('sidebar-hidden'),
+            cluster:$('toggle-cluster').checked, heat:$('toggle-heat').checked,
+            geocoder:$('toggle-geocoder').checked,
+            poisChecked: $('lyr-pois-huitzo').checked};
+  localStorage.setItem('cvdr_state',JSON.stringify({active, ext, ui}));
+}
+function restoreState(){
+  try{
+    const s=JSON.parse(localStorage.getItem('cvdr_state')||'{}');
+    if(s.ui){
+      $('lyr-pois-huitzo').checked = s.ui.poisChecked ?? true;
+    }
+    (s.active||[]).forEach(id=>{const el=$(id); if(el && !el.checked){el.checked=true; el.dispatchEvent(new Event('change'));}});
+    if(s.ui){
+      if(s.ui.hidden){$('app').classList.add('sidebar-hidden'); setTimeout(()=>map.invalidateSize(),50);}
+      $('toggle-cluster').checked=!!s.ui.cluster; enableCluster(s.ui.cluster);
+      $('toggle-heat').checked=!!s.ui.heat; enableHeat(s.ui.heat);
+      $('toggle-geocoder').checked=!!s.ui.geocoder; if(!s.ui.geocoder) geocoderCtrl.remove();
+    }
+    if(s.ext && s.ext.length){
+      s.ext.forEach(x=>{
+        $('ext-url').value=x.url||'';
+        $('ext-layer').value=x.layerName||'';
+        addExternal();
+      });
+      $('ext-url').value=''; $('ext-layer').value='';
+    }
+  }catch{}
+}
+map.on('layeradd',saveState); map.on('layerremove',saveState);
+restoreState();
+
+/* ===== Binds finales ===== */
+function refreshBadges(){qsa('.acc-item').forEach(it=>{const on=[...it.querySelectorAll('.acc-body input[type="checkbox"]')].filter(i=>i.checked).length; const b=it.querySelector('[data-badge]'); if(b) b.textContent=on;});}
+renderLegend(); refreshBadges();
 </script>
 </body>
 </html>
